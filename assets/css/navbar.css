@@ -1,0 +1,325 @@
+/* ============================================================
+   KINGS FURNITURE GHANA — Navbar
+   navbar.css
+   ============================================================ */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-nav);
+  padding-block: var(--space-5);
+  background: transparent;
+}
+
+.nav.is-scrolled {
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding-block: var(--space-3);
+  box-shadow: 0 1px 0 var(--color-border-subtle);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* ── LOGO ── */
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nav__logo-img {
+  height: 90px;
+  width: auto;
+  display: block;
+}
+
+/* Invert when over dark hero */
+.nav--light .nav__link {
+  color: #fff;
+}
+
+/* ── LINKS ── */
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.nav__link {
+  font-size: var(--text-base);
+  font-weight: 400;
+  color: var(--color-text-primary);
+  letter-spacing: var(--tracking-wide);
+  text-decoration: none;
+  position: relative;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-brand);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--duration-base) var(--ease-expo);
+}
+
+.nav__link:hover { color: var(--color-brand); }
+.nav__link:hover::after { transform: scaleX(1); }
+.nav__link.is-active { color: var(--color-brand); }
+.nav__link.is-active::after { transform: scaleX(1); }
+
+/* ── CTA ── */
+.nav__cta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* ── PILL BORDER NAV WRAPPER (the design reference style) ── */
+.nav__pill {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  background: rgba(255,255,255,0.08);
+  border: 0.5px solid rgba(255,255,255,0.16);
+  border-radius: var(--radius-pill);
+  padding: var(--space-2) var(--space-5);
+  backdrop-filter: blur(8px);
+  transition: background var(--duration-slow) var(--ease-expo),
+              border-color var(--duration-slow) var(--ease-expo);
+}
+
+.nav.is-scrolled .nav__pill {
+  background: transparent !important;
+  border-color: transparent !important;
+  border: none !important;
+  padding: 0;
+}
+
+/* ── HAMBURGER ── */
+.nav__hamburger {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  padding: var(--space-3);
+  padding-right: var(--space-12);
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  margin-left: auto;
+}
+
+.nav__hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--color-text-primary);
+  transition: transform var(--duration-base) var(--ease-expo),
+              opacity var(--duration-fast) var(--ease-standard);
+  transform-origin: center;
+}
+
+.nav__hamburger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav__hamburger.is-open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav__hamburger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── MOBILE MENU ── */
+.nav__mobile {
+  position: fixed;
+  inset: 0;
+  background: var(--color-brand-deep);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  padding: var(--space-20);
+}
+
+.nav__mobile.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.nav__mobile-close {
+  position: absolute;
+  top: var(--space-6);
+  right: var(--space-6);
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border-radius: var(--radius-sm);
+  padding: 0;
+}
+
+.nav__mobile-close:hover {
+  border-color: var(--color-gold);
+  background: var(--color-gold);
+  color: var(--color-brand-deep);
+}
+
+.nav__mobile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+  text-align: center;
+}
+
+.nav__mobile-link {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: var(--tracking-wide);
+  transition: color 0.3s ease;
+  padding: var(--space-2) 0;
+}
+
+.nav__mobile-link:hover,
+.nav__mobile-link.is-active {
+  color: var(--color-gold);
+}
+
+.nav__mobile-cta {
+  margin-top: var(--space-8);
+  display: inline-block;
+  background: var(--color-gold);
+  color: var(--color-brand-deep);
+  padding: var(--space-3) var(--space-8);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.nav__mobile-cta:hover {
+  background: #9d7e5a;
+  color: #fff;
+}
+
+.nav__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: calc(var(--z-nav) - 2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--duration-slow) var(--ease-standard);
+}
+
+.nav__overlay.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ── LIGHT MODE (over hero) ── */
+.nav--light {
+  background: transparent;
+}
+
+.nav--light .nav__link {
+  color: #fff;
+}
+
+.nav--light .nav__hamburger span {
+  background: #fff;
+}
+
+.nav--light .nav__pill {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav--light .btn--primary {
+  background: var(--color-gold);
+  color: var(--color-text-primary);
+}
+
+.nav--light .btn--primary:hover {
+  background: #fff;
+  color: var(--color-brand-deep);
+}
+
+/* ── SCROLLED STATE ── */
+.nav.is-scrolled .nav__link {
+  color: var(--color-text-primary);
+}
+
+.nav.is-scrolled .nav__hamburger span {
+  background: var(--color-text-primary);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .nav__pill { display: none; }
+  .nav__hamburger { display: flex; }
+}
+
+@media (max-width: 768px) {
+  .nav__cta { display: none; }
+
+  .nav__mobile {
+    width: 100vw;
+    padding: var(--space-20) var(--gutter);
+    padding-top: calc(var(--space-20) + 60px);
+  }
+
+  .nav__mobile-link {
+    font-size: var(--text-2xl);
+    padding: var(--space-3) 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    padding-block: var(--space-3);
+  }
+
+  .nav__inner {
+    padding-inline: var(--space-4);
+  }
+
+  .nav__logo-text {
+    font-size: var(--text-sm);
+  }
+}

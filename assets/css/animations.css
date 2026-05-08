@@ -1,0 +1,191 @@
+/* ============================================================
+   KINGS FURNITURE GHANA — Animations
+   animations.css
+   ============================================================ */
+
+/* ── PAGE LOAD FADE-IN ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ── IMAGE SKELETON LOADER ── */
+.img-skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-subtle) 0%,
+    var(--color-bg-soft) 50%,
+    var(--color-bg-subtle) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+/* ── NAVBAR SCROLL TRANSITIONS ── */
+.nav {
+  transition:
+    background var(--duration-slow) var(--ease-expo),
+    box-shadow var(--duration-slow) var(--ease-expo),
+    padding var(--duration-slow) var(--ease-expo);
+}
+
+/* ── HOVER LIFT ── */
+.hover-lift {
+  transition: transform var(--duration-base) var(--ease-expo),
+              box-shadow var(--duration-base) var(--ease-expo);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ── LINK UNDERLINE SLIDE ── */
+.link-slide {
+  position: relative;
+  display: inline-block;
+}
+
+.link-slide::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width var(--duration-base) var(--ease-expo);
+}
+
+.link-slide:hover::after {
+  width: 100%;
+}
+
+/* ── PRODUCT CARD OVERLAY ── */
+.product-card__overlay {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity var(--duration-base) var(--ease-expo),
+              transform var(--duration-base) var(--ease-expo);
+}
+
+.product-card:hover .product-card__overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── STAGGER CHILDREN (CSS fallback) ── */
+.stagger-children > * {
+  opacity: 0;
+  animation: fadeUp 0.7s var(--ease-expo) both;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0.05s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.12s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.19s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.26s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.33s; }
+.stagger-children > *:nth-child(6) { animation-delay: 0.40s; }
+
+/* ── CURSOR EXPAND ON HOVER ── */
+.cursor-expand {
+  cursor: none;
+}
+
+/* ── CATEGORY CARD HOVER ── */
+.cat-card {
+  transition: opacity var(--duration-fast) var(--ease-standard);
+}
+
+.cat-card:hover .cat-card__label {
+  color: var(--color-brand);
+}
+
+/* ── BUTTON RIPPLE (pure CSS fallback) ── */
+.btn--primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0);
+  transition: background var(--duration-fast) var(--ease-standard);
+  border-radius: inherit;
+}
+
+.btn--primary:active::after {
+  background: rgba(255,255,255,0.1);
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── HERO PARALLAX WRAPPER ── */
+.hero__parallax {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* ── SECTION LINE REVEAL ── */
+.line-reveal {
+  overflow: hidden;
+  display: block;
+}
+
+.line-reveal span {
+  display: block;
+  transform: translateY(100%);
+  transition: transform var(--duration-slower) var(--ease-expo);
+}
+
+.line-reveal.in-view span {
+  transform: translateY(0);
+}
+
+/* ── FADE CLASSES (JS toggles these) ── */
+.is-revealed {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: opacity var(--duration-slow) var(--ease-expo),
+              transform var(--duration-slow) var(--ease-expo);
+}
+
+/* ── PROMO BANNER ENTRANCE ── */
+@keyframes bannerSlideDown {
+  from { transform: translateY(-100%); }
+  to   { transform: translateY(0); }
+}
+
+.promo-banner {
+  animation: bannerSlideDown 0.5s var(--ease-expo) both;
+}
+
+/* ── MOBILE MENU ── */
+.mobile-menu {
+  transform: translateX(100%);
+  transition: transform var(--duration-slow) var(--ease-expo);
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
