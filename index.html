@@ -48,6 +48,7 @@
   <link rel="stylesheet" href="./assets/css/home.css" />
   <link rel="stylesheet" href="./assets/css/featured-products.css" />
   <link rel="stylesheet" href="./assets/css/categories-slider.css" />
+  <link rel="stylesheet" href="./assets/css/projects-testimonials.css" />
 </head>
 <body>
 
@@ -154,7 +155,7 @@
 
 <section class="section categories" data-section-categories>
   <div class="container">
-    <div class="categories__header" data-reveal>
+    <div class="categories__header">
       <div>
         <p class="label" style="margin-bottom: var(--space-3);">Browse by room</p>
         <h2 class="display display--4">Shop by Collection</h2>
@@ -291,14 +292,14 @@
 <section class="section featured-products" id="featured-products">
   <div class="container">
     <div class="featured-products__header">
-      <div class="featured-products__header-text" data-reveal>
+      <div class="featured-products__header-text">
         <span class="label label--brand">Featured Products</span>
         <h2 class="display display--3">Handpicked for you</h2>
       </div>
-      <a href="./pages/products.html" class="btn btn--ghost" data-reveal>View full collection →</a>
+      <a href="./pages/products.html" class="btn btn--ghost">View full collection →</a>
     </div>
 
-    <div class="featured-products__grid" id="featured-products-grid" data-stagger-parent>
+    <div class="featured-products__grid" id="featured-products-grid">
       <!-- Rendered by products-home.js from /data/products.json -->
       <!-- Fallback cards shown while JS loads -->
     </div>
@@ -308,117 +309,328 @@
 <hr class="rule container" data-rule-draw />
 
 
-  <!-- ════════════════════════════════════════
-       ABOUT STRIP
-  ════════════════════════════════════════ -->
-  <section class="section about-strip">
-    <div class="container">
-      <div class="about-strip__grid">
-        <div class="about-strip__left" data-reveal-left>
-          <p class="label" style="margin-bottom: var(--space-5);">Our story</p>
-          <h2 class="display display--3">
-            Built in Takoradi.<br>
-            <em>Trusted across Ghana.</em>
-          </h2>
-          <p class="body-text" style="margin-block: var(--space-5);">
-            Since 1992, we've designed and crafted furniture that earns its place in every room it enters. Every piece carries the precision of three decades of practice.
-          </p>
-          <a href="../pages/about.html" class="btn btn--ghost">Read our story →</a>
+  <!-- ABOUT STRIP -->
+
+<section class="about-strip" id="about-strip">
+  <div class="container">
+    <div class="about-strip__grid">
+
+      <!-- LEFT — text -->
+      <div class="about-strip__left">
+        <p class="label label--brand">Our story</p>
+        <h2 class="display display--3">
+          Built in Takoradi.<br>
+          <em>Trusted across Ghana.</em>
+        </h2>
+        <p class="body-text">
+          Since 1992, we've designed and crafted furniture that earns its place
+          in every room it enters. Every piece carries the precision of three
+          decades of practice — built to last, made to matter.
+        </p>
+        <a href="./pages/about.html" class="btn btn--secondary">Read our story →</a>
+      </div>
+
+      <!-- RIGHT — stats + image -->
+      <div class="about-strip__right">
+
+        <div class="about-strip__stats">
+          <div class="stat-card">
+            <p class="stat-card__number display display--3 text-brand"
+               data-count="30" data-suffix="+">0+</p>
+            <p class="stat-card__label label">Years of craft</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-card__number display display--3 text-brand"
+               data-count="120" data-suffix="+">0+</p>
+            <p class="stat-card__label label">Skilled artisans</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-card__number display display--3 text-brand"
+               data-count="2">0</p>
+            <p class="stat-card__label label">City showrooms</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-card__number display display--3 text-brand"
+               data-count="1000" data-suffix="+">0+</p>
+            <p class="stat-card__label label">Homes furnished</p>
+          </div>
         </div>
 
-        <div class="about-strip__right">
-          <div class="about-strip__stats" data-stagger-parent>
-            <div class="stat-card" data-stagger-child>
-              <p class="stat-card__number display display--3 text-brand" data-count="30" data-suffix="+">0+</p>
-              <p class="stat-card__label label">Years of craft</p>
-            </div>
-            <div class="stat-card" data-stagger-child>
-              <p class="stat-card__number display display--3 text-brand" data-count="120" data-suffix="+">0+</p>
-              <p class="stat-card__label label">Skilled artisans</p>
-            </div>
-            <div class="stat-card" data-stagger-child>
-              <p class="stat-card__number display display--3 text-brand" data-count="2">0</p>
-              <p class="stat-card__label label">City showrooms</p>
-            </div>
-            <div class="stat-card" data-stagger-child>
-              <p class="stat-card__number display display--3 text-brand" data-count="1000" data-suffix="+">0+</p>
-              <p class="stat-card__label label">Homes furnished</p>
-            </div>
-          </div>
-
-          <div class="about-strip__img img-frame" data-reveal-right>
-            <img
-              src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760989901/bedroom_xcasuq.jpg"
-              alt="Kings Furniture craftsmanship"
-              class="img-cover"
-              loading="lazy"
-            />
-          </div>
+        <div class="about-strip__img img-frame">
+          <img
+            src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760989901/bedroom_xcasuq.jpg"
+            alt="Kings Furniture craftsmanship"
+            class="img-cover"
+            loading="lazy"
+          />
         </div>
+
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <hr class="rule container" data-rule-draw />
 
+ <!-- PROJECTS TEASER -->
 
-  <!-- ════════════════════════════════════════
-       WHY US
-  ════════════════════════════════════════ -->
-  <section class="section why-us">
-    <div class="container">
-      <p class="label" data-reveal style="margin-bottom: var(--space-12);">Why Kings Furniture</p>
-      <div class="why-us__grid" data-stagger-parent>
-        <div class="why-item" data-stagger-child>
-          <p class="why-item__num">01</p>
+<section class="projects-teaser">
+  <div class="container">
+
+    <div class="projects-teaser__header">
+      <div>
+        <p class="label label--brand">Our work</p>
+        <h2 class="display display--3">
+          Spaces we've<br>
+          <em>transformed.</em>
+        </h2>
+      </div>
+      <a href="./pages/projects.html" class="btn btn--secondary">View all projects →</a>
+    </div>
+
+    <div class="projects-teaser__grid">
+
+      <a href="./pages/projects.html" class="project-card project-card--large">
+        <figure class="project-card__figure">
+          <img
+            src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_900/v1760989890/9fc86d74-a09a-4155-881d-60e6af7e76c8_elkcx3.jpg"
+            alt="Residential living room project — Accra"
+            class="project-card__img"
+            loading="lazy"
+          />
+          <div class="project-card__overlay">
+            <div class="project-card__meta">
+              <span class="project-card__tag">Residential</span>
+              <span class="project-card__tag">Accra</span>
+            </div>
+            <h3 class="project-card__name">Private Residence, East Legon</h3>
+            <p class="project-card__desc">Full living and dining fit-out for a 5-bedroom home in Accra.</p>
+          </div>
+        </figure>
+      </a>
+
+      <a href="./pages/projects.html" class="project-card">
+        <figure class="project-card__figure">
+          <img
+            src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760991627/office_zy54dk.jpg"
+            alt="Corporate office fit-out — Takoradi"
+            class="project-card__img"
+            loading="lazy"
+          />
+          <div class="project-card__overlay">
+            <div class="project-card__meta">
+              <span class="project-card__tag">Commercial</span>
+              <span class="project-card__tag">Takoradi</span>
+            </div>
+            <h3 class="project-card__name">Corporate HQ, Takoradi</h3>
+            <p class="project-card__desc">Executive suites and open-plan workspaces across three floors.</p>
+          </div>
+        </figure>
+      </a>
+
+      <a href="./pages/projects.html" class="project-card">
+        <figure class="project-card__figure">
+          <img
+            src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760989901/bedroom_xcasuq.jpg"
+            alt="Hotel bedroom suite — Kumasi"
+            class="project-card__img"
+            loading="lazy"
+          />
+          <div class="project-card__overlay">
+            <div class="project-card__meta">
+              <span class="project-card__tag">Hospitality</span>
+              <span class="project-card__tag">Kumasi</span>
+            </div>
+            <h3 class="project-card__name">Boutique Hotel, Kumasi</h3>
+            <p class="project-card__desc">24 bedroom suites fully furnished to a luxury brief.</p>
+          </div>
+        </figure>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<hr class="rule container" data-rule-draw />
+
+
+<!-- TESTIMONIALS -->
+
+<section class="testimonials">
+  <div class="container">
+
+    <div class="testimonials__header">
+      <p class="label label--brand">What clients say</p>
+      <h2 class="display display--3">
+        Trusted by homes<br>
+        <em>across Ghana.</em>
+      </h2>
+    </div>
+
+    <div class="testimonials__grid">
+
+      <blockquote class="testimonial-card">
+        <div class="testimonial-card__stars" aria-label="5 stars">
+          ★★★★★
+        </div>
+        <p class="testimonial-card__quote">
+          "Kings Furniture transformed our entire home. The quality is unlike anything
+          we've seen from a local manufacturer — every joint, every finish, every detail
+          is exactly right. We've recommended them to everyone we know."
+        </p>
+        <footer class="testimonial-card__footer">
+          <div class="testimonial-card__avatar" aria-hidden="true">AO</div>
+          <div>
+            <p class="testimonial-card__name">Abena Osei</p>
+            <p class="testimonial-card__role">Homeowner, East Legon, Accra</p>
+          </div>
+        </footer>
+      </blockquote>
+
+      <blockquote class="testimonial-card testimonial-card--featured">
+        <div class="testimonial-card__stars" aria-label="5 stars">
+          ★★★★★
+        </div>
+        <p class="testimonial-card__quote">
+          "We furnished our entire corporate headquarters with Kings. The team was
+          professional, the delivery was on time, and the craftsmanship has held up
+          perfectly two years later. They are the standard for Ghanaian furniture."
+        </p>
+        <footer class="testimonial-card__footer">
+          <div class="testimonial-card__avatar" aria-hidden="true">KA</div>
+          <div>
+            <p class="testimonial-card__name">Kwame Asante</p>
+            <p class="testimonial-card__role">Managing Director, Takoradi</p>
+          </div>
+        </footer>
+      </blockquote>
+
+      <blockquote class="testimonial-card">
+        <div class="testimonial-card__stars" aria-label="5 stars">
+          ★★★★★
+        </div>
+        <p class="testimonial-card__quote">
+          "The custom kitchen cabinets they built for us are absolutely stunning.
+          They listened to exactly what we wanted, suggested improvements we hadn't
+          thought of, and delivered on time. We couldn't be happier."
+        </p>
+        <footer class="testimonial-card__footer">
+          <div class="testimonial-card__avatar" aria-hidden="true">EA</div>
+          <div>
+            <p class="testimonial-card__name">Esi Acheampong</p>
+            <p class="testimonial-card__role">Homeowner, Kumasi</p>
+          </div>
+        </footer>
+      </blockquote>
+
+    </div>
+  </div>
+</section>
+
+<hr class="rule container" data-rule-draw />
+
+
+<!-- WHY US -->
+<section class="why-us">
+  <div class="container">
+ 
+    <div class="why-us__header">
+      <p class="label label--brand">Why Kings Furniture</p>
+      <h2 class="display display--3">
+        Crafted with intention.<br>
+        <em>Built to endure.</em>
+      </h2>
+    </div>
+ 
+    <div class="why-us__grid">
+ 
+      <div class="why-item">
+        <div class="why-item__icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/>
+            <path d="M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div class="why-item__text">
           <h3 class="why-item__title">Quality materials</h3>
           <p class="why-item__body">Carefully sourced hardwoods and fabrics, built to outlast trends and daily use for decades.</p>
         </div>
-        <div class="why-item" data-stagger-child>
-          <p class="why-item__num">02</p>
+      </div>
+ 
+      <div class="why-item">
+        <div class="why-item__icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+          </svg>
+        </div>
+        <div class="why-item__text">
           <h3 class="why-item__title">Custom design</h3>
           <p class="why-item__body">Tell us your vision and dimensions. We'll design and build exactly what your space needs.</p>
         </div>
-        <div class="why-item" data-stagger-child>
-          <p class="why-item__num">03</p>
+      </div>
+ 
+      <div class="why-item">
+        <div class="why-item__icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12H19M19 12L13 6M19 12L13 18"/>
+          </svg>
+        </div>
+        <div class="why-item__text">
           <h3 class="why-item__title">Nationwide delivery</h3>
           <p class="why-item__body">From our Takoradi workshop to Accra, Kumasi, and every city across Ghana.</p>
         </div>
-        <div class="why-item" data-stagger-child>
-          <p class="why-item__num">04</p>
+      </div>
+ 
+      <div class="why-item">
+        <div class="why-item__icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div class="why-item__text">
           <h3 class="why-item__title">30 years trusted</h3>
           <p class="why-item__body">Three decades earning the trust of families, institutions, and businesses throughout Ghana.</p>
         </div>
       </div>
+ 
     </div>
-  </section>
+  </div>
+</section>
 
 
-  <!-- ════════════════════════════════════════
-       CTA BANNER
-  ════════════════════════════════════════ -->
+
+<!-- CTA BANNER -->
   <section class="cta-banner" data-cta-banner>
-    <div class="container">
-      <div class="cta-banner__inner">
-        <div class="cta-banner__text" data-cta-item>
-          <p class="label label--gold">Ready to start?</p>
-          <h2 class="display display--3">
-            Find the right furniture<br>
-            <em>for your space.</em>
-          </h2>
-        </div>
-        <div class="cta-banner__actions" data-cta-item>
-          <a href="./pages/products.html" class="btn btn--primary btn--lg">Browse Collection</a>
-          <a href="./pages/contact.html" class="btn btn--secondary btn--lg">Get a Quote</a>
-        </div>
+  <div class="cta-banner__bg" aria-hidden="true"></div>
+  <div class="container">
+    <div class="cta-banner__inner">
+ 
+      <div class="cta-banner__left">
+        <p class="label label--gold">Ready to start?</p>
+        <h2 class="display display--2">
+          Find the right furniture<br>
+          <em>for your space.</em>
+        </h2>
+        <p class="cta-banner__sub">
+          Visit our showrooms in Takoradi and Accra, or reach out and
+          we'll bring the showroom to you.
+        </p>
       </div>
+ 
+      <div class="cta-banner__right">
+        <a href="./pages/products.html" class="btn btn--primary btn--lg">Browse Collection</a>
+        <a href="./pages/contact.html" class="btn cta-banner__ghost">Get a Quote →</a>
+      </div>
+ 
     </div>
-  </section>
+  </div>
+</section>
 
 
-  <!-- ════════════════════════════════════════
-       FOOTER
-  ════════════════════════════════════════ -->
+
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">

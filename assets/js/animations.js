@@ -98,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Staggered grid reveals ──
   document.querySelectorAll('[data-stagger-parent]').forEach(parent => {
     const children = parent.querySelectorAll('[data-stagger-child]');
+    if (!children.length) return;
     gsap.from(children, {
       y: 40,
       opacity: 0,
