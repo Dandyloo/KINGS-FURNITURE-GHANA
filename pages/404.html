@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — Kings Furniture Ghana</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://res.cloudinary.com/djmyiuu5k/image/upload/v1760868207/KINGS_NEW_LOGO_3_qwzemb.png" type="image/png" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../assets/css/tokens.css" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/animations.css" />
+  <link rel="stylesheet" href="../assets/css/navbar.css" />
+
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--space-12) var(--gutter);
+    }
+
+    .error-page__num {
+      font-family: var(--font-display);
+      font-size: clamp(6rem, 20vw, 14rem);
+      font-weight: 300;
+      line-height: 1;
+      color: var(--color-brand-light);
+      letter-spacing: var(--tracking-tight);
+      margin-bottom: var(--space-6);
+    }
+
+    .error-page__title {
+      font-family: var(--font-display);
+      font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+      font-weight: 400;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-5);
+    }
+
+    .error-page__body {
+      font-size: var(--text-base);
+      color: var(--color-text-secondary);
+      line-height: var(--leading-loose);
+      max-width: 380px;
+      margin-bottom: var(--space-10);
+    }
+
+    .error-page__actions {
+      display: flex;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .error-page__links {
+      margin-top: var(--space-16);
+      display: flex;
+      gap: var(--space-8);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .error-page__link {
+      font-size: var(--text-sm);
+      color: var(--color-text-tertiary);
+      text-decoration: none;
+      transition: color var(--duration-fast) var(--ease-standard);
+    }
+
+    .error-page__link:hover {
+      color: var(--color-brand);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page transition overlay -->
+  <div class="page-transition" aria-hidden="true"></div>
+
+  <!-- ════════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════ -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+
+      <a href="/index.html" class="nav__logo" aria-label="Kings Furniture Ghana">
+        <img src="https://res.cloudinary.com/djmyiuu5k/image/upload/v1760868207/KINGS_NEW_LOGO_3_qwzemb.png" alt="Kings Furniture Ghana" class="nav__logo-img" />
+      </a>
+
+      <div class="nav__pill">
+        <a href="/index.html" class="nav__link">Home</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="products.html" class="nav__link">Products</a>
+        <a href="projects.html" class="nav__link">Projects</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+      </div>
+
+      <div class="nav__cta">
+        <a href="contact.html" class="btn btn--primary">Contact Us</a>
+      </div>
+
+      <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile overlay -->
+  <div class="nav__overlay" aria-hidden="true"></div>
+
+  <!-- Mobile menu -->
+  <nav class="nav__mobile" id="mobileNav" aria-hidden="true">
+    <button class="nav__mobile-close" aria-label="Close menu">&times;</button>
+    <div class="nav__mobile-content">
+      <a href="/index.html" class="nav__mobile-link">Home</a>
+      <a href="about.html" class="nav__mobile-link">About</a>
+      <a href="products.html" class="nav__mobile-link">Products</a>
+      <a href="projects.html" class="nav__mobile-link">Projects</a>
+      <a href="contact.html" class="nav__mobile-link">Contact</a>
+      <a href="contact.html" class="nav__mobile-cta">Get a Quote</a>
+    </div>
+  </nav>
+
+
+  <!-- ════════════════════════════════════════
+       404 CONTENT
+  ════════════════════════════════════════ -->
+  <main id="main-content">
+    <div class="error-page">
+      <p class="error-page__num">404</p>
+      <h1 class="error-page__title">This page doesn't exist.</h1>
+      <p class="error-page__body">
+        The page you're looking for may have been moved or removed.
+        Let's get you back to something beautiful.
+      </p>
+      <div class="error-page__actions">
+        <a href="/index.html" class="btn btn--primary btn--lg">Back to Home</a>
+        <a href="products.html" class="btn btn--secondary btn--lg">Browse Collection</a>
+      </div>
+      <div class="error-page__links">
+        <a href="about.html" class="error-page__link">About</a>
+        <a href="projects.html" class="error-page__link">Projects</a>
+        <a href="contact.html" class="error-page__link">Contact</a>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/navbar.js"></script>
+  <script src="../assets/js/animations.js"></script>
+</body>
+</html>

@@ -295,7 +295,7 @@
   .nav__hamburger { display: flex; }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .nav__cta { display: none; }
 
   .nav__mobile {

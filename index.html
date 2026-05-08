@@ -36,6 +36,9 @@
     "url": "https://kingsfurniture.gh"
   }
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="icon" href="https://res.cloudinary.com/djmyiuu5k/image/upload/v1760868207/KINGS_NEW_LOGO_3_qwzemb.png" type="image/png" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="./assets/css/tokens.css" />
@@ -101,12 +104,13 @@
        HERO
   ════════════════════════════════════════ -->
   <section class="hero" data-hero>
-    <div class="hero__media" data-hero-img>
+    <div class="hero__media" >
       <img
         src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_1400/v1760989890/9fc86d74-a09a-4155-881d-60e6af7e76c8_elkcx3.jpg"
         alt="Kings Furniture — Premium Living Room"
         class="img-cover"
         fetchpriority="high"
+        data-hero-img
       />
       <div class="hero__overlay" aria-hidden="true"></div>
     </div>
@@ -352,10 +356,9 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <div class="nav__logo" style="margin-bottom: var(--space-4);">
-            <div class="nav__logo-mark"><span>K</span></div>
-            <span class="nav__logo-text">Kings Furniture</span>
-          </div>
+          <a href="/index.html" class="nav__logo" style="margin-bottom: var(--space-4);">
+  <img src="https://res.cloudinary.com/djmyiuu5k/image/upload/v1760868207/KINGS_NEW_LOGO_3_qwzemb.png" alt="Kings Furniture Ghana" class="nav__logo-img" />
+</a>
           <p class="body-text body-text--sm" style="max-width:220px;">
             Crafting quality furniture for over 30 years.<br>Takoradi, Ghana.
           </p>
@@ -369,7 +372,7 @@
         <div class="footer__col">
           <p class="label" style="margin-bottom: var(--space-5);">Navigate</p>
           <nav>
-            <a href="./pages/index.html" class="footer__link">Home</a>
+            <a href="/index.html" class="footer__link">Home</a>
             <a href="./pages/about.html" class="footer__link">About</a>
             <a href="./pages/products.html" class="footer__link">Products</a>
             <a href="./pages/projects.html" class="footer__link">Projects</a>
