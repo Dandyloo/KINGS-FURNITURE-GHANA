@@ -1,0 +1,126 @@
+{
+  "featured": [
+    {
+      "id": "kf-001",
+      "name": "Serenity King Bed",
+      "category": "Bedroom",
+      "categorySlug": "bedroom",
+      "description": "A statement headboard with upholstered panel detailing. Solid hardwood frame built for generations.",
+      "image": "https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_800/v1760989901/bedroom_xcasuq.jpg",
+      "featured": true,
+      "enquirySubject": "Serenity King Bed"
+    },
+    {
+      "id": "kf-002",
+      "name": "Meridian Dining Set",
+      "category": "Dining",
+      "categorySlug": "dining",
+      "description": "Six-seater dining set with hand-turned legs and a solid mahogany top. For gatherings that matter.",
+      "image": "https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_800/v1760990684/dining_cvuxju.jpg",
+      "featured": true,
+      "enquirySubject": "Meridian Dining Set"
+    },
+    {
+      "id": "kf-003",
+      "name": "Executive Office Suite",
+      "category": "Office",
+      "categorySlug": "office",
+      "description": "A commanding desk and credenza in dark walnut veneer. Designed to project authority and comfort.",
+      "image": "https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_800/v1760991627/office_zy54dk.jpg",
+      "featured": true,
+      "enquirySubject": "Executive Office Suite"
+    },
+    {
+      "id": "kf-004",
+      "name": "Takoradi Living Suite",
+      "category": "Living Room",
+      "categorySlug": "living",
+      "description": "A deep-seated sofa set with carved wooden accents. Comfort without compromise, style without effort.",
+      "image": "https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_800/v1760989890/9fc86d74-a09a-4155-881d-60e6af7e76c8_elkcx3.jpg",
+      "featured": true,
+      "enquirySubject": "Takoradi Living Suite"
+    },
+    {
+      "id": "kf-005",
+      "name": "Artisan Kitchen Cabinets",
+      "category": "Kitchen",
+      "categorySlug": "kitchen",
+      "description": "Custom-built kitchen cabinetry in satin-lacquered hardwood. Designed to your exact dimensions.",
+      "image": "https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_800/v1760990288/kitchen_ss5qdm.jpg",
+      "featured": true,
+      "enquirySubject": "Artisan Kitchen Cabinets"
+    },
+    {
+      "id": "kf-006",
+      "name": "Heritage Wardrobe",
+      "category": "Bedroom",
+      "categorySlug": "bedroom",
+      "description": "A floor-to-ceiling fitted wardrobe with soft-close hinges and solid wood carcass. Timeless storage.",
+      "image": "https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_800/v1760989901/bedroom_xcasuq.jpg",
+      "featured": true,
+      "enquirySubject": "Heritage Wardrobe"
+    }
+  ],
+  "all": [
+    {
+      "id": "kf-001",
+      "name": "Serenity King Bed",
+      "category": "Bedroom",
+      "categorySlug": "bedroom",
+      "description": "A statement headboard with upholstered panel detailing. Solid hardwood frame built for generations.",
+      "image": "https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_800/v1760989901/bedroom_xcasuq.jpg",
+      "featured": true,
+      "enquirySubject": "Serenity King Bed"
+    },
+    {
+      "id": "kf-002",
+      "name": "Meridian Dining Set",
+      "category": "Dining",
+      "categorySlug": "dining",
+      "description": "Six-seater dining set with hand-turned legs and a solid mahogany top. For gatherings that matter.",
+      "image": "https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_800/v1760990684/dining_cvuxju.jpg",
+      "featured": true,
+      "enquirySubject": "Meridian Dining Set"
+    },
+    {
+      "id": "kf-003",
+      "name": "Executive Office Suite",
+      "category": "Office",
+      "categorySlug": "office",
+      "description": "A commanding desk and credenza in dark walnut veneer. Designed to project authority and comfort.",
+      "image": "https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_800/v1760991627/office_zy54dk.jpg",
+      "featured": true,
+      "enquirySubject": "Executive Office Suite"
+    },
+    {
+      "id": "kf-004",
+      "name": "Takoradi Living Suite",
+      "category": "Living Room",
+      "categorySlug": "living",
+      "description": "A deep-seated sofa set with carved wooden accents. Comfort without compromise, style without effort.",
+      "image": "https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_800/v1760989890/9fc86d74-a09a-4155-881d-60e6af7e76c8_elkcx3.jpg",
+      "featured": true,
+      "enquirySubject": "Takoradi Living Suite"
+    },
+    {
+      "id": "kf-005",
+      "name": "Artisan Kitchen Cabinets",
+      "category": "Kitchen",
+      "categorySlug": "kitchen",
+      "description": "Custom-built kitchen cabinetry in satin-lacquered hardwood. Designed to your exact dimensions.",
+      "image": "https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_800/v1760990288/kitchen_ss5qdm.jpg",
+      "featured": true,
+      "enquirySubject": "Artisan Kitchen Cabinets"
+    },
+    {
+      "id": "kf-006",
+      "name": "Heritage Wardrobe",
+      "category": "Bedroom",
+      "categorySlug": "bedroom",
+      "description": "A floor-to-ceiling fitted wardrobe with soft-close hinges and solid wood carcass. Timeless storage.",
+      "image": "https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_800/v1760989901/bedroom_xcasuq.jpg",
+      "featured": true,
+      "enquirySubject": "Heritage Wardrobe"
+    }
+  ]
+}
