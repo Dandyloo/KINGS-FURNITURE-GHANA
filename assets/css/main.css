@@ -278,6 +278,8 @@ input, textarea, select {
   pointer-events: none;
   transform-origin: bottom;
   transform: scaleY(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 /* ── MISC ── */
