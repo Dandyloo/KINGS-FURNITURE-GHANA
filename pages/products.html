@@ -49,6 +49,7 @@
   <link rel="stylesheet" href="../assets/css/main.css" />
   <link rel="stylesheet" href="../assets/css/animations.css" />
   <link rel="stylesheet" href="../assets/css/navbar.css" />
+  <link rel="stylesheet" href="../assets/css/home.css" />
   <link rel="stylesheet" href="../assets/css/products.css" />
 </head>
 <body>
@@ -108,17 +109,27 @@
   <main id="main-content">
 
     <!-- ── PAGE HERO ── -->
-    <section class="products-hero">
+    <section class="products-hero products-hero--image" data-hero>
+      <div class="products-hero__media">
+        <img
+          src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_1400/v1760990684/dining_cvuxju.jpg"
+          alt="Kings Furniture Ghana — collection"
+          class="img-cover"
+          fetchpriority="high"
+          data-hero-img
+        />
+        <div class="products-hero__overlay" aria-hidden="true"></div>
+      </div>
       <div class="container">
         <div class="products-hero__inner">
           <div>
-            <p class="label label--brand products-hero__label" data-reveal>Our collection</p>
-            <h1 class="display display--2 products-hero__heading" data-reveal>
+            <p class="label label--gold products-hero__label" data-hero-label>Our collection</p>
+            <h1 class="display display--2 products-hero__heading" data-hero-heading>
               Furniture built<br>
               <em>to last a lifetime.</em>
             </h1>
           </div>
-          <div class="products-hero__meta" data-reveal>
+          <div class="products-hero__meta" data-hero-badge>
             <p class="products-hero__count" id="products-hero-count">—</p>
             <p class="products-hero__count-label">Pieces available</p>
           </div>
@@ -170,7 +181,7 @@
     </section>
 
     <!-- ── CTA STRIP ── -->
-    <section class="products-cta-strip" data-reveal>
+    <section class="products-cta-strip">
       <div class="container">
         <div class="products-cta-strip__inner">
           <div class="products-cta-strip__text">

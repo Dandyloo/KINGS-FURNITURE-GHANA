@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Kings Furniture Ghana</title>
-  <meta name="description" content="The story of Kings Furniture Ghana — crafting premium furniture in Takoradi since 1992." />
+  <meta name="description" content="The story of Kings Furniture Ghana — crafting premium furniture in Takoradi since 1992. Three decades of craft, trusted by homes and institutions across Ghana." />
 
   <!-- SEO -->
   <meta name="robots" content="index, follow" />
@@ -21,13 +21,14 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="About — Kings Furniture Ghana" />
 
-  <!-- Schema: LocalBusiness -->
+  <!-- Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FurnitureStore",
     "name": "Kings Furniture Ghana",
     "foundingDate": "1992",
+    "description": "Ghana's most recognised furniture brand, crafting premium furniture in Takoradi since 1992.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Takoradi",
@@ -50,6 +51,8 @@
   <link rel="stylesheet" href="../assets/css/main.css" />
   <link rel="stylesheet" href="../assets/css/animations.css" />
   <link rel="stylesheet" href="../assets/css/navbar.css" />
+  <link rel="stylesheet" href="../assets/css/home.css" />
+  <link rel="stylesheet" href="../assets/css/about.css" />
 </head>
 <body>
 
@@ -59,7 +62,7 @@
   <!-- ════════════════════════════════════════
        NAVBAR
   ════════════════════════════════════════ -->
-  <nav class="nav" aria-label="Main navigation">
+  <nav class="nav nav--light" data-light="true" aria-label="Main navigation">
     <div class="nav__inner">
 
       <a href="../index.html" class="nav__logo" aria-label="Kings Furniture Ghana">
@@ -71,7 +74,7 @@
         <a href="about.html" class="nav__link is-active">About</a>
         <a href="products.html" class="nav__link">Products</a>
         <a href="projects.html" class="nav__link">Projects</a>
-        <a href="contact.html" class="nav__link">Contact</a>
+        <a href="news.html" class="nav__link">News</a>
       </div>
 
       <div class="nav__cta">
@@ -95,6 +98,7 @@
       <a href="about.html" class="nav__mobile-link is-active">About</a>
       <a href="products.html" class="nav__mobile-link">Products</a>
       <a href="projects.html" class="nav__mobile-link">Projects</a>
+      <a href="news.html" class="nav__mobile-link">News</a>
       <a href="contact.html" class="nav__mobile-link">Contact</a>
       <a href="contact.html" class="nav__mobile-cta">Get a Quote</a>
     </div>
@@ -102,10 +106,501 @@
 
 
   <!-- ════════════════════════════════════════
-       MAIN CONTENT — to be built
+       MAIN CONTENT
   ════════════════════════════════════════ -->
-  <main id="main-content" style="min-height: 60vh;">
-    <!-- Page hero, brand story, timeline, team, showrooms go here -->
+  <main id="main-content">
+
+    <!-- ══ 1. PAGE HERO ══ -->
+    <section class="about-hero" data-hero>
+      <div class="about-hero__media">
+        <img
+          src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_1600/v1760989890/9fc86d74-a09a-4155-881d-60e6af7e76c8_elkcx3.jpg"
+          alt="Kings Furniture Ghana — craftsmanship"
+          fetchpriority="high"
+          data-hero-img
+        />
+      </div>
+      <div class="about-hero__overlay" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="about-hero__content">
+          <div>
+            <p class="label label--gold about-hero__label" data-hero-label>Our story</p>
+            <h1 class="display display--1 about-hero__heading" data-hero-heading>
+              Three decades<br>
+              of <em>craft</em> and<br>
+              conviction.
+            </h1>
+          </div>
+          <div class="about-hero__right" data-hero-body>
+            <p class="about-hero__sub">
+              Founded in Takoradi in 1992, Kings Furniture has spent thirty years
+              building the standard for premium furniture in Ghana — one piece,
+              one family, one room at a time.
+            </p>
+            <div class="about-hero__scroll-line" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══ 2. BRAND STORY ══ -->
+    <section class="about-story">
+      <div class="container">
+        <div class="about-story__grid">
+
+          <!-- Image left -->
+          <figure class="about-story__figure">
+            <div class="about-story__img-wrap">
+              <img
+                src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_900/v1760989901/bedroom_xcasuq.jpg"
+                alt="Kings Furniture Ghana — craftsmanship"
+                loading="lazy"
+              />
+            </div>
+            <div class="about-story__badge" aria-hidden="true">
+              <span class="about-story__badge-year">1992</span>
+              <span class="about-story__badge-label">Founded</span>
+            </div>
+          </figure>
+
+          <!-- Text right -->
+          <div class="about-story__text">
+            <p class="label label--brand">Who we are</p>
+            <h2 class="display display--3">
+              Built in Takoradi.<br>
+              <em>Trusted across Ghana.</em>
+            </h2>
+
+            <blockquote class="about-story__pull">
+              "We didn't set out to build a furniture company. We set out to build
+              furniture worth keeping."
+            </blockquote>
+
+            <div class="about-story__body">
+              <p>
+                Kings Furniture Ghana was founded in 1992 in Takoradi by a craftsman
+                with a simple belief — that <strong>Ghanaian homes deserved furniture
+                built to the same standard as the world's finest.</strong> What began
+                as a small workshop on the western coast has grown into the country's
+                most recognised furniture brand.
+              </p>
+              <p>
+                Every piece we make starts with the same question: will this still be
+                beautiful in thirty years? We source hardwoods with patience, join them
+                with precision, and finish them with the kind of care that only comes
+                from people who genuinely love their work.
+              </p>
+              <p>
+                We serve homeowners, architects, hoteliers and institutions across
+                Ghana — from Takoradi to Accra, Kumasi to Tamale. Our workshop has
+                grown, but our standard has never changed.
+              </p>
+            </div>
+
+            <a href="products.html" class="btn btn--secondary" style="width:fit-content;">
+              Explore our collection →
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule container" data-rule-draw />
+
+
+    <!-- ══ 3. MILESTONE TIMELINE ══ -->
+    <section class="about-timeline">
+      <div class="container">
+
+        <div class="about-timeline__header">
+          <div>
+            <p class="label label--brand">Our journey</p>
+            <h2 class="display display--3">
+              Thirty years,<br>
+              <em>one standard.</em>
+            </h2>
+          </div>
+          <p class="about-timeline__header-right">
+            From a single workshop in Takoradi to Ghana's most recognised
+            furniture brand — every milestone shaped by craft, not compromise.
+          </p>
+        </div>
+
+        <div class="about-timeline__track" data-stagger-parent>
+
+          <div class="timeline-item" data-stagger-child>
+            <span class="timeline-item__year">1992</span>
+            <div class="timeline-item__dot" aria-hidden="true"></div>
+            <div class="timeline-item__content">
+              <h3 class="timeline-item__title">The workshop opens</h3>
+              <p class="timeline-item__body">
+                Kings Furniture is founded in Takoradi by [Founder Name] with a
+                four-person team and a belief that Ghanaian craftsmanship could
+                match the world's best. Placeholder — swap this copy.
+              </p>
+              <span class="timeline-item__tag">Founding</span>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-stagger-child>
+            <span class="timeline-item__year">1998</span>
+            <div class="timeline-item__dot" aria-hidden="true"></div>
+            <div class="timeline-item__content">
+              <h3 class="timeline-item__title">First showroom opens</h3>
+              <p class="timeline-item__body">
+                The Takoradi showroom opens its doors to the public, bringing
+                the workshop's full range to customers for the first time.
+                Placeholder — swap this copy.
+              </p>
+              <span class="timeline-item__tag">Expansion</span>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-stagger-child>
+            <span class="timeline-item__year">2005</span>
+            <div class="timeline-item__dot" aria-hidden="true"></div>
+            <div class="timeline-item__content">
+              <h3 class="timeline-item__title">Commercial contracts begin</h3>
+              <p class="timeline-item__body">
+                Kings secures its first major commercial contract, furnishing a
+                landmark hotel project in [City]. The hospitality division is
+                born. Placeholder — swap this copy.
+              </p>
+              <span class="timeline-item__tag">Commercial</span>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-stagger-child>
+            <span class="timeline-item__year">2012</span>
+            <div class="timeline-item__dot" aria-hidden="true"></div>
+            <div class="timeline-item__content">
+              <h3 class="timeline-item__title">Accra showroom launches</h3>
+              <p class="timeline-item__body">
+                A second showroom opens in Accra, extending Kings Furniture's
+                reach to the capital and cementing its national presence.
+                Placeholder — swap this copy.
+              </p>
+              <span class="timeline-item__tag">Expansion</span>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-stagger-child>
+            <span class="timeline-item__year">2018</span>
+            <div class="timeline-item__dot" aria-hidden="true"></div>
+            <div class="timeline-item__content">
+              <h3 class="timeline-item__title">Workshop expansion</h3>
+              <p class="timeline-item__body">
+                The Takoradi workshop triples in size, adding dedicated finishing
+                rooms and upholstery studios. Artisan count grows to over 120.
+                Placeholder — swap this copy.
+              </p>
+              <span class="timeline-item__tag">Milestone</span>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-stagger-child>
+            <span class="timeline-item__year">2025</span>
+            <div class="timeline-item__dot" aria-hidden="true"></div>
+            <div class="timeline-item__content">
+              <h3 class="timeline-item__title">30 years. Still building.</h3>
+              <p class="timeline-item__body">
+                Kings Furniture marks three decades of craft with over 1,000 homes
+                furnished, two showrooms, and the same uncompromising standard the
+                workshop was founded on.
+              </p>
+              <span class="timeline-item__tag">30th Anniversary</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule container" data-rule-draw />
+
+
+    <!-- ══ 4. CRAFTSMANSHIP + TEAM ══ -->
+    <section class="about-craft">
+      <div class="container">
+
+        <div class="about-craft__header">
+          <div>
+            <p class="label label--brand">The making</p>
+            <h2 class="display display--3">
+              People who take<br>
+              <em>pride in every joint.</em>
+            </h2>
+          </div>
+          <p class="about-craft__header-sub">
+            Our artisans are the soul of Kings Furniture. Most have been with us
+            for over a decade — and it shows in every piece they build.
+          </p>
+        </div>
+
+        <!-- Workshop scene -->
+        <div class="about-craft__scene">
+          <img
+            src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_1400/v1760991627/office_zy54dk.jpg"
+            alt="Kings Furniture Ghana — workshop and craftsmanship"
+            loading="lazy"
+          />
+          <div class="about-craft__scene-overlay" aria-hidden="true">
+            <div class="about-craft__scene-text">
+              <h3 class="about-craft__scene-heading">
+                Every piece begins<br>
+                with <em>hardwood and hands.</em>
+              </h3>
+              <p class="about-craft__scene-body">
+                Our Takoradi workshop runs on patience. Timber is dried, joinery
+                is hand-fitted, and every surface is finished by someone who will
+                sign their name to the result.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team -->
+        <p class="label label--brand about-craft__team-label">Meet the team</p>
+
+        <div class="about-craft__team" data-stagger-parent>
+
+          <div class="team-card" data-stagger-child>
+            <figure class="team-card__figure">
+              <div class="team-card__avatar" aria-hidden="true">KA</div>
+            </figure>
+            <div class="team-card__info">
+              <h3 class="team-card__name">[Founder Name]</h3>
+              <p class="team-card__role">Founder & Master Craftsman</p>
+              <p class="team-card__years">Est. 1992</p>
+            </div>
+          </div>
+
+          <div class="team-card" data-stagger-child>
+            <figure class="team-card__figure">
+              <div class="team-card__avatar" aria-hidden="true">AA</div>
+            </figure>
+            <div class="team-card__info">
+              <h3 class="team-card__name">[Name Placeholder]</h3>
+              <p class="team-card__role">Head of Production</p>
+              <p class="team-card__years">18 years with Kings</p>
+            </div>
+          </div>
+
+          <div class="team-card" data-stagger-child>
+            <figure class="team-card__figure">
+              <div class="team-card__avatar" aria-hidden="true">EK</div>
+            </figure>
+            <div class="team-card__info">
+              <h3 class="team-card__name">[Name Placeholder]</h3>
+              <p class="team-card__role">Lead Designer</p>
+              <p class="team-card__years">12 years with Kings</p>
+            </div>
+          </div>
+
+          <div class="team-card" data-stagger-child>
+            <figure class="team-card__figure">
+              <div class="team-card__avatar" aria-hidden="true">BA</div>
+            </figure>
+            <div class="team-card__info">
+              <h3 class="team-card__name">[Name Placeholder]</h3>
+              <p class="team-card__role">Showroom Manager, Accra</p>
+              <p class="team-card__years">9 years with Kings</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══ 5. STATS STRIP ══ -->
+    <section class="about-stats">
+      <div class="about-stats__bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="about-stats__grid" data-stagger-parent>
+
+          <div class="about-stat" data-stagger-child>
+            <p class="about-stat__number"
+               data-count="30" data-suffix="+">0+</p>
+            <p class="about-stat__label">Years of craft</p>
+            <p class="about-stat__desc">Founded in Takoradi in 1992. Still building to the same standard.</p>
+          </div>
+
+          <div class="about-stat" data-stagger-child>
+            <p class="about-stat__number"
+               data-count="120" data-suffix="+">0+</p>
+            <p class="about-stat__label">Skilled artisans</p>
+            <p class="about-stat__desc">Our team of joiners, finishers and upholsterers — most here over a decade.</p>
+          </div>
+
+          <div class="about-stat" data-stagger-child>
+            <p class="about-stat__number"
+               data-count="2">0</p>
+            <p class="about-stat__label">City showrooms</p>
+            <p class="about-stat__desc">Experience the full collection in Takoradi and Accra.</p>
+          </div>
+
+          <div class="about-stat" data-stagger-child>
+            <p class="about-stat__number"
+               data-count="1000" data-suffix="+">0+</p>
+            <p class="about-stat__label">Homes furnished</p>
+            <p class="about-stat__desc">From private residences to hotels and corporate headquarters.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══ 6. SHOWROOMS ══ -->
+    <section class="about-showrooms">
+      <div class="container">
+
+        <div class="about-showrooms__header">
+          <p class="label label--brand">Visit us</p>
+          <h2 class="display display--3">
+            Two showrooms.<br>
+            <em>One standard.</em>
+          </h2>
+        </div>
+
+        <div class="about-showrooms__grid" data-stagger-parent>
+
+          <!-- Takoradi -->
+          <article class="showroom-card" data-stagger-child>
+            <div class="showroom-card__map">
+              <div class="showroom-card__map-placeholder">
+                <div class="showroom-card__map-pin">
+                  <div class="showroom-card__map-pin-dot" aria-hidden="true"></div>
+                  <span class="showroom-card__map-pin-label">Takoradi Showroom</span>
+                </div>
+              </div>
+            </div>
+            <div class="showroom-card__body">
+              <div class="showroom-card__eyebrow">
+                <span class="showroom-card__type">Headquarters</span>
+              </div>
+              <h3 class="showroom-card__name">Takoradi Showroom</h3>
+              <div class="showroom-card__details">
+                <div class="showroom-card__detail">
+                  <svg class="showroom-card__detail-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  <span>[Address Placeholder], Takoradi, Western Region, Ghana</span>
+                </div>
+                <div class="showroom-card__detail">
+                  <svg class="showroom-card__detail-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  <span>Mon – Sat: 8:00 AM – 6:00 PM<br>Sunday: 10:00 AM – 4:00 PM</span>
+                </div>
+                <div class="showroom-card__detail">
+                  <svg class="showroom-card__detail-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.42 2 2 0 0 1 3.57 1.25h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.72 16.92z"/>
+                  </svg>
+                  <span>+233 50 367 6484</span>
+                </div>
+              </div>
+            </div>
+            <div class="showroom-card__footer">
+              <a href="https://wa.me/233503676484?text=Hello%20Kings%20Furniture%2C%20I%27d%20like%20to%20visit%20the%20Takoradi%20showroom." target="_blank" rel="noopener" class="btn btn--primary">WhatsApp Us</a>
+              <a href="contact.html" class="btn btn--secondary">Get Directions →</a>
+            </div>
+          </article>
+
+          <!-- Accra -->
+          <article class="showroom-card" data-stagger-child>
+            <div class="showroom-card__map">
+              <div class="showroom-card__map-placeholder">
+                <div class="showroom-card__map-pin">
+                  <div class="showroom-card__map-pin-dot" aria-hidden="true"></div>
+                  <span class="showroom-card__map-pin-label">Accra Showroom</span>
+                </div>
+              </div>
+            </div>
+            <div class="showroom-card__body">
+              <div class="showroom-card__eyebrow">
+                <span class="showroom-card__type">Accra Branch</span>
+              </div>
+              <h3 class="showroom-card__name">Accra Showroom</h3>
+              <div class="showroom-card__details">
+                <div class="showroom-card__detail">
+                  <svg class="showroom-card__detail-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  <span>[Address Placeholder], Accra, Greater Accra Region, Ghana</span>
+                </div>
+                <div class="showroom-card__detail">
+                  <svg class="showroom-card__detail-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  <span>Mon – Sat: 8:00 AM – 6:00 PM<br>Sunday: 10:00 AM – 4:00 PM</span>
+                </div>
+                <div class="showroom-card__detail">
+                  <svg class="showroom-card__detail-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.42 2 2 0 0 1 3.57 1.25h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.72 16.92z"/>
+                  </svg>
+                  <span>+233 50 367 6484</span>
+                </div>
+              </div>
+            </div>
+            <div class="showroom-card__footer">
+              <a href="https://wa.me/233503676484?text=Hello%20Kings%20Furniture%2C%20I%27d%20like%20to%20visit%20the%20Accra%20showroom." target="_blank" rel="noopener" class="btn btn--primary">WhatsApp Us</a>
+              <a href="contact.html" class="btn btn--secondary">Get Directions →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══ 7. CTA BANNER ══ -->
+    <section class="about-cta">
+      <div class="about-cta__decor" aria-hidden="true">
+        <div class="about-cta__decor-circle"></div>
+        <div class="about-cta__decor-circle"></div>
+      </div>
+      <div class="container">
+        <div class="about-cta__inner" data-stagger-parent>
+
+          <div class="about-cta__text" data-stagger-child>
+            <p class="label label--gold">Let's work together</p>
+            <h2 class="about-cta__heading">
+              Ready to furnish<br>
+              <em>your space?</em>
+            </h2>
+            <p class="about-cta__sub">
+              Whether it's a single piece or a full home fit-out, we'd love to
+              hear about your project. Reach us on WhatsApp or visit a showroom.
+            </p>
+          </div>
+
+          <div class="about-cta__actions" data-stagger-child>
+            <a
+              href="https://wa.me/233503676484?text=Hello%20Kings%20Furniture%2C%20I%27d%20like%20to%20discuss%20a%20furniture%20project."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="about-cta__wa"
+              aria-label="Contact Kings Furniture on WhatsApp"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Chat on WhatsApp
+            </a>
+            <a href="contact.html" class="about-cta__contact">
+              Contact Us →
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
 
@@ -180,5 +675,6 @@
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/navbar.js"></script>
   <script src="../assets/js/animations.js"></script>
+  <script src="../assets/js/about.js" defer></script>
 </body>
 </html>

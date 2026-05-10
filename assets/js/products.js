@@ -36,6 +36,17 @@
     return;
   }
 
+  // ── Hero entrance animation ──
+  if (typeof gsap !== 'undefined') {
+    const heroLabel   = document.querySelector('.products-hero__label');
+    const heroHeading = document.querySelector('.products-hero__heading');
+    const heroMeta    = document.querySelector('.products-hero__meta');
+    const tl = gsap.timeline({ delay: 0.1 });
+    if (heroLabel)   tl.from(heroLabel,   { y: 16, opacity: 0, duration: 0.7, ease: 'expo.out' }, 0.1);
+    if (heroHeading) tl.from(heroHeading, { y: 32, opacity: 0, duration: 0.9, ease: 'expo.out' }, 0.2);
+    if (heroMeta)    tl.from(heroMeta,    { y: 16, opacity: 0, duration: 0.7, ease: 'expo.out' }, 0.45);
+  }
+
   // ── Update hero count ──
   if (heroCount) heroCount.textContent = allProducts.length;
 
