@@ -21,6 +21,22 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Products — Kings Furniture Ghana" />
 
+  <!-- Schema: ItemList (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Products — Kings Furniture Ghana",
+    "description": "Full furniture collection by Kings Furniture Ghana, crafted in Takoradi since 1992.",
+    "url": "https://kingsfurniture.gh/pages/products.html",
+    "provider": {
+      "@type": "FurnitureStore",
+      "name": "Kings Furniture Ghana",
+      "url": "https://kingsfurniture.gh"
+    }
+  }
+  </script>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,6 +49,7 @@
   <link rel="stylesheet" href="../assets/css/main.css" />
   <link rel="stylesheet" href="../assets/css/animations.css" />
   <link rel="stylesheet" href="../assets/css/navbar.css" />
+  <link rel="stylesheet" href="../assets/css/products.css" />
 </head>
 <body>
 
@@ -54,7 +71,7 @@
         <a href="about.html" class="nav__link">About</a>
         <a href="products.html" class="nav__link is-active">Products</a>
         <a href="projects.html" class="nav__link">Projects</a>
-        <a href="contact.html" class="nav__link">Contact</a>
+        <a href="news.html" class="nav__link">News</a>
       </div>
 
       <div class="nav__cta">
@@ -78,6 +95,7 @@
       <a href="about.html" class="nav__mobile-link">About</a>
       <a href="products.html" class="nav__mobile-link is-active">Products</a>
       <a href="projects.html" class="nav__mobile-link">Projects</a>
+      <a href="news.html" class="nav__mobile-link">News</a>
       <a href="contact.html" class="nav__mobile-link">Contact</a>
       <a href="contact.html" class="nav__mobile-cta">Get a Quote</a>
     </div>
@@ -85,10 +103,102 @@
 
 
   <!-- ════════════════════════════════════════
-       MAIN CONTENT — to be built
+       MAIN CONTENT
   ════════════════════════════════════════ -->
-  <main id="main-content" style="min-height: 60vh;">
-    <!-- Page hero, category filter tabs, product grid, search go here -->
+  <main id="main-content">
+
+    <!-- ── PAGE HERO ── -->
+    <section class="products-hero">
+      <div class="container">
+        <div class="products-hero__inner">
+          <div>
+            <p class="label label--brand products-hero__label" data-reveal>Our collection</p>
+            <h1 class="display display--2 products-hero__heading" data-reveal>
+              Furniture built<br>
+              <em>to last a lifetime.</em>
+            </h1>
+          </div>
+          <div class="products-hero__meta" data-reveal>
+            <p class="products-hero__count" id="products-hero-count">—</p>
+            <p class="products-hero__count-label">Pieces available</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FILTER BAR ── -->
+    <div class="products-filters" role="navigation" aria-label="Filter by category">
+      <div class="container">
+        <div class="products-filters__inner">
+          <div class="products-filters__tabs" role="list">
+            <button class="filter-tab is-active" data-filter="all" role="listitem" aria-pressed="true">
+              All <span class="filter-tab__count"></span>
+            </button>
+            <button class="filter-tab" data-filter="living" role="listitem" aria-pressed="false">
+              Living Room <span class="filter-tab__count"></span>
+            </button>
+            <button class="filter-tab" data-filter="bedroom" role="listitem" aria-pressed="false">
+              Bedroom <span class="filter-tab__count"></span>
+            </button>
+            <button class="filter-tab" data-filter="dining" role="listitem" aria-pressed="false">
+              Dining <span class="filter-tab__count"></span>
+            </button>
+            <button class="filter-tab" data-filter="office" role="listitem" aria-pressed="false">
+              Office <span class="filter-tab__count"></span>
+            </button>
+            <button class="filter-tab" data-filter="kitchen" role="listitem" aria-pressed="false">
+              Kitchen <span class="filter-tab__count"></span>
+            </button>
+            <button class="filter-tab" data-filter="outdoor" role="listitem" aria-pressed="false">
+              Outdoor <span class="filter-tab__count"></span>
+            </button>
+          </div>
+          <p class="products-filters__result" id="products-result-count" aria-live="polite">
+            — pieces
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PRODUCT GRID ── -->
+    <section class="products-section">
+      <div class="container">
+        <div class="products-grid" id="products-grid" aria-label="Product collection">
+          <!-- Rendered by products.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA STRIP ── -->
+    <section class="products-cta-strip" data-reveal>
+      <div class="container">
+        <div class="products-cta-strip__inner">
+          <div class="products-cta-strip__text">
+            <p class="label label--brand">Can't find what you need?</p>
+            <h2 class="display display--3">
+              We build <em>custom</em><br>
+              to your brief.
+            </h2>
+            <p class="products-cta-strip__sub">
+              Every piece in our collection can be customised — dimensions,
+              finishes, fabrics. Or start from scratch with a bespoke commission.
+            </p>
+          </div>
+          <div class="products-cta-strip__actions">
+            <a
+              href="https://wa.me/233503676484?text=Hello%20Kings%20Furniture%2C%20I%20have%20a%20custom%20furniture%20project%20I%27d%20like%20to%20discuss."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--primary btn--lg"
+            >
+              Discuss a Custom Order
+            </a>
+            <a href="contact.html" class="btn btn--secondary">Visit our showroom →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
 
@@ -163,5 +273,6 @@
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/navbar.js"></script>
   <script src="../assets/js/animations.js"></script>
+  <script src="../assets/js/products.js" defer></script>
 </body>
 </html>
