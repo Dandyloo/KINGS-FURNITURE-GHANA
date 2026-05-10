@@ -7,10 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('.nav');
   if (!nav) return;
 
-  // ── Scroll behaviour ──
-  let lastScroll = 0;
+  const isLightPage = nav.dataset.light === 'true';
 
-  const handleScroll = () => {
+  // ── Single source of truth for nav appearance ──
+  // Called on every scroll event AND on menu close
+  const updateNavAppearance = () => {
     const scrollY = window.scrollY;
 
     if (scrollY > 60) {
@@ -18,9 +19,20 @@ document.addEventListener('DOMContentLoaded', () => {
       nav.classList.remove('nav--light');
     } else {
       nav.classList.remove('is-scrolled');
-      // Restore light mode if hero is dark
-      if (nav.dataset.light === 'true') nav.classList.add('nav--light');
+      // Only restore light if this page has a dark hero
+      if (isLightPage) {
+        nav.classList.add('nav--light');
+      }
     }
+  };
+
+  // ── Scroll behaviour ──
+  let lastScroll = 0;
+
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+
+    updateNavAppearance();
 
     // Hide on scroll down, show on scroll up
     if (scrollY > lastScroll && scrollY > 200) {
@@ -32,18 +44,21 @@ document.addEventListener('DOMContentLoaded', () => {
     lastScroll = scrollY;
   };
 
-  window.addEventListener('scroll', handleScroll, { passive: true });
+  // Set transition BEFORE first scroll so it doesn't flash on page load
   nav.style.transition = 'transform 0.4s cubic-bezier(0.16,1,0.3,1), background 0.5s ease, padding 0.4s ease, box-shadow 0.4s ease';
 
+  window.addEventListener('scroll', handleScroll, { passive: true });
+
+  // Run once on init to set correct state
+  updateNavAppearance();
+
   // ── Mobile menu ──
-  const hamburger = document.querySelector('.nav__hamburger');
-  const mobileNav = document.querySelector('.nav__mobile');
+  const hamburger   = document.querySelector('.nav__hamburger');
+  const mobileNav   = document.querySelector('.nav__mobile');
   const mobileClose = document.querySelector('.nav__mobile-close');
-  const overlay = document.querySelector('.nav__overlay');
+  const overlay     = document.querySelector('.nav__overlay');
 
   if (hamburger && mobileNav) {
-    console.log('Mobile menu initialized');
-
     const openMenu = () => {
       hamburger.classList.add('is-open');
       mobileNav.classList.add('is-open');
@@ -51,7 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileNav.setAttribute('aria-hidden', 'false');
       document.documentElement.style.overflow = 'hidden';
       document.body.style.overflow = 'hidden';
-      if (nav) nav.classList.add('nav--light');
+      // Hamburger lines: always white when menu is open
+      if (hamburger) {
+        hamburger.querySelectorAll('span').forEach(s => s.style.background = '#fff');
+      }
     };
 
     const closeMenu = () => {
@@ -61,12 +79,12 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileNav.setAttribute('aria-hidden', 'true');
       document.documentElement.style.overflow = '';
       document.body.style.overflow = '';
-      // Restore light mode if still in hero section
-      if (window.scrollY < 60 && nav.dataset.light === 'true') {
-        nav.classList.add('nav--light');
-      } else {
-        nav.classList.remove('nav--light');
+      // Reset hamburger lines — let CSS handle colour based on scroll state
+      if (hamburger) {
+        hamburger.querySelectorAll('span').forEach(s => s.style.background = '');
       }
+      // Re-sync nav appearance after menu close
+      updateNavAppearance();
     };
 
     hamburger.addEventListener('click', (e) => {
@@ -75,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (mobileClose) mobileClose.addEventListener('click', closeMenu);
-    if (overlay) overlay.addEventListener('click', closeMenu);
+    if (overlay)     overlay.addEventListener('click', closeMenu);
 
     mobileNav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', closeMenu);
@@ -84,7 +102,5 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape' && mobileNav.classList.contains('is-open')) closeMenu();
     });
-  } else {
-    console.warn('Mobile menu elements not found');
   }
 });

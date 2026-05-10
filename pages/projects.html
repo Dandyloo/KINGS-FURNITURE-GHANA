@@ -21,6 +21,22 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Projects — Kings Furniture Ghana" />
 
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Projects — Kings Furniture Ghana",
+    "description": "Portfolio of residential, commercial and hospitality furniture installations by Kings Furniture Ghana.",
+    "url": "https://kingsfurniture.gh/pages/projects.html",
+    "provider": {
+      "@type": "FurnitureStore",
+      "name": "Kings Furniture Ghana",
+      "url": "https://kingsfurniture.gh"
+    }
+  }
+  </script>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,6 +49,8 @@
   <link rel="stylesheet" href="../assets/css/main.css" />
   <link rel="stylesheet" href="../assets/css/animations.css" />
   <link rel="stylesheet" href="../assets/css/navbar.css" />
+  <link rel="stylesheet" href="../assets/css/home.css" />
+  <link rel="stylesheet" href="../assets/css/projects.css" />
 </head>
 <body>
 
@@ -40,56 +58,228 @@
   <div class="page-transition" aria-hidden="true"></div>
 
   <!-- ════════════════════════════════════════
-       NAVBAR
+       NAVBAR — light mode (dark hero below)
   ════════════════════════════════════════ -->
-  <nav class="nav" aria-label="Main navigation">
+    <nav class="nav nav--light" data-light="true" aria-label="Main navigation">
     <div class="nav__inner">
-
-      <a href="../index.html" class="nav__logo" aria-label="Kings Furniture Ghana">
-        <img src="https://res.cloudinary.com/djmyiuu5k/image/upload/v1760868207/KINGS_NEW_LOGO_3_qwzemb.png" alt="Kings Furniture Ghana" class="nav__logo-img" />
+      <a href="../index.html" class="nav__logo" aria-label="Kings Furniture Ghana — Home">
+        <img
+          src="https://res.cloudinary.com/djmyiuu5k/image/upload/v1760868207/KINGS_NEW_LOGO_3_qwzemb.png"
+          alt="Kings Furniture Ghana"
+          class="nav__logo-img"
+        />
       </a>
-
-      <div class="nav__pill">
-        <a href="../index.html" class="nav__link">Home</a>
-        <a href="about.html" class="nav__link">About</a>
-        <a href="products.html" class="nav__link">Products</a>
-        <a href="projects.html" class="nav__link is-active">Projects</a>
-        <a href="contact.html" class="nav__link">Contact</a>
+ 
+      <div class="nav__pill" role="list">
+        <a href="../index.html" class="nav__link"           role="listitem">Home</a>
+        <a href="about.html"    class="nav__link"           role="listitem">About</a>
+        <a href="products.html" class="nav__link"           role="listitem">Products</a>
+        <a href="projects.html" class="nav__link is-active" role="listitem">Projects</a>
+        <a href="contact.html"  class="nav__link"           role="listitem">Contact</a>
       </div>
-
+ 
       <div class="nav__cta">
         <a href="contact.html" class="btn btn--primary">Contact Us</a>
       </div>
-
+ 
       <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
-
-  <!-- Mobile overlay -->
+ 
   <div class="nav__overlay" aria-hidden="true"></div>
-
-  <!-- Mobile menu -->
-  <nav class="nav__mobile" id="mobileNav" aria-hidden="true">
+ 
+  <nav class="nav__mobile" aria-label="Mobile navigation" aria-hidden="true">
     <button class="nav__mobile-close" aria-label="Close menu">&times;</button>
     <div class="nav__mobile-content">
       <a href="../index.html" class="nav__mobile-link">Home</a>
-      <a href="about.html" class="nav__mobile-link">About</a>
+      <a href="about.html"    class="nav__mobile-link">About</a>
       <a href="products.html" class="nav__mobile-link">Products</a>
       <a href="projects.html" class="nav__mobile-link is-active">Projects</a>
-      <a href="contact.html" class="nav__mobile-link">Contact</a>
-      <a href="contact.html" class="nav__mobile-cta">Get a Quote</a>
+      <a href="contact.html"  class="nav__mobile-link">Contact</a>
+      <a href="contact.html"  class="nav__mobile-cta">Get a Quote</a>
     </div>
   </nav>
 
 
+
   <!-- ════════════════════════════════════════
-       MAIN CONTENT — to be built
+       MAIN CONTENT
   ════════════════════════════════════════ -->
-  <main id="main-content" style="min-height: 60vh;">
-    <!-- Page hero, filter tabs, portfolio grid, project lightbox go here -->
+  <main id="main-content">
+
+    <!-- ── 1. PAGE HERO ── -->
+    <section class="projects-hero" data-hero>
+      <div class="projects-hero__media">
+        <img
+          src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_1600/v1760989890/9fc86d74-a09a-4155-881d-60e6af7e76c8_elkcx3.jpg"
+          alt="Kings Furniture Ghana — portfolio"
+          fetchpriority="high"
+          data-hero-img
+        />
+      </div>
+      <div class="projects-hero__overlay" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="projects-hero__content">
+          <div>
+            <p class="label label--gold projects-hero__label" data-hero-label>Our portfolio</p>
+            <h1 class="display display--1 projects-hero__heading" data-hero-heading>
+              Spaces we've<br>
+              <em>transformed.</em>
+            </h1>
+          </div>
+          <div class="projects-hero__meta" data-hero-badge>
+            <p class="projects-hero__count" id="projects-hero-count">—</p>
+            <p class="projects-hero__count-label">Completed projects</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── 2. FILTER BAR ── -->
+    <div class="projects-filters" role="navigation" aria-label="Filter by project type">
+      <div class="container">
+        <div class="projects-filters__inner">
+          <div class="projects-filters__tabs" role="list">
+            <button class="proj-filter-tab is-active" data-filter="all" role="listitem" aria-pressed="true">
+              All <span class="proj-filter-tab__count"></span>
+            </button>
+            <button class="proj-filter-tab" data-filter="residential" role="listitem" aria-pressed="false">
+              Residential <span class="proj-filter-tab__count"></span>
+            </button>
+            <button class="proj-filter-tab" data-filter="commercial" role="listitem" aria-pressed="false">
+              Commercial <span class="proj-filter-tab__count"></span>
+            </button>
+            <button class="proj-filter-tab" data-filter="hospitality" role="listitem" aria-pressed="false">
+              Hospitality <span class="proj-filter-tab__count"></span>
+            </button>
+          </div>
+          <p class="projects-filters__result" id="projects-result-count" aria-live="polite">
+            — projects
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── 3. PROJECTS GRID ── -->
+    <section class="projects-section">
+      <div class="container">
+        <div class="projects-grid" id="projects-grid" aria-label="Projects portfolio">
+          <!-- Rendered by projects.js from /data/projects.json -->
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── 4. CTA STRIP ── -->
+    <section class="projects-cta">
+      <div class="projects-cta__bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="projects-cta__inner" data-stagger-parent>
+
+          <div class="projects-cta__text" data-stagger-child>
+            <p class="label label--gold">Start your project</p>
+            <h2 class="projects-cta__heading">
+              Ready to create<br>
+              <em>something lasting?</em>
+            </h2>
+            <p class="projects-cta__sub">
+              Tell us about your space and what you're looking to achieve.
+              We'll design and build it to a standard you'll be proud of for decades.
+            </p>
+          </div>
+
+          <div class="projects-cta__actions" data-stagger-child>
+            <a
+              href="https://wa.me/233503676484?text=Hello%20Kings%20Furniture%2C%20I%27d%20like%20to%20discuss%20a%20project."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--primary btn--lg"
+              style="background: var(--color-gold); border-color: var(--color-gold); color: var(--color-brand-deep);"
+            >
+              Discuss a Project
+            </a>
+            <a href="contact.html" class="btn btn--secondary"
+               style="border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.7);">
+              Visit a Showroom →
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
+
+
+  <!-- ════════════════════════════════════════
+       PROJECT LIGHTBOX
+  ════════════════════════════════════════ -->
+  <div
+    class="project-lightbox"
+    id="projectLightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="lightboxName"
+    aria-hidden="true"
+  >
+    <div class="project-lightbox__backdrop" id="lightboxBackdrop" aria-hidden="true"></div>
+
+    <div class="project-lightbox__panel">
+      <button class="project-lightbox__close" id="lightboxClose" aria-label="Close project details">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
+      <div class="project-lightbox__img-wrap">
+        <img id="lightboxImg" src="" alt="" />
+      </div>
+
+      <div class="project-lightbox__body">
+
+        <div class="project-lightbox__meta">
+          <span class="project-lightbox__tag" id="lightboxCat">Category</span>
+        </div>
+
+        <h2 class="project-lightbox__name" id="lightboxName">Project name</h2>
+        <p class="project-lightbox__desc" id="lightboxDesc">Description here.</p>
+
+        <div class="project-lightbox__details">
+          <div class="project-lightbox__detail">
+            <strong>Location</strong>
+            <span id="lightboxLoc">—</span>
+          </div>
+          <div class="project-lightbox__detail">
+            <strong>Year</strong>
+            <span id="lightboxYear">—</span>
+          </div>
+          <div class="project-lightbox__detail">
+            <strong>Scope</strong>
+            <span id="lightboxScope">—</span>
+          </div>
+        </div>
+
+        <div class="project-lightbox__actions">
+          <a
+            href="#"
+            id="lightboxWa"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--primary"
+          >
+            Enquire via WhatsApp
+          </a>
+          <a href="contact.html" class="btn btn--secondary">Contact Us →</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
 
   <!-- ════════════════════════════════════════
@@ -163,5 +353,6 @@
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/navbar.js"></script>
   <script src="../assets/js/animations.js"></script>
+  <script src="../assets/js/projects.js" defer></script>
 </body>
 </html>
