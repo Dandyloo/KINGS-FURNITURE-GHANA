@@ -5,11 +5,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ── Prevent browser restoring scroll on back navigation ──
-  if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-  }
-  window.scrollTo(0, 0);
 
   // ── Page transition overlay ──
   const overlay = document.querySelector('.page-transition');

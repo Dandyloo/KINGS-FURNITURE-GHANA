@@ -1,56 +1,53 @@
 /* ============================================================
    KINGS FURNITURE GHANA — Navbar JS
-   navbar.js
+   navbar.js — full rewrite
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('.nav');
   if (!nav) return;
 
-  const isLightPage = nav.dataset.light === 'true';
+  // ── Find the hero section on the current page ──
+  // Each page uses a different class for its hero
+  const hero =
+    document.querySelector('.hero') ||          // homepage
+    document.querySelector('.about-hero') ||    // about
+    document.querySelector('.products-hero') || // products
+    document.querySelector('.projects-hero') || // projects
+    null;
 
-  // ── Single source of truth for nav appearance ──
-  // Called on every scroll event AND on menu close
-  const updateNavAppearance = () => {
+  // ── Scroll threshold ──
+  // Switches navbar when the bottom of the hero scrolls past the top of the viewport
+  // Falls back to 80px if no hero found (contact, 404, promotions)
+  const getThreshold = () => {
+    if (!hero) return 80;
+    return hero.offsetTop + hero.offsetHeight - nav.offsetHeight;
+  };
+
+  // ── Apply nav state ──
+  const updateNav = () => {
     const scrollY = window.scrollY;
+    const threshold = getThreshold();
 
-    if (scrollY > 60) {
+    if (scrollY >= threshold) {
       nav.classList.add('is-scrolled');
-      nav.classList.remove('nav--light');
     } else {
       nav.classList.remove('is-scrolled');
-      // Only restore light if this page has a dark hero
-      if (isLightPage) {
-        nav.classList.add('nav--light');
-      }
     }
   };
 
-  // ── Scroll behaviour ──
-  let lastScroll = 0;
+  // ── Listen ──
+  window.addEventListener('scroll', updateNav, { passive: true });
 
-  const handleScroll = () => {
-    const scrollY = window.scrollY;
+  // ── Run once on load ──
+  updateNav();
 
-    updateNavAppearance();
-
-    // Hide on scroll down, show on scroll up
-    if (scrollY > lastScroll && scrollY > 200) {
-      nav.style.transform = 'translateY(-100%)';
-    } else {
-      nav.style.transform = 'translateY(0)';
-    }
-
-    lastScroll = scrollY;
-  };
-
-  // Set transition BEFORE first scroll so it doesn't flash on page load
-  nav.style.transition = 'transform 0.4s cubic-bezier(0.16,1,0.3,1), background 0.5s ease, padding 0.4s ease, box-shadow 0.4s ease';
-
-  window.addEventListener('scroll', handleScroll, { passive: true });
-
-  // Run once on init to set correct state
-  updateNavAppearance();
+  // ── Recalculate threshold on resize (hero height can change) ──
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(updateNav, 120);
+  });
 
   // ── Mobile menu ──
   const hamburger   = document.querySelector('.nav__hamburger');
@@ -58,49 +55,60 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileClose = document.querySelector('.nav__mobile-close');
   const overlay     = document.querySelector('.nav__overlay');
 
-  if (hamburger && mobileNav) {
-    const openMenu = () => {
-      hamburger.classList.add('is-open');
-      mobileNav.classList.add('is-open');
-      hamburger.setAttribute('aria-expanded', 'true');
-      mobileNav.setAttribute('aria-hidden', 'false');
-      document.documentElement.style.overflow = 'hidden';
-      document.body.style.overflow = 'hidden';
-      // Hamburger lines: always white when menu is open
-      if (hamburger) {
-        hamburger.querySelectorAll('span').forEach(s => s.style.background = '#fff');
-      }
-    };
+  if (!hamburger || !mobileNav) return;
 
-    const closeMenu = () => {
-      hamburger.classList.remove('is-open');
-      mobileNav.classList.remove('is-open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      mobileNav.setAttribute('aria-hidden', 'true');
-      document.documentElement.style.overflow = '';
-      document.body.style.overflow = '';
-      // Reset hamburger lines — let CSS handle colour based on scroll state
-      if (hamburger) {
-        hamburger.querySelectorAll('span').forEach(s => s.style.background = '');
-      }
-      // Re-sync nav appearance after menu close
-      updateNavAppearance();
-    };
+  const lockScroll   = () => {
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+  };
 
-    hamburger.addEventListener('click', (e) => {
-      e.preventDefault();
-      mobileNav.classList.contains('is-open') ? closeMenu() : openMenu();
-    });
+  const unlockScroll = () => {
+    document.documentElement.style.overflow = '';
+    document.body.style.overflow = '';
+  };
 
-    if (mobileClose) mobileClose.addEventListener('click', closeMenu);
-    if (overlay)     overlay.addEventListener('click', closeMenu);
+  const openMenu = () => {
+    mobileNav.classList.add('is-open');
+    mobileNav.setAttribute('aria-hidden', 'false');
+    hamburger.classList.add('is-open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    if (overlay) overlay.classList.add('is-visible');
+    lockScroll();
+  };
 
-    mobileNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', closeMenu);
-    });
+  const closeMenu = () => {
+    mobileNav.classList.remove('is-open');
+    mobileNav.setAttribute('aria-hidden', 'true');
+    hamburger.classList.remove('is-open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    if (overlay) overlay.classList.remove('is-visible');
+    unlockScroll();
+  };
 
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && mobileNav.classList.contains('is-open')) closeMenu();
-    });
-  }
+  hamburger.addEventListener('click', () => {
+    mobileNav.classList.contains('is-open') ? closeMenu() : openMenu();
+  });
+
+  if (mobileClose) mobileClose.addEventListener('click', closeMenu);
+  if (overlay)     overlay.addEventListener('click', closeMenu);
+
+  // Close on nav link click (navigates away)
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && mobileNav.classList.contains('is-open')) {
+      closeMenu();
+    }
+  });
+
+  // ── Sync nav state after bfcache restore (back button) ──
+  window.addEventListener('pageshow', e => {
+    if (e.persisted) {
+      closeMenu();
+      updateNav();
+    }
+  });
 });

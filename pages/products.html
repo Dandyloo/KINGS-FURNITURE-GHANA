@@ -61,46 +61,56 @@
        NAVBAR
   ════════════════════════════════════════ -->
   <nav class="nav" aria-label="Main navigation">
-    <div class="nav__inner">
-
-      <a href="../index.html" class="nav__logo" aria-label="Kings Furniture Ghana">
-        <img src="https://res.cloudinary.com/djmyiuu5k/image/upload/v1760868207/KINGS_NEW_LOGO_3_qwzemb.png" alt="Kings Furniture Ghana" class="nav__logo-img" />
-      </a>
-
-      <div class="nav__pill">
-        <a href="../index.html" class="nav__link">Home</a>
-        <a href="about.html" class="nav__link">About</a>
-        <a href="products.html" class="nav__link is-active">Products</a>
-        <a href="projects.html" class="nav__link">Projects</a>
-        <a href="news.html" class="nav__link">News</a>
-      </div>
-
-      <div class="nav__cta">
-        <a href="contact.html" class="btn btn--primary">Contact Us</a>
-      </div>
-
-      <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+  <div class="nav__inner">
+ 
+    <a href="../index.html" class="nav__logo" aria-label="Kings Furniture Ghana — Home">
+      <img
+        src="https://res.cloudinary.com/djmyiuu5k/image/upload/v1760868207/KINGS_NEW_LOGO_3_qwzemb.png"
+        alt="Kings Furniture Ghana"
+        class="nav__logo-img"
+        width="200"
+        height="72"
+      />
+    </a>
+ 
+    <div class="nav__pill" role="list">
+      <a href="../index.html"  class="nav__link"           role="listitem">Home</a>
+      <a href="about.html"     class="nav__link"           role="listitem">About</a>
+      <a href="products.html"  class="nav__link is-active"           role="listitem">Products</a>
+      <a href="projects.html"  class="nav__link"           role="listitem">Projects</a>
+      <a href="news.html"      class="nav__link"           role="listitem">News</a>
     </div>
-  </nav>
-
-  <!-- Mobile overlay -->
-  <div class="nav__overlay" aria-hidden="true"></div>
-
-  <!-- Mobile menu -->
-  <nav class="nav__mobile" id="mobileNav" aria-hidden="true">
-    <button class="nav__mobile-close" aria-label="Close menu">&times;</button>
-    <div class="nav__mobile-content">
-      <a href="../index.html" class="nav__mobile-link">Home</a>
-      <a href="about.html" class="nav__mobile-link">About</a>
-      <a href="products.html" class="nav__mobile-link is-active">Products</a>
-      <a href="projects.html" class="nav__mobile-link">Projects</a>
-      <a href="news.html" class="nav__mobile-link">News</a>
-      <a href="contact.html" class="nav__mobile-link">Contact</a>
-      <a href="contact.html" class="nav__mobile-cta">Get a Quote</a>
+ 
+    <div class="nav__cta">
+      <a href="contact.html" class="btn btn--primary">Contact Us</a>
     </div>
-  </nav>
+ 
+    <button class="nav__hamburger" aria-label="Open navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+ 
+  </div>
+</nav>
+ 
+<!-- Mobile menu backdrop -->
+<div class="nav__overlay" aria-hidden="true"></div>
+ 
+<!-- Mobile menu -->
+<nav class="nav__mobile" aria-label="Mobile navigation" aria-hidden="true">
+  <button class="nav__mobile-close" aria-label="Close navigation menu">&times;</button>
+ 
+  <div class="nav__mobile-content">
+    <a href="../index.html" class="nav__mobile-link">Home</a>
+    <a href="about.html"    class="nav__mobile-link">About</a>
+    <a href="products.html" class="nav__mobile-link is-active">Products</a>
+    <a href="projects.html" class="nav__mobile-link">Projects</a>
+    <a href="news.html"     class="nav__mobile-link">News</a>
+    <div class="nav__mobile-divider" aria-hidden="true"></div>
+    <a href="contact.html"  class="nav__mobile-cta">Get a Quote</a>
+  </div>
+</nav>
 
 
   <!-- ════════════════════════════════════════
