@@ -1,0 +1,157 @@
+/* Animations
+Two types of animation live here:
+1. CSS keyframes — run automatically, no JS needed
+2. Starting states for GSAP scroll reveals
+ */
+
+/* CSS KEYFRAMES
+@keyframes defines an animation sequence.
+You give it a name, then use it with animation: name duration.
+*/
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes pulse {
+  0%   { transform: translateY(0);    opacity: 1; }
+  50%  { transform: translateY(10px); opacity: 0.5; }
+  100% { transform: translateY(0);    opacity: 1; }
+}
+
+/* Shimmer — used on image placeholders while loading */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+/* IMAGE SKELETON LOADER 
+Applied to image wrappers before the image loads.
+The gradient sweeps left to right giving a "loading" effect.
+*/
+.img-skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-subtle) 0%,
+    var(--color-bg-soft)   50%,
+    var(--color-bg-subtle) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+/* GSAP SCROLL REVEAL — STARTING STATES
+Elements with these data attributes start invisible.
+GSAP animates them to opacity:1 / transform:none
+when they scroll into view.
+data-reveal       = fade up from below
+data-reveal-left  = slide in from left
+data-reveal-right = slide in from right
+data-reveal-scale = scale up from slightly small
+*/
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(32px);
+}
+
+[data-reveal-left] {
+  opacity: 0;
+  transform: translateX(-32px);
+}
+
+[data-reveal-right] {
+  opacity: 0;
+  transform: translateX(32px);
+}
+
+[data-reveal-scale] {
+  opacity: 0;
+  transform: scale(0.96);
+}
+
+/* CSS FALLBACK 
+If GSAP loads but ScrollTrigger fails, JS adds .is-revealed
+to make elements visible. This is the safety net.
+*/
+.is-revealed {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* HOVER UTILITIES
+Reusable hover lift effect.
+Add class="hover-lift" to any card or element.
+*/
+.hover-lift {
+  transition:
+    transform var(--duration-base) var(--ease-expo),
+    box-shadow var(--duration-base) var(--ease-expo);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* LINK UNDERLINE SLIDE
+Animated underline that grows from left to right on hover.
+*/
+.link-slide {
+  position: relative;
+  display: inline-block;
+}
+
+.link-slide::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width var(--duration-base) var(--ease-expo);
+}
+
+.link-slide:hover::after {
+  width: 100%;
+}
+
+/* PULSE ARROW 
+Used on the hero scroll indicator
+*/
+.pulse {
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+/* REDUCED MOTION
+Some users have a system setting to reduce animations
+This respects that preference — accessibility best practice
+*/
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  [data-reveal],
+  [data-reveal-left],
+  [data-reveal-right],
+  [data-reveal-scale] {
+    opacity: 1;
+    transform: none;
+  }
+}

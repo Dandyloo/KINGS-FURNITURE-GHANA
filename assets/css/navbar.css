@@ -1,0 +1,513 @@
+/* Navbar 
+Three states:
+1. Transparent — sitting over a hero image (default)
+2. is-scrolled — white background, dark text (after hero)
+3. is-scrolled immediately — on pages with no hero
+*/
+
+/* BASE 
+position: fixed keeps navbar at top while page scrolls.
+We start transparent so it blends into the hero image.
+*/
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-nav);
+    padding-block: var(--space-4);
+    background: transparent;
+    transition:
+        background var(--duration-slow) var(--ease-expo),
+        box-shadow var(--duration-slow) var(--ease-expo),
+        padding var(--duration-slow) var(--ease-expo);
+}
+
+/* SCROLLED STATE 
+JS adds .is-scrolled when page scrolls past the hero.
+Also added immediately on pages that have no hero.
+*/
+.nav.is-scrolled {
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px); 
+    padding-block: var(--space-3);
+    box-shadow: 0 1px 0 var(--color-border);
+}
+
+/* INNER LAYOUT 
+Three columns: logo | links | cta+hamburger */
+.nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+}
+
+/* LOGO */
+.nav__logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;  /* prevents logo from shrinking on mobile */
+    text-decoration: none;
+}
+
+.nav__logo-img {
+    height: 80px;
+    width: auto;
+    display: block;
+    transition: opacity var(--duration-fast) var(--ease-standard);
+}
+
+.nav.is-scrolled .nav__logo-img {
+    height: 66px;
+}
+
+.nav__logo:hover .nav__logo-img {
+    opacity: 0.85;
+}
+
+/* DESKTOP LINKS
+Hidden on mobile - hamburger shows instead 
+*/
+.nav__links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+}
+
+.nav__link {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 400;
+    letter-spacing: var(--tracking-wide);
+    color: #fff;
+    position: relative;
+    transition:
+        color var(--duration-fast) var(--ease-standard),
+        opacity  var(--duration-fast) var(--ease-standard);
+}
+/* Animated underline using ::after pseudo element */
+.nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--duration-base) var(--ease-expo);   
+}
+
+/* Show underline on hover and active pages */
+.nav__link:hover::after,
+.nav__link.is-active::after {
+    transform: scaleX(1);
+}
+
+.nav__link:hover {
+    opacity: 0.75;
+}
+
+/* When scrolled - links switch to dark text */
+.nav.is-scrolled .nav__link {
+    color: var(--color-text-primary);
+}
+
+.nav.is-scrolled .nav__link:hover {
+    color: var(--color-brand);
+    opacity: 1;
+}
+
+.nav.is-scrolled .nav__link.is-active {
+    color: var(--color-brand);
+}
+
+/* CTA BUTTON */
+.nav__cta {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* Gold button over hero */
+.nav__cta .btn--primary {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-brand-deep);
+}
+
+.nav__cta .btn--primary:hover {
+  background: #a88858;
+  border-color: #a88858;
+  color: #fff;
+}
+
+/* Navy button when scrolled */
+.nav.is-scrolled .nav__cta .btn--primary {
+  background: var(--color-brand);
+  border-color: var(--color-brand);
+  color: #fff;
+}
+
+.nav.is-scrolled .nav__cta .btn--primary:hover {
+  background: var(--color-brand-deep);
+  border-color: var(--color-brand-deep);
+}
+
+/* ── HAMBURGER ───────────────────────────────────────────────────
+   Three <span> elements styled as lines.
+   JS adds .is-open to animate them into an X.
+── */
+.nav__hamburger {
+  display: none;         /* hidden on desktop */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.nav__hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: #fff;      /* white over hero */
+  border-radius: 2px;
+  transition:
+    transform  var(--duration-slow) var(--ease-expo),
+    opacity    var(--duration-fast) var(--ease-standard),
+    background var(--duration-fast) var(--ease-standard);
+  transform-origin: center;
+}
+
+/* Dark lines when scrolled */
+.nav.is-scrolled .nav__hamburger span {
+  background: var(--color-text-primary);
+}
+
+/* Animate three lines into an X when menu is open */
+.nav__hamburger.is-open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.nav__hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.nav__hamburger.is-open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* Force white lines when menu is open regardless of scroll state */
+.nav__hamburger.is-open span {
+  background: #fff !important;
+}
+
+/* ── MOBILE BACKDROP ── */
+.nav__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: calc(var(--z-nav) - 2);
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--duration-slow) var(--ease-standard);
+}
+
+.nav__backdrop.is-visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ── MOBILE MENU ── */
+.nav__mobile {
+  position: fixed;
+  inset: 0;
+  z-index: calc(var(--z-nav) - 1);
+  background: #0E1236;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  /* Slides up from bottom */
+  transform: translateY(100%);
+  transition:
+    opacity     var(--duration-slow) var(--ease-expo),
+    transform   var(--duration-slow) var(--ease-expo);
+}
+
+.nav__mobile.is-open {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+/* ── TOP BAR ── */
+.nav__mobile-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
+}
+
+.nav__mobile-brand {
+  font-family: var(--font-label);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* Close button — two spans become an X */
+.nav__mobile-close {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 0.5px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* The two lines that form the X */
+.nav__mobile-close span {
+  display: block;
+  position: absolute;
+  width: 14px;
+  height: 1px;
+  background: var(--color-gold);
+  border-radius: 2px;
+}
+
+.nav__mobile-close span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.nav__mobile-close span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+.nav__mobile-close:hover {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+.nav__mobile-close:hover span {
+  background: var(--color-brand-deep);
+}
+
+/* ── MAIN PANEL ── */
+.nav__mobile-panel {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ── LEFT: CONTACT INFO ── */
+.nav__mobile-info {
+  width: 42%;
+  padding: var(--space-8) var(--space-5) var(--space-8) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-6);
+  border-right: 0.5px solid rgba(255, 255, 255, 0.07);
+  flex-shrink: 0;
+}
+
+.nav__mobile-info-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.nav__mobile-info-label {
+  font-size: 9px;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.30);
+  margin: 0;
+}
+
+.nav__mobile-info-value {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.75);
+  line-height: var(--leading-loose);
+  margin: 0;
+  text-decoration: none;
+}
+
+a.nav__mobile-info-value:hover {
+  color: var(--color-gold);
+}
+
+/* WhatsApp badge */
+.nav__mobile-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: rgba(37, 211, 102, 0.10);
+  border: 0.5px solid rgba(37, 211, 102, 0.25);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: #25D366;
+  text-decoration: none;
+  width: fit-content;
+  transition: background var(--duration-fast) var(--ease-standard);
+}
+
+.nav__mobile-wa:hover {
+  background: rgba(37, 211, 102, 0.20);
+}
+
+.nav__mobile-wa-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #25D366;
+  flex-shrink: 0;
+}
+
+/* ── RIGHT: NAV LINKS ── */
+.nav__mobile-links {
+  flex: 1;
+  padding: var(--space-8) var(--space-6) var(--space-8) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: var(--space-1);
+  position: relative;
+}
+
+/* Gold vertical accent line on right edge */
+.nav__mobile-line {
+  position: absolute;
+  right: 0;
+  top: var(--space-8);
+  bottom: var(--space-8);
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--color-gold) 30%,
+    var(--color-gold) 70%,
+    transparent 100%
+  );
+}
+
+.nav__mobile-link {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.70);
+  text-decoration: none;
+  line-height: var(--leading-snug);
+  padding: var(--space-1) var(--space-5) var(--space-1) 0;
+  text-align: right;
+  transition: color var(--duration-fast) var(--ease-standard);
+
+  /* Start state for stagger animation */
+  opacity: 0;
+  transform: translateX(20px);
+  transition:
+    color      var(--duration-fast) var(--ease-standard),
+    opacity    0.45s var(--ease-expo),
+    transform  0.45s var(--ease-expo);
+}
+
+.nav__mobile-link:hover {
+  color: var(--color-gold);
+}
+
+.nav__mobile-link.is-active {
+  color: var(--color-gold);
+}
+
+/* Stagger links in when menu opens */
+.nav__mobile.is-open .nav__mobile-link:nth-child(2) { opacity:1; transform:translateX(0); transition-delay: 0.10s; }
+.nav__mobile.is-open .nav__mobile-link:nth-child(3) { opacity:1; transform:translateX(0); transition-delay: 0.16s; }
+.nav__mobile.is-open .nav__mobile-link:nth-child(4) { opacity:1; transform:translateX(0); transition-delay: 0.22s; }
+.nav__mobile.is-open .nav__mobile-link:nth-child(5) { opacity:1; transform:translateX(0); transition-delay: 0.28s; }
+.nav__mobile.is-open .nav__mobile-link:nth-child(6) { opacity:1; transform:translateX(0); transition-delay: 0.34s; }
+
+/* ── BOTTOM CTA ── */
+.nav__mobile-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) var(--space-6);
+  background: var(--color-gold);
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: background var(--duration-fast) var(--ease-standard);
+}
+
+.nav__mobile-cta:hover {
+  background: #a88858;
+}
+
+.nav__mobile-cta span {
+  font-family: var(--font-label);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-brand-deep);
+}
+
+.nav__mobile-cta-arrow {
+  font-size: var(--text-lg);
+  color: var(--color-brand-deep);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .nav__links     { display: none; }
+  .nav__cta       { display: none; }
+  .nav__hamburger { display: flex; }
+}
+
+@media (max-width: 768px) {
+  .nav__logo-img { height: 68px; }
+  .nav.is-scrolled .nav__logo-img { height: 56px; }
+}
+
+@media (max-width: 480px) {
+  .nav { padding-block: var(--space-3); }
+  .nav.is-scrolled { padding-block: var(--space-2); }
+  .nav__logo-img { height: 58px; }
+  .nav.is-scrolled .nav__logo-img { height: 48px; }
+
+  .nav__mobile-link {
+    font-size: var(--text-2xl);
+  }
+}
+
+/* Hide navbar when mobile menu is open */
+.nav.is-menu-open {
+  opacity: 0;
+  pointer-events: none;
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kings Furniture Ghana - Premium Furniture Since 1992</title>
+    <meta name="description" content="Ghana's most recognised furniture brand. Handcrafted sofas, beds, dining sets and more. Designed and built in Takoradi since 1992.">
+
+    <!-- Canonical URL - tells search engines this is the real page -->
+    <link rel="canonical" href="https://www.kingsfurnituregh.com" />
+
+    <!-- Open Graph - controls how the page looks when shared on Whatsapp, Facebook etc -->
+    <meta property="og:type"  content="website" />
+    <meta property="og:url"   content="https://www.kingsfurnituregh.com/" />
+    <meta property="og:title"  content="Kings Furniture Ghana" />
+    <meta property="og:description"  content="Ghana's most recognised furniture brand. Crafted in Takoradi since 1992." />
+    <meta property="og:image"  content="https://res.cloudinary.com/djmyiuu5k/image/upload/v1760868207/KINGS_NEW_LOGO_3_qwzemb.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://res.cloudinary.com/djmyiuu5k/image/upload/v1760868207/KINGS_NEW_LOGO_3_qwzemb.png" type="image/png" />
+
+     <!-- Fonts — preconnect first so the browser opens the connection early -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+  />
+
+  <!-- Styles — order matters, tokens first -->
+  <link rel="stylesheet" href="./assets/css/tokens.css" />
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="stylesheet" href="./assets/css/animations.css" />
+  <link rel="stylesheet" href="./assets/css/navbar.css" />
+</head>
+<body>
+    
+    <!-- Page transition overlay - JS animates this on navigation -->
+     <div class="page-transition" aria-hidden="true"></div>
+
+     <!-- NAVBAR -->
+      <nav class="nav" aria-label="Main navigation">
+        <div class="nav__inner">
+            <!-- LOGO -->
+             <a href="./index.html" class="nav__logo" aria-label="Kings Furniture Ghana - Home">
+                <img src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_400/v1760868207/KINGS_NEW_LOGO_3_qwzemb.png" 
+                alt="Kings Furniture Ghana"
+                class="nav__logo-img"
+                />
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="nav__links">
+             <a href="./index.html"    class="nav__link is-active">Home</a>
+             <a href="./pages/about.html"   class="nav__link">About</a>
+             <a href="./pages/products.html"   class="nav__link">Products</a>
+             <a href="./pages/projects.html"   class="nav__link">Projects</a>
+             <a href="./pages/news.html"   class="nav__link">News</a>
+             </div>
+
+             <!-- Desktop CTA -->
+              <div class="nav__cta">
+                <a href="./pages/contact.html"   class="btn btn--primary">Contact Us</a>
+              </div>
+
+              <!-- Hamburger - mobile only -->
+               <button   
+               class="nav__hamburger"
+               aria-label="Open navigation menu"
+               aria-expanded="false"
+               aria-controls="mobile-nav"
+                >
+                 <span></span>
+                 <span></span>
+                 <span></span>
+               </button>
+            </div>
+        </div>
+      </nav>
+
+<!-- Mobile menu backdrop -->
+<div class="nav__backdrop" aria-hidden="true"></div>
+
+<!-- Mobile menu -->
+<nav
+  class="nav__mobile"
+  id="mobile-nav"
+  aria-label="Mobile navigation"
+  aria-hidden="true"
+>
+  <!-- Top bar -->
+  <div class="nav__mobile-bar">
+    <span class="nav__mobile-brand">Kings Furniture</span>
+    <button class="nav__mobile-close" aria-label="Close navigation menu">
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- Main panel -->
+  <div class="nav__mobile-panel">
+
+    <!-- Left: contact info -->
+    <div class="nav__mobile-info">
+      <div class="nav__mobile-info-block">
+        <p class="nav__mobile-info-label">Call us</p>
+        <a href="tel:+233503676484" class="nav__mobile-info-value">
+          +233 50 367 6484
+        </a>
+      </div>
+      <div class="nav__mobile-info-block">
+        <p class="nav__mobile-info-label">Showrooms</p>
+        <p class="nav__mobile-info-value">Takoradi<br/>Accra</p>
+      </div>
+      <div class="nav__mobile-info-block">
+        <p class="nav__mobile-info-label">Hours</p>
+        <p class="nav__mobile-info-value">Mon – Sat<br/>8am – 6pm</p>
+      </div>
+      
+        <a href="https://wa.me/233503676484?text=Hello%20Kings%20Furniture%2C%20I%27d%20like%20to%20enquire%20about%20your%20furniture."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="nav__mobile-wa"
+        >
+        <span class="nav__mobile-wa-dot"></span>
+        WhatsApp
+      </a>
+    </div>
+
+    <!-- Right: nav links -->
+    <div class="nav__mobile-links">
+      <!-- Gold accent line -->
+      <div class="nav__mobile-line" aria-hidden="true"></div>
+
+      <a href="./index.html"          class="nav__mobile-link is-active">Home</a>
+      <a href="./pages/about.html"    class="nav__mobile-link">About</a>
+      <a href="./pages/products.html" class="nav__mobile-link">Products</a>
+      <a href="./pages/projects.html" class="nav__mobile-link">Projects</a>
+      <a href="./pages/news.html"     class="nav__mobile-link">News</a>
+    </div>
+
+  </div>
+
+  <!-- Bottom CTA -->
+  <a href="./pages/contact.html" class="nav__mobile-cta">
+    <span>Get a Quote</span>
+    <span class="nav__mobile-cta-arrow">→</span>
+  </a>
+
+</nav>
+
+
+
+     <main id="main-content">
+
+     </main>
+
+     <!-- Scripts — at bottom so HTML loads first -->
+    <!-- defer means script downloads in background, runs after HTML is parsed -->
+
+    <!-- GSAP — animation library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+    <!-- Our scripts -->
+    <script src="./assets/js/navbar.js" defer></script>
+
+</body>
+</html>
