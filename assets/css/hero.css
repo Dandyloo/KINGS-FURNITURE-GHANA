@@ -1,0 +1,256 @@
+/* Hero Section */
+
+/* HERO WRAPPER
+min-height: 100vh means at least full viewport height.
+display: flex + align-items: center vertically centers content.
+position: relative so children can use position: absolute.
+*/
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* BACKGROUND IMAGE
+position: absolute fills the entire hero section.
+z-index: -1 pushes it behind the content.
+*/
+.hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* OVERLAY 
+A dark gradient sits on top of the image.
+This makes white text readable over any photo.
+to right means left side is darkest — where our text sits.
+*/
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(14, 18, 54, 0.85) 0%,
+    rgba(14, 18, 54, 0.55) 55%,
+    rgba(14, 18, 54, 0.20) 100%
+  );
+}
+
+/* CONTENT
+position: relative + z-index: 1 lifts content above the overlay.
+The container handles max-width and padding.
+*/
+.hero .container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.hero__content {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: var(--space-16);
+  padding-top: calc(var(--space-32) + 80px);
+  padding-bottom: var(--space-40);
+}
+
+/* TEXT COLUMN */
+.hero__text {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.hero__label {
+  display: block;
+}
+
+/* The main heading */
+.hero__heading {
+  color: #fff;
+  margin: 0;
+}
+
+/* em inside heading — italic gold accent */
+.hero__heading em {
+  color: var(--color-gold);
+  font-style: italic;
+}
+
+.hero__body {
+  font-size: var(--text-lg);
+  line-height: var(--leading-loose);
+  color: rgba(255, 255, 255, 0.80);
+  margin: 0;
+  max-width: 460px;
+}
+
+/* CTA BUTTONS */
+.hero__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+  margin-top: var(--space-4);
+}
+
+.hero .btn--primary {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-brand-deep);
+}
+
+.hero .btn--primary:hover {
+  background: #a88858;
+  border-color: #a88858;
+  color: #fff;
+}
+
+/* Ghost text link — "Our Story →" */
+.hero__ghost-link {
+  font-family: var(--font-label);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  position: relative;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+/* Animated underline */
+.hero__ghost-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scaleX(1);
+  transition: background var(--duration-fast) var(--ease-standard);
+}
+
+.hero__ghost-link:hover {
+  color: var(--color-gold);
+}
+
+.hero__ghost-link:hover::after {
+  background: var(--color-gold);
+}
+
+/* BADGE
+Floating glass card on the right side.
+backdrop-filter: blur creates the frosted glass effect.
+*/
+.hero__badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-2);
+  padding: var(--space-10) var(--space-8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  flex-shrink: 0;
+}
+
+.hero__badge-label {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.hero__badge-year {
+  font-family: var(--font-display);
+  font-size: var(--text-5xl);
+  font-weight: 300;
+  color: #fff;
+  line-height: 1;
+}
+
+.hero__badge-city {
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-wide);
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ── SCROLL INDICATOR ── */
+.hero__scroll {
+  position: absolute;
+  bottom: var(--space-8);
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.50);
+  z-index: 1;
+}
+
+.hero__scroll-icon {
+  display: block;
+}
+
+/* RESPONSIVE
+Stack content on smaller screens.
+*/
+@media (max-width: 1024px) {
+  .hero__content {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  .hero__badge {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__content {
+    padding-block: var(--space-32);
+  }
+
+  .hero__body {
+    font-size: var(--text-base);
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__badge {
+    display: none;
+  }
+
+  .hero__content {
+    padding-block: var(--space-24);
+  }
+}
+
+
