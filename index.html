@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="./assets/css/animations.css" />
   <link rel="stylesheet" href="./assets/css/navbar.css" />
   <link rel="stylesheet" href="./assets/css/hero.css" />
+  <link rel="stylesheet" href="./assets/css/categories.css" />
 </head>
 <body>
     
@@ -224,6 +225,169 @@
 
   </section>
 
+  <!-- CATEGORIES SLIDER -->
+   <section class="categories">
+    <div class="container">
+
+      <!-- Header -->
+      <div class="categories__header">
+        <div>
+          <p class="label label--brand">Browse by room</p>
+          <h2 class="display display--4">Shop by Collection</h2>
+        </div>
+
+        <!-- Arrow controls + counter -->
+        <div class="categories__controls">
+          <button
+            class="categories__arrow categories__arrow--prev"
+            aria-label="Previous category"
+            disabled
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+          </button>
+
+          <span class="categories__counter">
+            <span class="categories__counter-current">1</span>
+            <span style="color: var(--color-text-tertiary);"> / </span>
+            <span class="categories__counter-total">5</span>
+          </span>
+
+          <button
+            class="categories__arrow categories__arrow--next"
+            aria-label="Next category"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Track sits outside container so cards bleed to screen edge -->
+    <div class="categories__track-wrapper">
+      <div class="categories__track" id="categoriesTrack">
+
+        <a href="./pages/products.html#bedroom" class="cat-card">
+          <figure class="cat-card__figure">
+            <img
+              src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760989901/bedroom_xcasuq.jpg"
+              alt="Bedroom furniture collection"
+              class="cat-card__img"
+              loading="lazy"
+            />
+            <div class="cat-card__overlay" aria-hidden="true">
+              <p class="cat-card__overlay-desc">
+                Beds, wardrobes and bedside pieces crafted for rest and elegance.
+              </p>
+              <span class="cat-card__overlay-cta">Explore Bedroom →</span>
+            </div>
+          </figure>
+          <div class="cat-card__info">
+            <h3 class="cat-card__name">Bedroom</h3>
+            <p class="cat-card__count">12 pieces</p>
+          </div>
+        </a>
+
+        <a href="./pages/products.html#dining" class="cat-card">
+          <figure class="cat-card__figure">
+            <img
+              src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760990684/dining_cvuxju.jpg"
+              alt="Dining furniture collection"
+              class="cat-card__img"
+              loading="lazy"
+            />
+            <div class="cat-card__overlay" aria-hidden="true">
+              <p class="cat-card__overlay-desc">
+                Dining tables and chairs built for families and long evenings together.
+              </p>
+              <span class="cat-card__overlay-cta">Explore Dining →</span>
+            </div>
+          </figure>
+          <div class="cat-card__info">
+            <h3 class="cat-card__name">Dining</h3>
+            <p class="cat-card__count">8 pieces</p>
+          </div>
+        </a>
+
+        <a href="./pages/products.html#office" class="cat-card">
+          <figure class="cat-card__figure">
+            <img
+              src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760991627/office_zy54dk.jpg"
+              alt="Office furniture collection"
+              class="cat-card__img"
+              loading="lazy"
+            />
+            <div class="cat-card__overlay" aria-hidden="true">
+              <p class="cat-card__overlay-desc">
+                Executive desks and seating designed to command any workspace.
+              </p>
+              <span class="cat-card__overlay-cta">Explore Office →</span>
+            </div>
+          </figure>
+          <div class="cat-card__info">
+            <h3 class="cat-card__name">Office</h3>
+            <p class="cat-card__count">11 pieces</p>
+          </div>
+        </a>
+
+        <a href="./pages/products.html#kitchen" class="cat-card">
+          <figure class="cat-card__figure">
+            <img
+              src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760990288/kitchen_ss5qdm.jpg"
+              alt="Kitchen furniture collection"
+              class="cat-card__img"
+              loading="lazy"
+            />
+            <div class="cat-card__overlay" aria-hidden="true">
+              <p class="cat-card__overlay-desc">
+                Custom cabinetry and kitchen units built to your exact layout.
+              </p>
+              <span class="cat-card__overlay-cta">Explore Kitchen →</span>
+            </div>
+          </figure>
+          <div class="cat-card__info">
+            <h3 class="cat-card__name">Kitchen</h3>
+            <p class="cat-card__count">16 pieces</p>
+          </div>
+        </a>
+
+        <a href="./pages/products.html#living" class="cat-card">
+          <figure class="cat-card__figure">
+            <img
+              src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760989890/9fc86d74-a09a-4155-881d-60e6af7e76c8_elkcx3.jpg"
+              alt="Living room furniture collection"
+              class="cat-card__img"
+              loading="lazy"
+            />
+            <div class="cat-card__overlay" aria-hidden="true">
+              <p class="cat-card__overlay-desc">
+                Sofas, coffee tables and accent pieces that anchor every living space.
+              </p>
+              <span class="cat-card__overlay-cta">Explore Living Room →</span>
+            </div>
+          </figure>
+          <div class="cat-card__info">
+            <h3 class="cat-card__name">Living Room</h3>
+            <p class="cat-card__count">38 pieces</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="container">
+      <div class="categories__progress">
+        <div class="categories__progress-bar" id="categoriesProgress"></div>
+      </div>
+    </div>
+
+  </section>
+
 </main>
 
 
@@ -237,6 +401,7 @@
     <!-- Our scripts -->
     <script src="./assets/js/navbar.js"></script>
     <script src="./assets/js/animations.js"></script>
+    <script src="./assets/js/categories-slider.js"></script>
 
 </body>
 </html>
