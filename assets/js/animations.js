@@ -71,48 +71,5 @@ window.addEventListener('load', () => {
     }, '-=0.2');
   }
 
-  /* SCROLL REVEALS
-    Any element with data-reveal animates in when it
-    enters the viewport during scroll.
-    once: true means it only animates once, not every time.
-  */
-  document.querySelectorAll('[data-reveal]').forEach(el => {
-    /* Skip hero elements — they already have their own animation */
-    if (el.closest('.hero')) return;
-
-    gsap.from(el, {
-      y: 40,
-      opacity: 0,
-      duration: 0.9,
-      ease: 'expo.out',
-      scrollTrigger: {
-        trigger: el,
-        start: 'top 88%',  /* fires when element is 88% from top of viewport */
-        once: true
-      }
-    });
-  });
-
-  /* STAGGER GRIDS
-    When a parent has data-stagger, its children animate in
-    one after another with a small delay between each.
-    */
-  document.querySelectorAll('[data-stagger]').forEach(parent => {
-    const children = parent.children;
-    if (!children.length) return;
-
-    gsap.from(children, {
-      y: 40,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.12,   /* 0.12s delay between each child */
-      ease: 'expo.out',
-      scrollTrigger: {
-        trigger: parent,
-        start: 'top 85%',
-        once: true
-      }
-    });
-  });
 
 });
