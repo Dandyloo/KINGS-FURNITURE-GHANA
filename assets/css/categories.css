@@ -4,7 +4,7 @@
 .categories {
   background: var(--color-bg);
   padding-block: clamp(var(--space-20), 12vw, var(--space-32));
-  overflow: hidden;    /* clips the track that bleeds beyond container */
+  overflow: hidden; /* clips the track that bleeds beyond container */
 }
 
 /* HEADER */
@@ -45,9 +45,9 @@
   color: var(--color-text-primary);
   cursor: pointer;
   transition:
-    background  var(--duration-fast) var(--ease-standard),
+    background var(--duration-fast) var(--ease-standard),
     border-color var(--duration-fast) var(--ease-standard),
-    color        var(--duration-fast) var(--ease-standard);
+    color var(--duration-fast) var(--ease-standard);
   flex-shrink: 0;
 }
 
@@ -83,7 +83,7 @@ cursor: grab shows the grab cursor for drag interaction.
   width: 100%;
   overflow: hidden;
   cursor: grab;
-  user-select: none;    /* prevents text selection while dragging */
+  user-select: none; /* prevents text selection while dragging */
 }
 
 .categories__track-wrapper:active {
@@ -101,12 +101,12 @@ padding-inline adds space at start and end matching the gutter.
   padding-inline: var(--gutter);
   transform: translateX(0);
   transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform;   /* tells browser to prepare GPU layer */
+  will-change: transform; /* tells browser to prepare GPU layer */
 }
 
 /* CATEGORY CARD */
 .cat-card {
-  flex: 0 0 clamp(240px, 28vw, 340px);  /* fixed width, never shrinks */
+  flex: 0 0 clamp(240px, 28vw, 340px); /* fixed width, never shrinks */
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
@@ -120,7 +120,7 @@ padding-inline adds space at start and end matching the gutter.
   overflow: hidden;
   background: var(--color-bg-subtle);
   border-radius: var(--radius-lg);
-  aspect-ratio: 3 / 4;    /* portrait ratio — taller than wide */
+  aspect-ratio: 3 / 4; /* portrait ratio — taller than wide */
   position: relative;
 }
 
@@ -159,7 +159,7 @@ Only on devices that support hover (not touch).
   opacity: 0;
   transform: translateY(6px);
   transition:
-    opacity   var(--duration-base) var(--ease-expo),
+    opacity var(--duration-base) var(--ease-expo),
     transform var(--duration-base) var(--ease-expo);
 }
 
@@ -227,7 +227,7 @@ Only on devices that support hover (not touch).
   height: 100%;
   background: var(--color-brand);
   border-radius: var(--radius-pill);
-  width: 20%;           /* 1 out of 5 cards = 20% */
+  width: 20%; /* 1 out of 5 cards = 20% */
   transition: width 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 

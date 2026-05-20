@@ -13,10 +13,10 @@ What this file does:
   /* async/await lets us fetch data without blocking the page.
      The () => { }() at the end means it runs immediately. */
 
-  const grid = document.getElementById('featured-products-grid');
+  const grid = document.getElementById("featured-products-grid");
   if (!grid) return;
 
-  const WA_NUMBER = '233503676484';
+  const WA_NUMBER = "233503676484";
 
   /*  FETCH DATA
     fetch() loads the JSON file.
@@ -26,12 +26,12 @@ What this file does:
   let products = [];
 
   try {
-    const response = await fetch('./data/products.json');
-    if (!response.ok) throw new Error('Failed to load products');
+    const response = await fetch("./data/products.json");
+    if (!response.ok) throw new Error("Failed to load products");
     const data = await response.json();
     products = data.featured || [];
   } catch (err) {
-    console.warn('Could not load products:', err);
+    console.warn("Could not load products:", err);
     grid.innerHTML = `
       <p style="grid-column: 1/-1; text-align: center; color: var(--color-text-secondary); padding: var(--space-20) 0;">
         Unable to load products.
@@ -49,7 +49,7 @@ What this file does:
   const buildCard = (product) => {
     /* Pre-build the WhatsApp message URL */
     const waMessage = encodeURIComponent(
-      `Hello Kings Furniture,\n\nI'd like to enquire about: ${product.name}.\n\nPlease send me more details.`
+      `Hello Kings Furniture,\n\nI'd like to enquire about: ${product.name}.\n\nPlease send me more details.`,
     );
     const waURL = `https://wa.me/${WA_NUMBER}?text=${waMessage}`;
 
@@ -89,14 +89,13 @@ What this file does:
   };
 
   /*  RENDER CARDS  */
-  grid.innerHTML = products.map(buildCard).join('');
+  grid.innerHTML = products.map(buildCard).join("");
 
-/* ── ANIMATION ── */
+  /* ── ANIMATION ── */
   /* CSS handles the animation — no GSAP needed */
-  const cards = grid.querySelectorAll('.product-card');
+  const cards = grid.querySelectorAll(".product-card");
   cards.forEach((card, index) => {
     card.style.animationDelay = `${index * 0.1}s`;
-    card.classList.add('card-animate-in');
+    card.classList.add("card-animate-in");
   });
-
 })();

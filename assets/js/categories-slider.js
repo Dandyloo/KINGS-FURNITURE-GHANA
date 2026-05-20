@@ -5,20 +5,19 @@
    3. Touch swipe — finger swipe on mobile
 */
 
-document.addEventListener('DOMContentLoaded', () => {
-
-  const track       = document.getElementById('categoriesTrack');
-  const progressBar = document.getElementById('categoriesProgress');
-  const prevBtn     = document.querySelector('.categories__arrow--prev');
-  const nextBtn     = document.querySelector('.categories__arrow--next');
-  const counterCurrent = document.querySelector('.categories__counter-current');
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.getElementById("categoriesTrack");
+  const progressBar = document.getElementById("categoriesProgress");
+  const prevBtn = document.querySelector(".categories__arrow--prev");
+  const nextBtn = document.querySelector(".categories__arrow--next");
+  const counterCurrent = document.querySelector(".categories__counter-current");
 
   if (!track) return;
 
-  const cards = Array.from(track.querySelectorAll('.cat-card'));
+  const cards = Array.from(track.querySelectorAll(".cat-card"));
   const total = cards.length;
   let currentIdx = 0;
-  let offset = 0;       /* current translateX in pixels */
+  let offset = 0; /* current translateX in pixels */
 
   /* HELPERS */
 
@@ -75,18 +74,18 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   /* ARROW BUTTONS */
-  if (prevBtn) prevBtn.addEventListener('click', () => slideTo(currentIdx - 1));
-  if (nextBtn) nextBtn.addEventListener('click', () => slideTo(currentIdx + 1));
+  if (prevBtn) prevBtn.addEventListener("click", () => slideTo(currentIdx - 1));
+  if (nextBtn) nextBtn.addEventListener("click", () => slideTo(currentIdx + 1));
 
   /* KEYBOARD */
-  document.addEventListener('keydown', (e) => {
+  document.addEventListener("keydown", (e) => {
     /* Only respond if slider is visible on screen */
     const rect = track.getBoundingClientRect();
     const inView = rect.top < window.innerHeight && rect.bottom > 0;
     if (!inView) return;
 
-    if (e.key === 'ArrowLeft')  slideTo(currentIdx - 1);
-    if (e.key === 'ArrowRight') slideTo(currentIdx + 1);
+    if (e.key === "ArrowLeft") slideTo(currentIdx - 1);
+    if (e.key === "ArrowRight") slideTo(currentIdx + 1);
   });
 
   /* MOUSE DRAG
@@ -98,33 +97,33 @@ document.addEventListener('DOMContentLoaded', () => {
   let dragStartOffset = 0;
   let hasDragged = false;
 
-  track.addEventListener('mousedown', (e) => {
+  track.addEventListener("mousedown", (e) => {
     isDragging = true;
     hasDragged = false;
     dragStartX = e.clientX;
     dragStartOffset = offset;
     /* Remove transition during drag so it follows finger instantly */
-    track.style.transition = 'none';
+    track.style.transition = "none";
   });
 
-  window.addEventListener('mousemove', (e) => {
+  window.addEventListener("mousemove", (e) => {
     if (!isDragging) return;
     const delta = dragStartX - e.clientX;
     if (Math.abs(delta) > 4) hasDragged = true;
     applyOffset(dragStartOffset + delta);
   });
 
-  window.addEventListener('mouseup', () => {
+  window.addEventListener("mouseup", () => {
     if (!isDragging) return;
     isDragging = false;
     /* Restore transition for snap animation */
-    track.style.transition = '';
+    track.style.transition = "";
     slideTo(currentIdx);
   });
 
   /* Prevent card links from firing after a drag */
-  cards.forEach(card => {
-    card.addEventListener('click', (e) => {
+  cards.forEach((card) => {
+    card.addEventListener("click", (e) => {
       if (hasDragged) e.preventDefault();
     });
   });
@@ -135,30 +134,37 @@ document.addEventListener('DOMContentLoaded', () => {
   let touchStartX = 0;
   let touchStartOffset = 0;
 
-  track.addEventListener('touchstart', (e) => {
-    touchStartX = e.touches[0].clientX;
-    touchStartOffset = offset;
-    track.style.transition = 'none';
-  }, { passive: true });
+  track.addEventListener(
+    "touchstart",
+    (e) => {
+      touchStartX = e.touches[0].clientX;
+      touchStartOffset = offset;
+      track.style.transition = "none";
+    },
+    { passive: true },
+  );
 
-  track.addEventListener('touchmove', (e) => {
-    const delta = touchStartX - e.touches[0].clientX;
-    applyOffset(touchStartOffset + delta);
-  }, { passive: true });
+  track.addEventListener(
+    "touchmove",
+    (e) => {
+      const delta = touchStartX - e.touches[0].clientX;
+      applyOffset(touchStartOffset + delta);
+    },
+    { passive: true },
+  );
 
-  track.addEventListener('touchend', () => {
-    track.style.transition = '';
+  track.addEventListener("touchend", () => {
+    track.style.transition = "";
     slideTo(currentIdx);
   });
 
   /* RESIZE */
   let resizeTimer;
-  window.addEventListener('resize', () => {
+  window.addEventListener("resize", () => {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => slideTo(currentIdx), 150);
   });
 
   /* INIT */
   updateUI();
-
 });

@@ -20,20 +20,37 @@ You give it a name, then use it with animation: name duration.
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes pulse {
-  0%   { transform: translateY(0);    opacity: 1; }
-  50%  { transform: translateY(10px); opacity: 0.5; }
-  100% { transform: translateY(0);    opacity: 1; }
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Shimmer — used on image placeholders while loading */
 @keyframes shimmer {
-  0%   { background-position: -200% 0; }
-  100% { background-position:  200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 /* IMAGE SKELETON LOADER 
@@ -44,7 +61,7 @@ The gradient sweeps left to right giving a "loading" effect.
   background: linear-gradient(
     90deg,
     var(--color-bg-subtle) 0%,
-    var(--color-bg-soft)   50%,
+    var(--color-bg-soft) 50%,
     var(--color-bg-subtle) 100%
   );
   background-size: 200% 100%;
@@ -113,7 +130,7 @@ Animated underline that grows from left to right on hover.
 }
 
 .link-slide::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -1px;
   left: 0;

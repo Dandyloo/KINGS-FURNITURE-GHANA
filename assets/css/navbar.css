@@ -10,17 +10,17 @@ position: fixed keeps navbar at top while page scrolls.
 We start transparent so it blends into the hero image.
 */
 .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: var(--z-nav);
-    padding-block: var(--space-4);
-    background: transparent;
-    transition:
-        background var(--duration-slow) var(--ease-expo),
-        box-shadow var(--duration-slow) var(--ease-expo),
-        padding var(--duration-slow) var(--ease-expo);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-nav);
+  padding-block: var(--space-4);
+  background: transparent;
+  transition:
+    background var(--duration-slow) var(--ease-expo),
+    box-shadow var(--duration-slow) var(--ease-expo),
+    padding var(--duration-slow) var(--ease-expo);
 }
 
 /* SCROLLED STATE 
@@ -28,110 +28,110 @@ JS adds .is-scrolled when page scrolls past the hero.
 Also added immediately on pages that have no hero.
 */
 .nav.is-scrolled {
-    background: rgba(255, 255, 255, 0.97);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px); 
-    padding-block: var(--space-3);
-    box-shadow: 0 1px 0 var(--color-border);
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding-block: var(--space-3);
+  box-shadow: 0 1px 0 var(--color-border);
 }
 
 /* INNER LAYOUT 
 Three columns: logo | links | cta+hamburger */
 .nav__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: var(--container-max);
-    margin-inline: auto;
-    padding-inline: var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
 }
 
 /* LOGO */
 .nav__logo {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;  /* prevents logo from shrinking on mobile */
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0; /* prevents logo from shrinking on mobile */
+  text-decoration: none;
 }
 
 .nav__logo-img {
-    height: 80px;
-    width: auto;
-    display: block;
-    transition: opacity var(--duration-fast) var(--ease-standard);
+  height: 80px;
+  width: auto;
+  display: block;
+  transition: opacity var(--duration-fast) var(--ease-standard);
 }
 
 .nav.is-scrolled .nav__logo-img {
-    height: 66px;
+  height: 66px;
 }
 
 .nav__logo:hover .nav__logo-img {
-    opacity: 0.85;
+  opacity: 0.85;
 }
 
 /* DESKTOP LINKS
 Hidden on mobile - hamburger shows instead 
 */
 .nav__links {
-    display: flex;
-    align-items: center;
-    gap: var(--space-8);
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
 }
 
 .nav__link {
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
-    font-weight: 400;
-    letter-spacing: var(--tracking-wide);
-    color: #fff;
-    position: relative;
-    transition:
-        color var(--duration-fast) var(--ease-standard),
-        opacity  var(--duration-fast) var(--ease-standard);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  letter-spacing: var(--tracking-wide);
+  color: #fff;
+  position: relative;
+  transition:
+    color var(--duration-fast) var(--ease-standard),
+    opacity var(--duration-fast) var(--ease-standard);
 }
 /* Animated underline using ::after pseudo element */
 .nav__link::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 100%;
-    height: 1.5px;
-    background: currentColor;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform var(--duration-base) var(--ease-expo);   
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--duration-base) var(--ease-expo);
 }
 
 /* Show underline on hover and active pages */
 .nav__link:hover::after,
 .nav__link.is-active::after {
-    transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .nav__link:hover {
-    opacity: 0.75;
+  opacity: 0.75;
 }
 
 /* When scrolled - links switch to dark text */
 .nav.is-scrolled .nav__link {
-    color: var(--color-text-primary);
+  color: var(--color-text-primary);
 }
 
 .nav.is-scrolled .nav__link:hover {
-    color: var(--color-brand);
-    opacity: 1;
+  color: var(--color-brand);
+  opacity: 1;
 }
 
 .nav.is-scrolled .nav__link.is-active {
-    color: var(--color-brand);
+  color: var(--color-brand);
 }
 
 /* CTA BUTTON */
 .nav__cta {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 /* Gold button over hero */
@@ -164,7 +164,7 @@ Hidden on mobile - hamburger shows instead
    JS adds .is-open to animate them into an X.
 ── */
 .nav__hamburger {
-  display: none;         /* hidden on desktop */
+  display: none; /* hidden on desktop */
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -182,11 +182,11 @@ Hidden on mobile - hamburger shows instead
   display: block;
   width: 22px;
   height: 1.5px;
-  background: #fff;      /* white over hero */
+  background: #fff; /* white over hero */
   border-radius: 2px;
   transition:
-    transform  var(--duration-slow) var(--ease-expo),
-    opacity    var(--duration-fast) var(--ease-standard),
+    transform var(--duration-slow) var(--ease-expo),
+    opacity var(--duration-fast) var(--ease-standard),
     background var(--duration-fast) var(--ease-standard);
   transform-origin: center;
 }
@@ -236,7 +236,7 @@ Hidden on mobile - hamburger shows instead
   position: fixed;
   inset: 0;
   z-index: calc(var(--z-nav) - 1);
-  background: #0E1236;
+  background: #0e1236;
   display: flex;
   flex-direction: column;
   opacity: 0;
@@ -244,8 +244,8 @@ Hidden on mobile - hamburger shows instead
   /* Slides up from bottom */
   transform: translateY(100%);
   transition:
-    opacity     var(--duration-slow) var(--ease-expo),
-    transform   var(--duration-slow) var(--ease-expo);
+    opacity var(--duration-slow) var(--ease-expo),
+    transform var(--duration-slow) var(--ease-expo);
 }
 
 .nav__mobile.is-open {
@@ -343,7 +343,7 @@ Hidden on mobile - hamburger shows instead
   font-size: 9px;
   letter-spacing: var(--tracking-widest);
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.30);
+  color: rgba(255, 255, 255, 0.3);
   margin: 0;
 }
 
@@ -364,7 +364,7 @@ a.nav__mobile-info-value:hover {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  background: rgba(37, 211, 102, 0.10);
+  background: rgba(37, 211, 102, 0.1);
   border: 0.5px solid rgba(37, 211, 102, 0.25);
   border-radius: var(--radius-sm);
   padding: var(--space-2) var(--space-3);
@@ -372,21 +372,21 @@ a.nav__mobile-info-value:hover {
   font-weight: 500;
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  color: #25D366;
+  color: #25d366;
   text-decoration: none;
   width: fit-content;
   transition: background var(--duration-fast) var(--ease-standard);
 }
 
 .nav__mobile-wa:hover {
-  background: rgba(37, 211, 102, 0.20);
+  background: rgba(37, 211, 102, 0.2);
 }
 
 .nav__mobile-wa-dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #25D366;
+  background: #25d366;
   flex-shrink: 0;
 }
 
@@ -422,7 +422,7 @@ a.nav__mobile-info-value:hover {
   font-family: var(--font-display);
   font-size: var(--text-3xl);
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.70);
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   line-height: var(--leading-snug);
   padding: var(--space-1) var(--space-5) var(--space-1) 0;
@@ -433,9 +433,9 @@ a.nav__mobile-info-value:hover {
   opacity: 0;
   transform: translateX(20px);
   transition:
-    color      var(--duration-fast) var(--ease-standard),
-    opacity    0.45s var(--ease-expo),
-    transform  0.45s var(--ease-expo);
+    color var(--duration-fast) var(--ease-standard),
+    opacity 0.45s var(--ease-expo),
+    transform 0.45s var(--ease-expo);
 }
 
 .nav__mobile-link:hover {
@@ -447,11 +447,31 @@ a.nav__mobile-info-value:hover {
 }
 
 /* Stagger links in when menu opens */
-.nav__mobile.is-open .nav__mobile-link:nth-child(2) { opacity:1; transform:translateX(0); transition-delay: 0.10s; }
-.nav__mobile.is-open .nav__mobile-link:nth-child(3) { opacity:1; transform:translateX(0); transition-delay: 0.16s; }
-.nav__mobile.is-open .nav__mobile-link:nth-child(4) { opacity:1; transform:translateX(0); transition-delay: 0.22s; }
-.nav__mobile.is-open .nav__mobile-link:nth-child(5) { opacity:1; transform:translateX(0); transition-delay: 0.28s; }
-.nav__mobile.is-open .nav__mobile-link:nth-child(6) { opacity:1; transform:translateX(0); transition-delay: 0.34s; }
+.nav__mobile.is-open .nav__mobile-link:nth-child(2) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.1s;
+}
+.nav__mobile.is-open .nav__mobile-link:nth-child(3) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.16s;
+}
+.nav__mobile.is-open .nav__mobile-link:nth-child(4) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.22s;
+}
+.nav__mobile.is-open .nav__mobile-link:nth-child(5) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.28s;
+}
+.nav__mobile.is-open .nav__mobile-link:nth-child(6) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.34s;
+}
 
 /* ── BOTTOM CTA ── */
 .nav__mobile-cta {
@@ -485,21 +505,39 @@ a.nav__mobile-info-value:hover {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
-  .nav__links     { display: none; }
-  .nav__cta       { display: none; }
-  .nav__hamburger { display: flex; }
+  .nav__links {
+    display: none;
+  }
+  .nav__cta {
+    display: none;
+  }
+  .nav__hamburger {
+    display: flex;
+  }
 }
 
 @media (max-width: 768px) {
-  .nav__logo-img { height: 68px; }
-  .nav.is-scrolled .nav__logo-img { height: 56px; }
+  .nav__logo-img {
+    height: 68px;
+  }
+  .nav.is-scrolled .nav__logo-img {
+    height: 56px;
+  }
 }
 
 @media (max-width: 480px) {
-  .nav { padding-block: var(--space-3); }
-  .nav.is-scrolled { padding-block: var(--space-2); }
-  .nav__logo-img { height: 58px; }
-  .nav.is-scrolled .nav__logo-img { height: 48px; }
+  .nav {
+    padding-block: var(--space-3);
+  }
+  .nav.is-scrolled {
+    padding-block: var(--space-2);
+  }
+  .nav__logo-img {
+    height: 58px;
+  }
+  .nav.is-scrolled .nav__logo-img {
+    height: 48px;
+  }
 
   .nav__mobile-link {
     font-size: var(--text-2xl);

@@ -1,578 +1,692 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kings Furniture Ghana - Premium Furniture Since 1992</title>
-    <meta name="description" content="Ghana's most recognised furniture brand. Handcrafted sofas, beds, dining sets and more. Designed and built in Takoradi since 1992.">
+    <meta
+      name="description"
+      content="Ghana's most recognised furniture brand. Handcrafted sofas, beds, dining sets and more. Designed and built in Takoradi since 1992."
+    />
 
     <!-- Canonical URL - tells search engines this is the real page -->
     <link rel="canonical" href="https://www.kingsfurnituregh.com" />
 
     <!-- Open Graph - controls how the page looks when shared on Whatsapp, Facebook etc -->
-    <meta property="og:type"  content="website" />
-    <meta property="og:url"   content="https://www.kingsfurnituregh.com/" />
-    <meta property="og:title"  content="Kings Furniture Ghana" />
-    <meta property="og:description"  content="Ghana's most recognised furniture brand. Crafted in Takoradi since 1992." />
-    <meta property="og:image"  content="https://res.cloudinary.com/djmyiuu5k/image/upload/v1760868207/KINGS_NEW_LOGO_3_qwzemb.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.kingsfurnituregh.com/" />
+    <meta property="og:title" content="Kings Furniture Ghana" />
+    <meta
+      property="og:description"
+      content="Ghana's most recognised furniture brand. Crafted in Takoradi since 1992."
+    />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/djmyiuu5k/image/upload/v1760868207/KINGS_NEW_LOGO_3_qwzemb.png"
+    />
 
     <!-- Favicon -->
-    <link rel="icon" href="https://res.cloudinary.com/djmyiuu5k/image/upload/v1760868207/KINGS_NEW_LOGO_3_qwzemb.png" type="image/png" />
+    <link
+      rel="icon"
+      href="https://res.cloudinary.com/djmyiuu5k/image/upload/v1760868207/KINGS_NEW_LOGO_3_qwzemb.png"
+      type="image/png"
+    />
 
-     <!-- Fonts — preconnect first so the browser opens the connection early -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
-  />
+    <!-- Fonts — preconnect first so the browser opens the connection early -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+    />
 
-  <!-- Styles — order matters, tokens first -->
-  <link rel="stylesheet" href="./assets/css/tokens.css" />
-  <link rel="stylesheet" href="./assets/css/main.css" />
-  <link rel="stylesheet" href="./assets/css/animations.css" />
-  <link rel="stylesheet" href="./assets/css/navbar.css" />
-  <link rel="stylesheet" href="./assets/css/hero.css" />
-  <link rel="stylesheet" href="./assets/css/categories.css" />
-  <link rel="stylesheet" href="./assets/css/featured-products.css" />
-  <link rel="stylesheet" href="./assets/css/about-strip.css" />
-  <link rel="stylesheet" href="./assets/css/projects-teaser.css" />
-</head>
-<body>
-    
+    <!-- Styles — order matters, tokens first -->
+    <link rel="stylesheet" href="./assets/css/tokens.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/animations.css" />
+    <link rel="stylesheet" href="./assets/css/navbar.css" />
+    <link rel="stylesheet" href="./assets/css/hero.css" />
+    <link rel="stylesheet" href="./assets/css/categories.css" />
+    <link rel="stylesheet" href="./assets/css/featured-products.css" />
+    <link rel="stylesheet" href="./assets/css/about-strip.css" />
+    <link rel="stylesheet" href="./assets/css/projects-teaser.css" />
+    <link rel="stylesheet" href="./assets/css/testimonials.css" />
+  </head>
+  <body>
     <!-- Page transition overlay - JS animates this on navigation -->
-     <div class="page-transition" aria-hidden="true"></div>
+    <div class="page-transition" aria-hidden="true"></div>
 
-     <!-- NAVBAR -->
-      <nav class="nav" aria-label="Main navigation">
-        <div class="nav__inner">
-            <!-- LOGO -->
-             <a href="./index.html" class="nav__logo" aria-label="Kings Furniture Ghana - Home">
-                <img src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_400/v1760868207/KINGS_NEW_LOGO_3_qwzemb.png" 
-                alt="Kings Furniture Ghana"
-                class="nav__logo-img"
-                />
-            </a>
-
-            <!-- Desktop Navigation -->
-            <div class="nav__links">
-             <a href="./index.html"    class="nav__link is-active">Home</a>
-             <a href="./pages/about.html"   class="nav__link">About</a>
-             <a href="./pages/products.html"   class="nav__link">Products</a>
-             <a href="./pages/projects.html"   class="nav__link">Projects</a>
-             <a href="./pages/news.html"   class="nav__link">News</a>
-             </div>
-
-             <!-- Desktop CTA -->
-              <div class="nav__cta">
-                <a href="./pages/contact.html"   class="btn btn--primary">Contact Us</a>
-              </div>
-
-              <!-- Hamburger - mobile only -->
-               <button   
-               class="nav__hamburger"
-               aria-label="Open navigation menu"
-               aria-expanded="false"
-               aria-controls="mobile-nav"
-                >
-                 <span></span>
-                 <span></span>
-                 <span></span>
-               </button>
-            </div>
-      </nav>
-
-<!-- Mobile menu backdrop -->
-<div class="nav__backdrop" aria-hidden="true"></div>
-
-<!-- Mobile menu -->
-<nav
-  class="nav__mobile"
-  id="mobile-nav"
-  aria-label="Mobile navigation"
-  aria-hidden="true"
->
-  <!-- Top bar -->
-  <div class="nav__mobile-bar">
-    <span class="nav__mobile-brand">Kings Furniture</span>
-    <button class="nav__mobile-close" aria-label="Close navigation menu">
-      <span></span>
-      <span></span>
-    </button>
-  </div>
-
-  <!-- Main panel -->
-  <div class="nav__mobile-panel">
-
-    <!-- Left: contact info -->
-    <div class="nav__mobile-info">
-      <div class="nav__mobile-info-block">
-        <p class="nav__mobile-info-label">Call us</p>
-        <a href="tel:+233503676484" class="nav__mobile-info-value">
-          +233 50 367 6484
-        </a>
-      </div>
-      <div class="nav__mobile-info-block">
-        <p class="nav__mobile-info-label">Showrooms</p>
-        <p class="nav__mobile-info-value">Takoradi<br/>Accra</p>
-      </div>
-      <div class="nav__mobile-info-block">
-        <p class="nav__mobile-info-label">Hours</p>
-        <p class="nav__mobile-info-value">Mon – Sat<br/>8am – 6pm</p>
-      </div>
-      
-        <a href="https://wa.me/233503676484?text=Hello%20Kings%20Furniture%2C%20I%27d%20like%20to%20enquire%20about%20your%20furniture."
-        target="_blank"
-        rel="noopener noreferrer"
-        class="nav__mobile-wa"
+    <!-- NAVBAR -->
+    <nav class="nav" aria-label="Main navigation">
+      <div class="nav__inner">
+        <!-- LOGO -->
+        <a
+          href="./index.html"
+          class="nav__logo"
+          aria-label="Kings Furniture Ghana - Home"
         >
-        <span class="nav__mobile-wa-dot"></span>
-        WhatsApp
-      </a>
-    </div>
+          <img
+            src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_400/v1760868207/KINGS_NEW_LOGO_3_qwzemb.png"
+            alt="Kings Furniture Ghana"
+            class="nav__logo-img"
+          />
+        </a>
 
-    <!-- Right: nav links -->
-    <div class="nav__mobile-links">
-      <!-- Gold accent line -->
-      <div class="nav__mobile-line" aria-hidden="true"></div>
+        <!-- Desktop Navigation -->
+        <div class="nav__links">
+          <a href="./index.html" class="nav__link is-active">Home</a>
+          <a href="./pages/about.html" class="nav__link">About</a>
+          <a href="./pages/products.html" class="nav__link">Products</a>
+          <a href="./pages/projects.html" class="nav__link">Projects</a>
+          <a href="./pages/news.html" class="nav__link">News</a>
+        </div>
 
-      <a href="./index.html"          class="nav__mobile-link is-active">Home</a>
-      <a href="./pages/about.html"    class="nav__mobile-link">About</a>
-      <a href="./pages/products.html" class="nav__mobile-link">Products</a>
-      <a href="./pages/projects.html" class="nav__mobile-link">Projects</a>
-      <a href="./pages/news.html"     class="nav__mobile-link">News</a>
-    </div>
+        <!-- Desktop CTA -->
+        <div class="nav__cta">
+          <a href="./pages/contact.html" class="btn btn--primary">Contact Us</a>
+        </div>
 
-  </div>
+        <!-- Hamburger - mobile only -->
+        <button
+          class="nav__hamburger"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
 
-  <!-- Bottom CTA -->
-  <a href="./pages/contact.html" class="nav__mobile-cta">
-    <span>Get a Quote</span>
-    <span class="nav__mobile-cta-arrow">→</span>
-  </a>
+    <!-- Mobile menu backdrop -->
+    <div class="nav__backdrop" aria-hidden="true"></div>
 
-</nav>
+    <!-- Mobile menu -->
+    <nav
+      class="nav__mobile"
+      id="mobile-nav"
+      aria-label="Mobile navigation"
+      aria-hidden="true"
+    >
+      <!-- Top bar -->
+      <div class="nav__mobile-bar">
+        <span class="nav__mobile-brand">Kings Furniture</span>
+        <button class="nav__mobile-close" aria-label="Close navigation menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
 
-
-
-     <main id="main-content">
-        <!-- HERO SECTION -->
-         <section class="hero" id="hero">
-
-            <!-- Background image -->
-             <div class="hero__media">
-                <img 
-                    src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_1600/v1760989890/9fc86d74-a09a-4155-881d-60e6af7e76c8_elkcx3.jpg" 
-                    alt="Kings Furniture Ghana - Handcrafted Sofa"
-                    class="hero__img"
-                    fetchpriority="high"
-                />
-             <!-- Dark overlay so text is readable over the image -->
-              <div class="hero__overlay" aria-label="true"></div>
-            </div>
-
-    <!-- Content -->
-    <div class="container">
-      <div class="hero__content">
-
-        <!-- Left: text + buttons -->
-        <div class="hero__text">
-          <p class="label label--gold hero__label">
-            Ghana's Premier Furniture Brand Since 1992
-          </p>
-          <h1 class="display display--1 hero__heading">
-            Furniture built<br>
-            <em>to last</em><br>
-            a lifetime.
-          </h1>
-          <p class="hero__body">
-            Designed and crafted in Takoradi. Trusted by homes,
-            offices and institutions across Ghana.
-          </p>
-          <div class="hero__actions">
-            <a href="./pages/products.html" class="btn btn--primary btn--lg">
-              Explore Collection
-            </a>
-            <a href="./pages/about.html" class="hero__ghost-link">
-              Our Story →
+      <!-- Main panel -->
+      <div class="nav__mobile-panel">
+        <!-- Left: contact info -->
+        <div class="nav__mobile-info">
+          <div class="nav__mobile-info-block">
+            <p class="nav__mobile-info-label">Call us</p>
+            <a href="tel:+233503676484" class="nav__mobile-info-value">
+              +233 50 367 6484
             </a>
           </div>
-        </div>
+          <div class="nav__mobile-info-block">
+            <p class="nav__mobile-info-label">Showrooms</p>
+            <p class="nav__mobile-info-value">Takoradi<br />Accra</p>
+          </div>
+          <div class="nav__mobile-info-block">
+            <p class="nav__mobile-info-label">Hours</p>
+            <p class="nav__mobile-info-value">Mon – Sat<br />8am – 6pm</p>
+          </div>
 
-        <!-- Right: floating badge -->
-        <div class="hero__badge">
-          <p class="hero__badge-label">Est.</p>
-          <p class="hero__badge-year">1992</p>
-          <p class="hero__badge-city">Takoradi, GH</p>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Scroll indicator -->
-    <div class="hero__scroll" aria-hidden="true">
-      <svg
-        class="hero__scroll-icon pulse"
-        width="24" height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <polyline points="6 9 12 15 18 9"></polyline>
-      </svg>
-    </div>
-
-  </section>
-
-  <!-- CATEGORIES SLIDER -->
-   <section class="categories">
-    <div class="container">
-
-      <!-- Header -->
-      <div class="categories__header">
-        <div>
-          <p class="label label--brand">Browse by room</p>
-          <h2 class="display display--4">Shop by Collection</h2>
-        </div>
-
-        <!-- Arrow controls + counter -->
-        <div class="categories__controls">
-          <button
-            class="categories__arrow categories__arrow--prev"
-            aria-label="Previous category"
-            disabled
+          <a
+            href="https://wa.me/233503676484?text=Hello%20Kings%20Furniture%2C%20I%27d%20like%20to%20enquire%20about%20your%20furniture."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav__mobile-wa"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="15 18 9 12 15 6"/>
-            </svg>
-          </button>
-
-          <span class="categories__counter">
-            <span class="categories__counter-current">1</span>
-            <span style="color: var(--color-text-tertiary);"> / </span>
-            <span class="categories__counter-total">5</span>
-          </span>
-
-          <button
-            class="categories__arrow categories__arrow--next"
-            aria-label="Next category"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 18 15 12 9 6"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Track sits outside container so cards bleed to screen edge -->
-    <div class="categories__track-wrapper">
-      <div class="categories__track" id="categoriesTrack">
-
-        <a href="./pages/products.html#bedroom" class="cat-card">
-          <figure class="cat-card__figure">
-            <img
-              src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760989901/bedroom_xcasuq.jpg"
-              alt="Bedroom furniture collection"
-              class="cat-card__img"
-              loading="lazy"
-            />
-            <div class="cat-card__overlay" aria-hidden="true">
-              <p class="cat-card__overlay-desc">
-                Beds, wardrobes and bedside pieces crafted for rest and elegance.
-              </p>
-              <span class="cat-card__overlay-cta">Explore Bedroom →</span>
-            </div>
-          </figure>
-          <div class="cat-card__info">
-            <h3 class="cat-card__name">Bedroom</h3>
-            <p class="cat-card__count">12 pieces</p>
-          </div>
-        </a>
-
-        <a href="./pages/products.html#dining" class="cat-card">
-          <figure class="cat-card__figure">
-            <img
-              src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760990684/dining_cvuxju.jpg"
-              alt="Dining furniture collection"
-              class="cat-card__img"
-              loading="lazy"
-            />
-            <div class="cat-card__overlay" aria-hidden="true">
-              <p class="cat-card__overlay-desc">
-                Dining tables and chairs built for families and long evenings together.
-              </p>
-              <span class="cat-card__overlay-cta">Explore Dining →</span>
-            </div>
-          </figure>
-          <div class="cat-card__info">
-            <h3 class="cat-card__name">Dining</h3>
-            <p class="cat-card__count">8 pieces</p>
-          </div>
-        </a>
-
-        <a href="./pages/products.html#office" class="cat-card">
-          <figure class="cat-card__figure">
-            <img
-              src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760991627/office_zy54dk.jpg"
-              alt="Office furniture collection"
-              class="cat-card__img"
-              loading="lazy"
-            />
-            <div class="cat-card__overlay" aria-hidden="true">
-              <p class="cat-card__overlay-desc">
-                Executive desks and seating designed to command any workspace.
-              </p>
-              <span class="cat-card__overlay-cta">Explore Office →</span>
-            </div>
-          </figure>
-          <div class="cat-card__info">
-            <h3 class="cat-card__name">Office</h3>
-            <p class="cat-card__count">11 pieces</p>
-          </div>
-        </a>
-
-        <a href="./pages/products.html#kitchen" class="cat-card">
-          <figure class="cat-card__figure">
-            <img
-              src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760990288/kitchen_ss5qdm.jpg"
-              alt="Kitchen furniture collection"
-              class="cat-card__img"
-              loading="lazy"
-            />
-            <div class="cat-card__overlay" aria-hidden="true">
-              <p class="cat-card__overlay-desc">
-                Custom cabinetry and kitchen units built to your exact layout.
-              </p>
-              <span class="cat-card__overlay-cta">Explore Kitchen →</span>
-            </div>
-          </figure>
-          <div class="cat-card__info">
-            <h3 class="cat-card__name">Kitchen</h3>
-            <p class="cat-card__count">16 pieces</p>
-          </div>
-        </a>
-
-        <a href="./pages/products.html#living" class="cat-card">
-          <figure class="cat-card__figure">
-            <img
-              src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760989890/9fc86d74-a09a-4155-881d-60e6af7e76c8_elkcx3.jpg"
-              alt="Living room furniture collection"
-              class="cat-card__img"
-              loading="lazy"
-            />
-            <div class="cat-card__overlay" aria-hidden="true">
-              <p class="cat-card__overlay-desc">
-                Sofas, coffee tables and accent pieces that anchor every living space.
-              </p>
-              <span class="cat-card__overlay-cta">Explore Living Room →</span>
-            </div>
-          </figure>
-          <div class="cat-card__info">
-            <h3 class="cat-card__name">Living Room</h3>
-            <p class="cat-card__count">38 pieces</p>
-          </div>
-        </a>
-
-      </div>
-    </div>
-
-    <!-- Progress bar -->
-    <div class="container">
-      <div class="categories__progress">
-        <div class="categories__progress-bar" id="categoriesProgress"></div>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- FEATURED PRODUCTS -->
-   <section class="featured-products">
-    <div class="container">
-
-      <!-- Header -->
-      <div class="featured-products__header">
-        <div>
-          <p class="label label--brand">Featured Products</p>
-          <h2 class="display display--3">Handpicked for you</h2>
-        </div>
-        <a href="./pages/products.html" class="btn btn--ghost">
-          View full collection →
-        </a>
-      </div>
-
-      <!-- Grid — filled by JS -->
-      <div
-        class="featured-products__grid"
-        id="featured-products-grid"
-        data-stagger
-      >
-        <!-- Products rendered here by products-home.js -->
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ABOUT STRIP -->
-   <section class="about-strip">
-    <div class="container">
-      <div class="about-strip__grid">
-
-        <!-- Left: text -->
-        <div class="about-strip__left">
-          <p class="label label--brand">Our story</p>
-          <h2 class="display display--3">
-            Built in Takoradi.<br>
-            <em>Trusted across Ghana.</em>
-          </h2>
-          <p class="body-text">
-            Since 1992, we've designed and crafted furniture that earns
-            its place in every room it enters. Every piece carries the
-            precision of three decades of practice — built to last,
-            made to matter.
-          </p>
-          <a href="./pages/about.html" class="btn btn--secondary">
-            Read our story →
+            <span class="nav__mobile-wa-dot"></span>
+            WhatsApp
           </a>
         </div>
 
-        <!-- Right: stats + image -->
-        <div class="about-strip__right">
+        <!-- Right: nav links -->
+        <div class="nav__mobile-links">
+          <!-- Gold accent line -->
+          <div class="nav__mobile-line" aria-hidden="true"></div>
 
-          <!-- Stats grid -->
-          <div class="about-strip__stats">
-            <div class="stat-card">
-              <p class="stat-card__number">30+</p>
-              <p class="stat-card__label">Years of craft</p>
-            </div>
-            <div class="stat-card">
-              <p class="stat-card__number">120+</p>
-              <p class="stat-card__label">Skilled artisans</p>
-            </div>
-            <div class="stat-card">
-              <p class="stat-card__number">2</p>
-              <p class="stat-card__label">City showrooms</p>
-            </div>
-            <div class="stat-card">
-              <p class="stat-card__number">1000+</p>
-              <p class="stat-card__label">Homes furnished</p>
-            </div>
-          </div>
-
-          <!-- Image -->
-          <div class="about-strip__img">
-            <img
-              src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760989901/bedroom_xcasuq.jpg"
-              alt="Kings Furniture Ghana craftsmanship"
-              class="img-cover"
-              loading="lazy"
-            />
-          </div>
-
+          <a href="./index.html" class="nav__mobile-link is-active">Home</a>
+          <a href="./pages/about.html" class="nav__mobile-link">About</a>
+          <a href="./pages/products.html" class="nav__mobile-link">Products</a>
+          <a href="./pages/projects.html" class="nav__mobile-link">Projects</a>
+          <a href="./pages/news.html" class="nav__mobile-link">News</a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- PROJECTS TEASER -->
-   <section class="projects-teaser">
-    <div class="container">
+      <!-- Bottom CTA -->
+      <a href="./pages/contact.html" class="nav__mobile-cta">
+        <span>Get a Quote</span>
+        <span class="nav__mobile-cta-arrow">→</span>
+      </a>
+    </nav>
 
-      <!-- Header -->
-      <div class="projects-teaser__header">
-        <div>
-          <p class="label label--brand">Our work</p>
-          <h2 class="display display--3">
-            Spaces we've<br>
-            <em>transformed.</em>
-          </h2>
+    <main id="main-content">
+      <!-- HERO SECTION -->
+      <section class="hero" id="hero">
+        <!-- Background image -->
+        <div class="hero__media">
+          <img
+            src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_1600/v1760989890/9fc86d74-a09a-4155-881d-60e6af7e76c8_elkcx3.jpg"
+            alt="Kings Furniture Ghana - Handcrafted Sofa"
+            class="hero__img"
+            fetchpriority="high"
+          />
+          <!-- Dark overlay so text is readable over the image -->
+          <div class="hero__overlay" aria-label="true"></div>
         </div>
-        <a href="./pages/projects.html" class="btn btn--secondary">
-          View all projects →
-        </a>
-      </div>
 
-      <!-- Asymmetric grid -->
-      <div class="projects-teaser__grid">
-
-        <!-- Large card — left, spans 2 rows -->
-        <a href="./pages/projects.html" class="project-card project-card--large">
-          <figure class="project-card__figure">
-            <img
-              src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_900/v1760989890/9fc86d74-a09a-4155-881d-60e6af7e76c8_elkcx3.jpg"
-              alt="Private Residence, East Legon"
-              class="project-card__img"
-              loading="lazy"
-            />
-            <div class="project-card__overlay">
-              <div class="project-card__meta">
-                <span class="project-card__tag">Residential</span>
-                <span class="project-card__tag">Accra</span>
-              </div>
-              <h3 class="project-card__name">Private Residence, East Legon</h3>
-              <p class="project-card__desc">
-                Full living and dining fit-out for a 5-bedroom home in Accra.
+        <!-- Content -->
+        <div class="container">
+          <div class="hero__content">
+            <!-- Left: text + buttons -->
+            <div class="hero__text">
+              <p class="label label--gold hero__label">
+                Ghana's Premier Furniture Brand Since 1992
               </p>
-            </div>
-          </figure>
-        </a>
-
-        <!-- Small card top right -->
-        <a href="./pages/projects.html" class="project-card">
-          <figure class="project-card__figure">
-            <img
-              src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760991627/office_zy54dk.jpg"
-              alt="Corporate HQ, Takoradi"
-              class="project-card__img"
-              loading="lazy"
-            />
-            <div class="project-card__overlay">
-              <div class="project-card__meta">
-                <span class="project-card__tag">Commercial</span>
-                <span class="project-card__tag">Takoradi</span>
-              </div>
-              <h3 class="project-card__name">Corporate HQ, Takoradi</h3>
-              <p class="project-card__desc">
-                Executive suites and open-plan workspaces across three floors.
+              <h1 class="display display--1 hero__heading">
+                Furniture built<br />
+                <em>to last</em><br />
+                a lifetime.
+              </h1>
+              <p class="hero__body">
+                Designed and crafted in Takoradi. Trusted by homes, offices and
+                institutions across Ghana.
               </p>
-            </div>
-          </figure>
-        </a>
-
-        <!-- Small card bottom right -->
-        <a href="./pages/projects.html" class="project-card">
-          <figure class="project-card__figure">
-            <img
-              src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760989901/bedroom_xcasuq.jpg"
-              alt="Boutique Hotel, Kumasi"
-              class="project-card__img"
-              loading="lazy"
-            />
-            <div class="project-card__overlay">
-              <div class="project-card__meta">
-                <span class="project-card__tag">Hospitality</span>
-                <span class="project-card__tag">Kumasi</span>
+              <div class="hero__actions">
+                <a
+                  href="./pages/products.html"
+                  class="btn btn--primary btn--lg"
+                >
+                  Explore Collection
+                </a>
+                <a href="./pages/about.html" class="hero__ghost-link">
+                  Our Story →
+                </a>
               </div>
-              <h3 class="project-card__name">Boutique Hotel, Kumasi</h3>
-              <p class="project-card__desc">
-                24 bedroom suites fully furnished to a luxury brief.
-              </p>
             </div>
-          </figure>
-        </a>
 
-      </div>
-    </div>
-  </section>
+            <!-- Right: floating badge -->
+            <div class="hero__badge">
+              <p class="hero__badge-label">Est.</p>
+              <p class="hero__badge-year">1992</p>
+              <p class="hero__badge-city">Takoradi, GH</p>
+            </div>
+          </div>
+        </div>
 
-</main>
+        <!-- Scroll indicator -->
+        <div class="hero__scroll" aria-hidden="true">
+          <svg
+            class="hero__scroll-icon pulse"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+      </section>
 
+      <!-- CATEGORIES SLIDER -->
+      <section class="categories">
+        <div class="container">
+          <!-- Header -->
+          <div class="categories__header">
+            <div>
+              <p class="label label--brand">Browse by room</p>
+              <h2 class="display display--4">Shop by Collection</h2>
+            </div>
 
-     <!-- Scripts — at bottom so HTML loads first -->
+            <!-- Arrow controls + counter -->
+            <div class="categories__controls">
+              <button
+                class="categories__arrow categories__arrow--prev"
+                aria-label="Previous category"
+                disabled
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="15 18 9 12 15 6" />
+                </svg>
+              </button>
+
+              <span class="categories__counter">
+                <span class="categories__counter-current">1</span>
+                <span style="color: var(--color-text-tertiary)"> / </span>
+                <span class="categories__counter-total">5</span>
+              </span>
+
+              <button
+                class="categories__arrow categories__arrow--next"
+                aria-label="Next category"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Track sits outside container so cards bleed to screen edge -->
+        <div class="categories__track-wrapper">
+          <div class="categories__track" id="categoriesTrack">
+            <a href="./pages/products.html#bedroom" class="cat-card">
+              <figure class="cat-card__figure">
+                <img
+                  src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760989901/bedroom_xcasuq.jpg"
+                  alt="Bedroom furniture collection"
+                  class="cat-card__img"
+                  loading="lazy"
+                />
+                <div class="cat-card__overlay" aria-hidden="true">
+                  <p class="cat-card__overlay-desc">
+                    Beds, wardrobes and bedside pieces crafted for rest and
+                    elegance.
+                  </p>
+                  <span class="cat-card__overlay-cta">Explore Bedroom →</span>
+                </div>
+              </figure>
+              <div class="cat-card__info">
+                <h3 class="cat-card__name">Bedroom</h3>
+                <p class="cat-card__count">12 pieces</p>
+              </div>
+            </a>
+
+            <a href="./pages/products.html#dining" class="cat-card">
+              <figure class="cat-card__figure">
+                <img
+                  src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760990684/dining_cvuxju.jpg"
+                  alt="Dining furniture collection"
+                  class="cat-card__img"
+                  loading="lazy"
+                />
+                <div class="cat-card__overlay" aria-hidden="true">
+                  <p class="cat-card__overlay-desc">
+                    Dining tables and chairs built for families and long
+                    evenings together.
+                  </p>
+                  <span class="cat-card__overlay-cta">Explore Dining →</span>
+                </div>
+              </figure>
+              <div class="cat-card__info">
+                <h3 class="cat-card__name">Dining</h3>
+                <p class="cat-card__count">8 pieces</p>
+              </div>
+            </a>
+
+            <a href="./pages/products.html#office" class="cat-card">
+              <figure class="cat-card__figure">
+                <img
+                  src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760991627/office_zy54dk.jpg"
+                  alt="Office furniture collection"
+                  class="cat-card__img"
+                  loading="lazy"
+                />
+                <div class="cat-card__overlay" aria-hidden="true">
+                  <p class="cat-card__overlay-desc">
+                    Executive desks and seating designed to command any
+                    workspace.
+                  </p>
+                  <span class="cat-card__overlay-cta">Explore Office →</span>
+                </div>
+              </figure>
+              <div class="cat-card__info">
+                <h3 class="cat-card__name">Office</h3>
+                <p class="cat-card__count">11 pieces</p>
+              </div>
+            </a>
+
+            <a href="./pages/products.html#kitchen" class="cat-card">
+              <figure class="cat-card__figure">
+                <img
+                  src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760990288/kitchen_ss5qdm.jpg"
+                  alt="Kitchen furniture collection"
+                  class="cat-card__img"
+                  loading="lazy"
+                />
+                <div class="cat-card__overlay" aria-hidden="true">
+                  <p class="cat-card__overlay-desc">
+                    Custom cabinetry and kitchen units built to your exact
+                    layout.
+                  </p>
+                  <span class="cat-card__overlay-cta">Explore Kitchen →</span>
+                </div>
+              </figure>
+              <div class="cat-card__info">
+                <h3 class="cat-card__name">Kitchen</h3>
+                <p class="cat-card__count">16 pieces</p>
+              </div>
+            </a>
+
+            <a href="./pages/products.html#living" class="cat-card">
+              <figure class="cat-card__figure">
+                <img
+                  src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760989890/9fc86d74-a09a-4155-881d-60e6af7e76c8_elkcx3.jpg"
+                  alt="Living room furniture collection"
+                  class="cat-card__img"
+                  loading="lazy"
+                />
+                <div class="cat-card__overlay" aria-hidden="true">
+                  <p class="cat-card__overlay-desc">
+                    Sofas, coffee tables and accent pieces that anchor every
+                    living space.
+                  </p>
+                  <span class="cat-card__overlay-cta"
+                    >Explore Living Room →</span
+                  >
+                </div>
+              </figure>
+              <div class="cat-card__info">
+                <h3 class="cat-card__name">Living Room</h3>
+                <p class="cat-card__count">38 pieces</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Progress bar -->
+        <div class="container">
+          <div class="categories__progress">
+            <div class="categories__progress-bar" id="categoriesProgress"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED PRODUCTS -->
+      <section class="featured-products">
+        <div class="container">
+          <!-- Header -->
+          <div class="featured-products__header">
+            <div>
+              <p class="label label--brand">Featured Products</p>
+              <h2 class="display display--3">Handpicked for you</h2>
+            </div>
+            <a href="./pages/products.html" class="btn btn--ghost">
+              View full collection →
+            </a>
+          </div>
+
+          <!-- Grid — filled by JS -->
+          <div
+            class="featured-products__grid"
+            id="featured-products-grid"
+            data-stagger
+          >
+            <!-- Products rendered here by products-home.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT STRIP -->
+      <section class="about-strip">
+        <div class="container">
+          <div class="about-strip__grid">
+            <!-- Left: text -->
+            <div class="about-strip__left">
+              <p class="label label--brand">Our story</p>
+              <h2 class="display display--3">
+                Built in Takoradi.<br />
+                <em>Trusted across Ghana.</em>
+              </h2>
+              <p class="body-text">
+                Since 1992, we've designed and crafted furniture that earns its
+                place in every room it enters. Every piece carries the precision
+                of three decades of practice — built to last, made to matter.
+              </p>
+              <a href="./pages/about.html" class="btn btn--secondary">
+                Read our story →
+              </a>
+            </div>
+
+            <!-- Right: stats + image -->
+            <div class="about-strip__right">
+              <!-- Stats grid -->
+              <div class="about-strip__stats">
+                <div class="stat-card">
+                  <p class="stat-card__number">30+</p>
+                  <p class="stat-card__label">Years of craft</p>
+                </div>
+                <div class="stat-card">
+                  <p class="stat-card__number">120+</p>
+                  <p class="stat-card__label">Skilled artisans</p>
+                </div>
+                <div class="stat-card">
+                  <p class="stat-card__number">2</p>
+                  <p class="stat-card__label">City showrooms</p>
+                </div>
+                <div class="stat-card">
+                  <p class="stat-card__number">1000+</p>
+                  <p class="stat-card__label">Homes furnished</p>
+                </div>
+              </div>
+
+              <!-- Image -->
+              <div class="about-strip__img">
+                <img
+                  src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760989901/bedroom_xcasuq.jpg"
+                  alt="Kings Furniture Ghana craftsmanship"
+                  class="img-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS TEASER -->
+      <section class="projects-teaser">
+        <div class="container">
+          <!-- Header -->
+          <div class="projects-teaser__header">
+            <div>
+              <p class="label label--brand">Our work</p>
+              <h2 class="display display--3">
+                Spaces we've<br />
+                <em>transformed.</em>
+              </h2>
+            </div>
+            <a href="./pages/projects.html" class="btn btn--secondary">
+              View all projects →
+            </a>
+          </div>
+
+          <!-- Asymmetric grid -->
+          <div class="projects-teaser__grid">
+            <!-- Large card — left, spans 2 rows -->
+            <a
+              href="./pages/projects.html"
+              class="project-card project-card--large"
+            >
+              <figure class="project-card__figure">
+                <img
+                  src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_900/v1760989890/9fc86d74-a09a-4155-881d-60e6af7e76c8_elkcx3.jpg"
+                  alt="Private Residence, East Legon"
+                  class="project-card__img"
+                  loading="lazy"
+                />
+                <div class="project-card__overlay">
+                  <div class="project-card__meta">
+                    <span class="project-card__tag">Residential</span>
+                    <span class="project-card__tag">Accra</span>
+                  </div>
+                  <h3 class="project-card__name">
+                    Private Residence, East Legon
+                  </h3>
+                  <p class="project-card__desc">
+                    Full living and dining fit-out for a 5-bedroom home in
+                    Accra.
+                  </p>
+                </div>
+              </figure>
+            </a>
+
+            <!-- Small card top right -->
+            <a href="./pages/projects.html" class="project-card">
+              <figure class="project-card__figure">
+                <img
+                  src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760991627/office_zy54dk.jpg"
+                  alt="Corporate HQ, Takoradi"
+                  class="project-card__img"
+                  loading="lazy"
+                />
+                <div class="project-card__overlay">
+                  <div class="project-card__meta">
+                    <span class="project-card__tag">Commercial</span>
+                    <span class="project-card__tag">Takoradi</span>
+                  </div>
+                  <h3 class="project-card__name">Corporate HQ, Takoradi</h3>
+                  <p class="project-card__desc">
+                    Executive suites and open-plan workspaces across three
+                    floors.
+                  </p>
+                </div>
+              </figure>
+            </a>
+
+            <!-- Small card bottom right -->
+            <a href="./pages/projects.html" class="project-card">
+              <figure class="project-card__figure">
+                <img
+                  src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760989901/bedroom_xcasuq.jpg"
+                  alt="Boutique Hotel, Kumasi"
+                  class="project-card__img"
+                  loading="lazy"
+                />
+                <div class="project-card__overlay">
+                  <div class="project-card__meta">
+                    <span class="project-card__tag">Hospitality</span>
+                    <span class="project-card__tag">Kumasi</span>
+                  </div>
+                  <h3 class="project-card__name">Boutique Hotel, Kumasi</h3>
+                  <p class="project-card__desc">
+                    24 bedroom suites fully furnished to a luxury brief.
+                  </p>
+                </div>
+              </figure>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONILS -->
+      <section class="testimonials">
+        <div class="container">
+          <!-- Header -->
+          <div class="testimonials__header">
+            <p class="label label--brand">What clients say</p>
+            <h2 class="display display--3">
+              Trusted by homes<br />
+              <em>across Ghana.</em>
+            </h2>
+          </div>
+
+          <!-- Cards -->
+          <div class="testimonials__grid">
+            <!-- Card 1 -->
+            <blockquote class="testimonial-card">
+              <div class="testimonial-card__stars" aria-label="5 stars">
+                ★★★★★
+              </div>
+              <p class="testimonial-card__quote">
+                "Kings Furniture transformed our entire home. The quality is
+                unlike anything we've seen from a local manufacturer — every
+                joint, every finish, every detail is exactly right."
+              </p>
+              <footer class="testimonial-card__footer">
+                <div class="testimonial-card__avatar" aria-hidden="true">
+                  AO
+                </div>
+                <div>
+                  <p class="testimonial-card__name">Abena Osei</p>
+                  <p class="testimonial-card__role">
+                    Homeowner, East Legon, Accra
+                  </p>
+                </div>
+              </footer>
+            </blockquote>
+
+            <!-- Card 2 — featured -->
+            <blockquote class="testimonial-card testimonial-card--featured">
+              <div class="testimonial-card__stars" aria-label="5 stars">
+                ★★★★★
+              </div>
+              <p class="testimonial-card__quote">
+                "We furnished our entire corporate headquarters with Kings. The
+                team was professional, the delivery was on time, and the
+                craftsmanship has held up perfectly two years later."
+              </p>
+              <footer class="testimonial-card__footer">
+                <div class="testimonial-card__avatar" aria-hidden="true">
+                  KA
+                </div>
+                <div>
+                  <p class="testimonial-card__name">Kwame Asante</p>
+                  <p class="testimonial-card__role">
+                    Managing Director, Takoradi
+                  </p>
+                </div>
+              </footer>
+            </blockquote>
+
+            <!-- Card 3 -->
+            <blockquote class="testimonial-card">
+              <div class="testimonial-card__stars" aria-label="5 stars">
+                ★★★★★
+              </div>
+              <p class="testimonial-card__quote">
+                "The custom kitchen cabinets they built for us are absolutely
+                stunning. They listened to exactly what we wanted and delivered
+                on time. We couldn't be happier."
+              </p>
+              <footer class="testimonial-card__footer">
+                <div class="testimonial-card__avatar" aria-hidden="true">
+                  EA
+                </div>
+                <div>
+                  <p class="testimonial-card__name">Esi Acheampong</p>
+                  <p class="testimonial-card__role">Homeowner, Kumasi</p>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Scripts — at bottom so HTML loads first -->
     <!-- defer means script downloads in background, runs after HTML is parsed -->
 
     <!-- GSAP — animation library -->
@@ -584,6 +698,5 @@
     <script src="./assets/js/animations.js"></script>
     <script src="./assets/js/categories-slider.js"></script>
     <script src="./assets/js/products-home.js"></script>
-
-</body>
+  </body>
 </html>

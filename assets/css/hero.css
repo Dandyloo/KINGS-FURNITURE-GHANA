@@ -43,7 +43,7 @@ to right means left side is darkest — where our text sits.
     to right,
     rgba(14, 18, 54, 0.85) 0%,
     rgba(14, 18, 54, 0.55) 55%,
-    rgba(14, 18, 54, 0.20) 100%
+    rgba(14, 18, 54, 0.2) 100%
   );
 }
 
@@ -93,7 +93,7 @@ The container handles max-width and padding.
 .hero__body {
   font-size: var(--text-lg);
   line-height: var(--leading-loose);
-  color: rgba(255, 255, 255, 0.80);
+  color: rgba(255, 255, 255, 0.8);
   margin: 0;
   max-width: 460px;
 }
@@ -134,7 +134,7 @@ The container handles max-width and padding.
 
 /* Animated underline */
 .hero__ghost-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -3px;
   left: 0;
@@ -200,7 +200,7 @@ backdrop-filter: blur creates the frosted glass effect.
   bottom: var(--space-8);
   left: 50%;
   transform: translateX(-50%);
-  color: rgba(255, 255, 255, 0.50);
+  color: rgba(255, 255, 255, 0.5);
   z-index: 1;
 }
 
@@ -252,5 +252,3 @@ Stack content on smaller screens.
     padding-block: var(--space-24);
   }
 }
-
-
