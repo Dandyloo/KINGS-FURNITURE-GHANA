@@ -1,0 +1,169 @@
+/* CTA BANNER
+   Dark full-width section with gold button and decorative elements.
+   Sits between Testimonials and Footer.
+*/
+
+.cta-banner {
+  position: relative;
+  background: var(--color-bg-inverse);
+  padding-block: clamp(var(--space-20), 14vw, var(--space-40));
+  overflow: hidden;
+}
+
+/* ── DECORATIVE BACKGROUND ELEMENTS ── */
+/* Large faint circle top-right */
+.cta-banner::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  border: 0.5px solid rgba(184, 154, 106, 0.12);
+  pointer-events: none;
+}
+
+/* Smaller circle bottom-left */
+.cta-banner::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: 0.5px solid rgba(184, 154, 106, 0.08);
+  pointer-events: none;
+}
+
+/* ── INNER LAYOUT ── */
+.cta-banner__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: clamp(var(--space-10), 6vw, var(--space-20));
+}
+
+/* ── TEXT SIDE ── */
+.cta-banner__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.cta-banner__label {
+  display: block;
+  color: var(--color-gold);
+}
+
+.cta-banner__heading {
+  color: #fff;
+  margin: 0;
+}
+
+/* Gold italic accent */
+.cta-banner__heading em {
+  color: var(--color-gold);
+  font-style: italic;
+}
+
+.cta-banner__body {
+  font-size: var(--text-base);
+  line-height: var(--leading-loose);
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  max-width: 440px;
+}
+
+/* ── ACTION SIDE ── */
+.cta-banner__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  flex-shrink: 0;
+}
+
+/* Gold primary button */
+.cta-banner .btn--gold {
+  background: var(--color-gold);
+  border: 1px solid var(--color-gold);
+  color: var(--color-brand-deep);
+  font-weight: 600;
+}
+
+.cta-banner .btn--gold:hover {
+  background: #a88858;
+  border-color: #a88858;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(184, 154, 106, 0.35);
+}
+
+/* Ghost link below button */
+.cta-banner__sub {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-standard);
+  white-space: nowrap;
+}
+
+.cta-banner__sub:hover {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ── DIVIDER LINE ── */
+/* Thin gold rule at the top edge of the section */
+.cta-banner__rule {
+  position: absolute;
+  top: 0;
+  left: var(--gutter);
+  right: var(--gutter);
+  height: 0.5px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(184, 154, 106, 0.4) 30%,
+    rgba(184, 154, 106, 0.4) 70%,
+    transparent 100%
+  );
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .cta-banner__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .cta-banner__actions {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-banner__actions {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .cta-banner .btn--gold {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cta-banner::before {
+    width: 280px;
+    height: 280px;
+    top: -60px;
+    right: -60px;
+  }
+}

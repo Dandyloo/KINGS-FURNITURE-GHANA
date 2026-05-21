@@ -1,0 +1,280 @@
+/* FOOTER
+   Four-column layout: logo/tagline | Products | Company | Contact
+   Dark background matching the nav's deep navy.
+*/
+
+.footer {
+  background: var(--color-brand-deep);
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ── MAIN FOOTER BODY ── */
+.footer__body {
+  padding-block: clamp(var(--space-16), 10vw, var(--space-32));
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: clamp(var(--space-10), 5vw, var(--space-16));
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ── COLUMN 1: BRAND ── */
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.footer__logo {
+  display: inline-flex;
+  width: fit-content;
+}
+
+.footer__logo-img {
+  height: 64px;
+  width: auto;
+  display: block;
+  /* Logo is dark on white — invert to make it work on dark bg */
+  
+  opacity: 0.85;
+}
+
+.footer__tagline {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: var(--leading-snug);
+  margin: 0;
+  max-width: 200px;
+}
+
+.footer__tagline em {
+  color: var(--color-gold);
+  font-style: italic;
+}
+
+/* WhatsApp CTA pill */
+.footer__wa {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: rgba(37, 211, 102, 0.1);
+  border: 0.5px solid rgba(37, 211, 102, 0.25);
+  border-radius: var(--radius-pill);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  color: #25d366;
+  text-decoration: none;
+  width: fit-content;
+  transition: background var(--duration-fast) var(--ease-standard);
+}
+
+.footer__wa:hover {
+  background: rgba(37, 211, 102, 0.18);
+}
+
+.footer__wa-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #25d366;
+  flex-shrink: 0;
+  animation: waPulse 2s ease-in-out infinite;
+}
+
+@keyframes waPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ── COLUMN 2, 3: NAV LISTS ── */
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.footer__col-title {
+  font-family: var(--font-label);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.footer__link {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-standard);
+  width: fit-content;
+  position: relative;
+}
+
+.footer__link::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 0.5px;
+  background: var(--color-gold);
+  transition: width var(--duration-base) var(--ease-expo);
+}
+
+.footer__link:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer__link:hover::after {
+  width: 100%;
+}
+
+/* ── COLUMN 4: CONTACT ── */
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.footer__contact-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.footer__contact-label {
+  font-size: 9px;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.25);
+  margin: 0;
+}
+
+.footer__contact-value {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.65);
+  line-height: var(--leading-loose);
+  margin: 0;
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+a.footer__contact-value:hover {
+  color: var(--color-gold);
+}
+
+/* ── BOTTOM BAR ── */
+.footer__bottom {
+  padding-block: var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.footer__legal {
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.25);
+  margin: 0;
+}
+
+/* Inline gold dot separator */
+.footer__legal span {
+  color: var(--color-gold);
+  margin-inline: var(--space-2);
+  opacity: 0.5;
+}
+
+/* Social links */
+.footer__social {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  transition:
+    background var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard);
+}
+
+.footer__social-link:hover {
+  background: rgba(184, 154, 106, 0.12);
+  border-color: rgba(184, 154, 106, 0.3);
+  color: var(--color-gold);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .footer__body {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-12);
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: var(--space-10);
+  }
+
+  .footer__tagline {
+    max-width: 240px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer__body {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-10);
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+    flex-direction: column;
+  }
+
+  .footer__contact {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__body {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__brand {
+    flex-direction: column;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+}

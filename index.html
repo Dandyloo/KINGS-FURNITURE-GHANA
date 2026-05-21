@@ -9,10 +9,8 @@
       content="Ghana's most recognised furniture brand. Handcrafted sofas, beds, dining sets and more. Designed and built in Takoradi since 1992."
     />
 
-    <!-- Canonical URL - tells search engines this is the real page -->
     <link rel="canonical" href="https://www.kingsfurnituregh.com" />
 
-    <!-- Open Graph - controls how the page looks when shared on Whatsapp, Facebook etc -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.kingsfurnituregh.com/" />
     <meta property="og:title" content="Kings Furniture Ghana" />
@@ -25,14 +23,12 @@
       content="https://res.cloudinary.com/djmyiuu5k/image/upload/v1760868207/KINGS_NEW_LOGO_3_qwzemb.png"
     />
 
-    <!-- Favicon -->
     <link
       rel="icon"
       href="https://res.cloudinary.com/djmyiuu5k/image/upload/v1760868207/KINGS_NEW_LOGO_3_qwzemb.png"
       type="image/png"
     />
 
-    <!-- Fonts — preconnect first so the browser opens the connection early -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -51,16 +47,16 @@
     <link rel="stylesheet" href="./assets/css/about-strip.css" />
     <link rel="stylesheet" href="./assets/css/projects-teaser.css" />
     <link rel="stylesheet" href="./assets/css/testimonials.css" />
-    <link rel="stylesheet" href="./assets/css/why-us.css" />
+    <link rel="stylesheet" href="./assets/css/cta-banner.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
   </head>
   <body>
-    <!-- Page transition overlay - JS animates this on navigation -->
+    <!-- Page transition overlay -->
     <div class="page-transition" aria-hidden="true"></div>
 
     <!-- NAVBAR -->
     <nav class="nav" aria-label="Main navigation">
       <div class="nav__inner">
-        <!-- LOGO -->
         <a
           href="./index.html"
           class="nav__logo"
@@ -73,7 +69,6 @@
           />
         </a>
 
-        <!-- Desktop Navigation -->
         <div class="nav__links">
           <a href="./index.html" class="nav__link is-active">Home</a>
           <a href="./pages/about.html" class="nav__link">About</a>
@@ -82,12 +77,10 @@
           <a href="./pages/news.html" class="nav__link">News</a>
         </div>
 
-        <!-- Desktop CTA -->
         <div class="nav__cta">
           <a href="./pages/contact.html" class="btn btn--primary">Contact Us</a>
         </div>
 
-        <!-- Hamburger - mobile only -->
         <button
           class="nav__hamburger"
           aria-label="Open navigation menu"
@@ -111,7 +104,6 @@
       aria-label="Mobile navigation"
       aria-hidden="true"
     >
-      <!-- Top bar -->
       <div class="nav__mobile-bar">
         <span class="nav__mobile-brand">Kings Furniture</span>
         <button class="nav__mobile-close" aria-label="Close navigation menu">
@@ -120,9 +112,7 @@
         </button>
       </div>
 
-      <!-- Main panel -->
       <div class="nav__mobile-panel">
-        <!-- Left: contact info -->
         <div class="nav__mobile-info">
           <div class="nav__mobile-info-block">
             <p class="nav__mobile-info-label">Call us</p>
@@ -150,11 +140,8 @@
           </a>
         </div>
 
-        <!-- Right: nav links -->
         <div class="nav__mobile-links">
-          <!-- Gold accent line -->
           <div class="nav__mobile-line" aria-hidden="true"></div>
-
           <a href="./index.html" class="nav__mobile-link is-active">Home</a>
           <a href="./pages/about.html" class="nav__mobile-link">About</a>
           <a href="./pages/products.html" class="nav__mobile-link">Products</a>
@@ -163,7 +150,6 @@
         </div>
       </div>
 
-      <!-- Bottom CTA -->
       <a href="./pages/contact.html" class="nav__mobile-cta">
         <span>Get a Quote</span>
         <span class="nav__mobile-cta-arrow">→</span>
@@ -173,7 +159,6 @@
     <main id="main-content">
       <!-- HERO SECTION -->
       <section class="hero" id="hero">
-        <!-- Background image -->
         <div class="hero__media">
           <img
             src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_1600/v1760989890/9fc86d74-a09a-4155-881d-60e6af7e76c8_elkcx3.jpg"
@@ -181,14 +166,11 @@
             class="hero__img"
             fetchpriority="high"
           />
-          <!-- Dark overlay so text is readable over the image -->
           <div class="hero__overlay" aria-label="true"></div>
         </div>
 
-        <!-- Content -->
         <div class="container">
           <div class="hero__content">
-            <!-- Left: text + buttons -->
             <div class="hero__text">
               <p class="label label--gold hero__label">
                 Ghana's Premier Furniture Brand Since 1992
@@ -215,7 +197,6 @@
               </div>
             </div>
 
-            <!-- Right: floating badge -->
             <div class="hero__badge">
               <p class="hero__badge-label">Est.</p>
               <p class="hero__badge-year">1992</p>
@@ -224,7 +205,6 @@
           </div>
         </div>
 
-        <!-- Scroll indicator -->
         <div class="hero__scroll" aria-hidden="true">
           <svg
             class="hero__scroll-icon pulse"
@@ -245,14 +225,12 @@
       <!-- CATEGORIES SLIDER -->
       <section class="categories">
         <div class="container">
-          <!-- Header -->
           <div class="categories__header">
             <div>
               <p class="label label--brand">Browse by room</p>
               <h2 class="display display--4">Shop by Collection</h2>
             </div>
 
-            <!-- Arrow controls + counter -->
             <div class="categories__controls">
               <button
                 class="categories__arrow categories__arrow--prev"
@@ -300,7 +278,6 @@
           </div>
         </div>
 
-        <!-- Track sits outside container so cards bleed to screen edge -->
         <div class="categories__track-wrapper">
           <div class="categories__track" id="categoriesTrack">
             <a href="./pages/products.html#bedroom" class="cat-card">
@@ -417,7 +394,6 @@
           </div>
         </div>
 
-        <!-- Progress bar -->
         <div class="container">
           <div class="categories__progress">
             <div class="categories__progress-bar" id="categoriesProgress"></div>
@@ -428,7 +404,6 @@
       <!-- FEATURED PRODUCTS -->
       <section class="featured-products">
         <div class="container">
-          <!-- Header -->
           <div class="featured-products__header">
             <div>
               <p class="label label--brand">Featured Products</p>
@@ -439,7 +414,6 @@
             </a>
           </div>
 
-          <!-- Grid — filled by JS -->
           <div
             class="featured-products__grid"
             id="featured-products-grid"
@@ -454,7 +428,6 @@
       <section class="about-strip">
         <div class="container">
           <div class="about-strip__grid">
-            <!-- Left: text -->
             <div class="about-strip__left">
               <p class="label label--brand">Our story</p>
               <h2 class="display display--3">
@@ -471,9 +444,7 @@
               </a>
             </div>
 
-            <!-- Right: stats + image -->
             <div class="about-strip__right">
-              <!-- Stats grid -->
               <div class="about-strip__stats">
                 <div class="stat-card">
                   <p class="stat-card__number">30+</p>
@@ -493,7 +464,6 @@
                 </div>
               </div>
 
-              <!-- Image -->
               <div class="about-strip__img">
                 <img
                   src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_700/v1760989901/bedroom_xcasuq.jpg"
@@ -510,7 +480,6 @@
       <!-- PROJECTS TEASER -->
       <section class="projects-teaser">
         <div class="container">
-          <!-- Header -->
           <div class="projects-teaser__header">
             <div>
               <p class="label label--brand">Our work</p>
@@ -524,9 +493,7 @@
             </a>
           </div>
 
-          <!-- Asymmetric grid -->
           <div class="projects-teaser__grid">
-            <!-- Large card — left, spans 2 rows -->
             <a
               href="./pages/projects.html"
               class="project-card project-card--large"
@@ -554,7 +521,6 @@
               </figure>
             </a>
 
-            <!-- Small card top right -->
             <a href="./pages/projects.html" class="project-card">
               <figure class="project-card__figure">
                 <img
@@ -577,7 +543,6 @@
               </figure>
             </a>
 
-            <!-- Small card bottom right -->
             <a href="./pages/projects.html" class="project-card">
               <figure class="project-card__figure">
                 <img
@@ -602,10 +567,9 @@
         </div>
       </section>
 
-      <!-- TESTIMONILS -->
+      <!-- TESTIMONIALS -->
       <section class="testimonials">
         <div class="container">
-          <!-- Header -->
           <div class="testimonials__header">
             <p class="label label--brand">What clients say</p>
             <h2 class="display display--3">
@@ -614,9 +578,7 @@
             </h2>
           </div>
 
-          <!-- Cards -->
           <div class="testimonials__grid">
-            <!-- Card 1 -->
             <blockquote class="testimonial-card">
               <div class="testimonial-card__stars" aria-label="5 stars">
                 ★★★★★
@@ -639,7 +601,6 @@
               </footer>
             </blockquote>
 
-            <!-- Card 2 — featured -->
             <blockquote class="testimonial-card testimonial-card--featured">
               <div class="testimonial-card__stars" aria-label="5 stars">
                 ★★★★★
@@ -662,7 +623,6 @@
               </footer>
             </blockquote>
 
-            <!-- Card 3 -->
             <blockquote class="testimonial-card">
               <div class="testimonial-card__stars" aria-label="5 stars">
                 ★★★★★
@@ -686,107 +646,230 @@
         </div>
       </section>
 
-      <!-- WHY US -->
-       <!-- ==========================================
-       WHY US
-  =========================================== -->
-  <section class="why-us">
-    <div class="container">
+      <!-- CTA BANNER -->
+      <section class="cta-banner">
+        <div class="cta-banner__rule" aria-hidden="true"></div>
 
-      <!-- Header -->
-      <div class="why-us__header">
-        <div>
-          <p class="label label--brand">Why Kings Furniture</p>
-          <h2 class="display display--3">
-            Crafted with intention.<br>
-            <em>Built to endure.</em>
-          </h2>
-        </div>
-        <p class="why-us__sub">
-          Three decades of building furniture that outlasts trends,
-          weathered by daily life and still standing strong.
-        </p>
-      </div>
+        <div class="container">
+          <div class="cta-banner__inner">
+            <div class="cta-banner__text">
+              <p class="label cta-banner__label">
+                Ready to furnish your space?
+              </p>
+              <h2 class="display display--3 cta-banner__heading">
+                Let's build something<br />
+                <em>you'll love forever.</em>
+              </h2>
+              <p class="cta-banner__body">
+                Visit our showrooms in Takoradi or Accra, or reach out on
+                WhatsApp. Our team will help you find the perfect piece — or
+                build one from scratch.
+              </p>
+            </div>
 
-      <!-- Four columns -->
-      <div class="why-us__grid">
-
-        <div class="why-item">
-          <div class="why-item__icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-              <path d="M2 17l10 5 10-5"/>
-              <path d="M2 12l10 5 10-5"/>
-            </svg>
-          </div>
-          <div class="why-item__text">
-            <h3 class="why-item__title">Quality materials</h3>
-            <p class="why-item__body">
-              Carefully sourced hardwoods and fabrics, built to outlast
-              trends and daily use for decades.
-            </p>
+            <div class="cta-banner__actions">
+              <a
+                href="https://wa.me/233503676484?text=Hello%20Kings%20Furniture%2C%20I%27d%20like%20to%20enquire%20about%20your%20furniture."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn--gold btn--lg"
+              >
+                Chat on WhatsApp →
+              </a>
+              <a href="./pages/contact.html" class="cta-banner__sub">
+                Or visit a showroom
+              </a>
+            </div>
           </div>
         </div>
-
-        <div class="why-item">
-          <div class="why-item__icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="3"/>
-              <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
-            </svg>
-          </div>
-          <div class="why-item__text">
-            <h3 class="why-item__title">Custom design</h3>
-            <p class="why-item__body">
-              Tell us your vision and dimensions. We'll design and build
-              exactly what your space needs.
-            </p>
-          </div>
-        </div>
-
-        <div class="why-item">
-          <div class="why-item__icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12H19M19 12L13 6M19 12L13 18"/>
-            </svg>
-          </div>
-          <div class="why-item__text">
-            <h3 class="why-item__title">Nationwide delivery</h3>
-            <p class="why-item__body">
-              From our Takoradi workshop to Accra, Kumasi and every
-              city across Ghana.
-            </p>
-          </div>
-        </div>
-
-        <div class="why-item">
-          <div class="why-item__icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
-          <div class="why-item__text">
-            <h3 class="why-item__title">30 years trusted</h3>
-            <p class="why-item__body">
-              Three decades earning the trust of families, institutions
-              and businesses throughout Ghana.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
+      </section>
     </main>
 
-    <!-- Scripts — at bottom so HTML loads first -->
-    <!-- defer means script downloads in background, runs after HTML is parsed -->
+    <!-- FOOTER -->
+    <footer class="footer" aria-label="Site footer">
+      <div class="container">
+        <div class="footer__body">
+          <!-- Col 1: Brand -->
+          <div class="footer__brand">
+            <a
+              href="./index.html"
+              class="footer__logo"
+              aria-label="Kings Furniture Ghana"
+            >
+              <img
+                src="https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_400/v1760868207/KINGS_NEW_LOGO_3_qwzemb.png"
+                alt="Kings Furniture Ghana"
+                class="footer__logo-img"
+              />
+            </a>
 
-    <!-- GSAP — animation library -->
+            <p class="footer__tagline">
+              Crafted in<br />
+              <em>Takoradi</em><br />
+              since 1992.
+            </p>
+
+            <a
+              href="https://wa.me/233503676484?text=Hello%20Kings%20Furniture%2C%20I%27d%20like%20to%20enquire%20about%20your%20furniture."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer__wa"
+              aria-label="Chat on WhatsApp"
+            >
+              <span class="footer__wa-dot" aria-hidden="true"></span>
+              WhatsApp Us
+            </a>
+          </div>
+
+          <!-- Col 2: Products -->
+          <div class="footer__col">
+            <p class="footer__col-title">Products</p>
+            <nav class="footer__links" aria-label="Product categories">
+              <a href="./pages/products.html#living" class="footer__link"
+                >Living Room</a
+              >
+              <a href="./pages/products.html#bedroom" class="footer__link"
+                >Bedroom</a
+              >
+              <a href="./pages/products.html#dining" class="footer__link"
+                >Dining</a
+              >
+              <a href="./pages/products.html#office" class="footer__link"
+                >Office</a
+              >
+              <a href="./pages/products.html#kitchen" class="footer__link"
+                >Kitchen</a
+              >
+            </nav>
+          </div>
+
+          <!-- Col 3: Company -->
+          <div class="footer__col">
+            <p class="footer__col-title">Company</p>
+            <nav class="footer__links" aria-label="Company pages">
+              <a href="./pages/about.html" class="footer__link">Our Story</a>
+              <a href="./pages/projects.html" class="footer__link">Projects</a>
+              <a href="./pages/news.html" class="footer__link">News</a>
+              <a href="./pages/contact.html" class="footer__link">Contact</a>
+            </nav>
+          </div>
+
+          <!-- Col 4: Contact -->
+          <div class="footer__contact">
+            <p class="footer__col-title">Find Us</p>
+
+            <div class="footer__contact-block">
+              <p class="footer__contact-label">Takoradi Showroom</p>
+              <p class="footer__contact-value">
+                Market Circle, Takoradi<br />Western Region, Ghana
+              </p>
+            </div>
+
+            <div class="footer__contact-block">
+              <p class="footer__contact-label">Accra Showroom</p>
+              <p class="footer__contact-value">Accra, Ghana</p>
+            </div>
+
+            <div class="footer__contact-block">
+              <p class="footer__contact-label">Call or WhatsApp</p>
+              <a href="tel:+233503676484" class="footer__contact-value"
+                >+233 50 367 6484</a
+              >
+            </div>
+
+            <div class="footer__contact-block">
+              <p class="footer__contact-label">Hours</p>
+              <p class="footer__contact-value">Mon – Sat: 8am – 6pm</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="footer__bottom">
+          <p class="footer__legal">
+            &copy; 2025 Kings Furniture Ghana
+            <span>·</span>
+            All rights reserved
+            <span>·</span>
+            Built in Ghana
+          </p>
+
+          <div class="footer__social" aria-label="Social media">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer__social-link"
+              aria-label="Kings Furniture on Facebook"
+            >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer__social-link"
+              aria-label="Kings Furniture on Instagram"
+            >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle
+                  cx="17.5"
+                  cy="6.5"
+                  r="0.5"
+                  fill="currentColor"
+                  stroke="none"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="https://wa.me/233503676484"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer__social-link"
+              aria-label="Kings Furniture on WhatsApp"
+            >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-    <!-- Our scripts -->
     <script src="./assets/js/navbar.js"></script>
     <script src="./assets/js/animations.js"></script>
     <script src="./assets/js/categories-slider.js"></script>
