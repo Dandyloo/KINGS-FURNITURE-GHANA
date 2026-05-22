@@ -1,0 +1,389 @@
+/* ============================================================
+   KINGS FURNITURE GHANA — Projects Page
+   projects.css
+   ============================================================ */
+
+/* ── HERO ── */
+.projects-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: var(--color-brand-deep);
+}
+
+.projects-hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.projects-hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.projects-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(14, 18, 54, 0.88) 0%,
+    rgba(14, 18, 54, 0.55) 55%,
+    rgba(14, 18, 54, 0.25) 100%
+  );
+}
+
+.projects-hero .container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-bottom: clamp(var(--space-16), 8vw, var(--space-32));
+  padding-top: calc(var(--space-32) + 80px);
+}
+
+.projects-hero__inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: var(--space-16);
+}
+
+.projects-hero__label {
+  display: block;
+  margin-bottom: var(--space-4);
+  color: var(--color-gold);
+}
+
+.projects-hero__heading {
+  margin: 0;
+  color: #fff;
+}
+
+.projects-hero__heading em {
+  color: var(--color-gold);
+  font-style: italic;
+}
+
+.projects-hero__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+.projects-hero__count {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: 300;
+  color: #fff;
+  line-height: 1;
+  margin: 0;
+}
+
+.projects-hero__count-label {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+}
+
+/* ── FILTER BAR ── */
+.projects-filters {
+  position: sticky;
+  top: 66px;
+  z-index: var(--z-raised);
+  background: var(--color-bg);
+  border-bottom: 0.5px solid var(--color-border);
+  padding-block: var(--space-4);
+}
+
+.projects-filters__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.projects-filters__tabs {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+/* Filter tabs reuse same classes as products page */
+.filter-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-label);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: 0.5px solid transparent;
+  border-radius: var(--radius-pill);
+  padding: var(--space-2) var(--space-5);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-standard);
+  white-space: nowrap;
+}
+
+.filter-tab:hover {
+  color: var(--color-brand);
+  border-color: var(--color-brand-light);
+  background: var(--color-brand-light);
+}
+
+.filter-tab.is-active {
+  color: #fff;
+  background: var(--color-brand);
+  border-color: var(--color-brand);
+}
+
+.filter-tab__count {
+  font-size: 10px;
+  opacity: 0.65;
+}
+
+.filter-tab.is-active .filter-tab__count {
+  opacity: 0.8;
+}
+
+.projects-filters__result {
+  font-size: var(--text-sm);
+  color: var(--color-text-tertiary);
+  flex-shrink: 0;
+}
+
+/* ── PROJECTS GRID ── */
+.projects-section {
+  background: var(--color-bg);
+  padding-block: clamp(var(--space-16), 8vw, var(--space-32));
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(var(--space-6), 2vw, var(--space-8));
+}
+
+/* ── PROJECT CARD ── */
+.project-grid-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  background: var(--color-bg-subtle);
+  cursor: pointer;
+}
+
+.project-grid-card__figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.project-grid-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform var(--duration-slower) var(--ease-expo);
+}
+
+.project-grid-card:hover .project-grid-card__img {
+  transform: scale(1.05);
+}
+
+/* Overlay */
+.project-grid-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(14, 18, 54, 0.90) 0%,
+    rgba(14, 18, 54, 0.3) 50%,
+    transparent 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-6);
+  gap: var(--space-3);
+}
+
+.project-grid-card__meta {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.project-grid-card__tag {
+  font-family: var(--font-label);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-gold);
+  background: rgba(184, 154, 106, 0.15);
+  border: 0.5px solid rgba(184, 154, 106, 0.3);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  line-height: 1.6;
+}
+
+.project-grid-card__name {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 400;
+  color: #fff;
+  margin: 0;
+  line-height: var(--leading-snug);
+}
+
+.project-grid-card__desc {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+  line-height: var(--leading-normal);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-height var(--duration-base) var(--ease-expo),
+    opacity    var(--duration-base) var(--ease-expo);
+}
+
+.project-grid-card:hover .project-grid-card__desc {
+  max-height: 80px;
+  opacity: 1;
+}
+
+.project-grid-card__cta {
+  font-family: var(--font-label);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-gold);
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity   var(--duration-base) var(--ease-expo),
+    transform var(--duration-base) var(--ease-expo);
+}
+
+.project-grid-card:hover .project-grid-card__cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hidden state for filter */
+.project-grid-card.is-hidden {
+  display: none;
+}
+
+/* ── CTA STRIP ── */
+.projects-cta-strip {
+  background: var(--color-bg-soft);
+  border-top: 0.5px solid var(--color-border);
+  padding-block: clamp(var(--space-16), 8vw, var(--space-24));
+}
+
+.projects-cta-strip__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-16);
+  flex-wrap: wrap;
+}
+
+.projects-cta-strip__text .label {
+  display: block;
+  margin-bottom: var(--space-4);
+}
+
+.projects-cta-strip__text .display {
+  margin: 0;
+}
+
+.projects-cta-strip__text .display em {
+  font-style: italic;
+  color: var(--color-brand);
+}
+
+.projects-cta-strip__sub {
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-loose);
+  max-width: 400px;
+}
+
+.projects-cta-strip__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+/* ── CARD ENTRANCE ANIMATION ── */
+@keyframes cardFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.card-animate-in {
+  animation: cardFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-hero__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .projects-filters {
+    top: 60px;
+  }
+
+  .projects-filters__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+
+  .projects-cta-strip__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
