@@ -1,0 +1,76 @@
+{
+  "articles": [
+    {
+      "id": "news-001",
+      "title": "Kings Furniture Opens Second Accra Showroom",
+      "slug": "kings-furniture-accra-showroom",
+      "category": "Company News",
+      "categorySlug": "company",
+      "date": "2024-11-15",
+      "dateFormatted": "November 15, 2024",
+      "excerpt": "We are proud to announce the opening of our second showroom in Accra, bringing our full collection closer to customers in the capital.",
+      "image": "https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_800/v1760989890/9fc86d74-a09a-4155-881d-60e6af7e76c8_elkcx3.jpg",
+      "featured": true
+    },
+    {
+      "id": "news-002",
+      "title": "How to Choose the Right Sofa for Your Living Room",
+      "slug": "choose-right-sofa-living-room",
+      "category": "Design Tips",
+      "categorySlug": "tips",
+      "date": "2024-10-08",
+      "dateFormatted": "October 8, 2024",
+      "excerpt": "Choosing a sofa is one of the most important decisions in furnishing a living room. Here is what to consider before you buy.",
+      "image": "https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_800/v1760989890/9fc86d74-a09a-4155-881d-60e6af7e76c8_elkcx3.jpg",
+      "featured": false
+    },
+    {
+      "id": "news-003",
+      "title": "Kings Furniture Completes Boutique Hotel Fit-Out in Kumasi",
+      "slug": "boutique-hotel-kumasi-fitout",
+      "category": "Projects",
+      "categorySlug": "projects",
+      "date": "2024-09-22",
+      "dateFormatted": "September 22, 2024",
+      "excerpt": "Our team has completed a full 24-room fit-out for a luxury boutique hotel in Kumasi — our largest hospitality project to date.",
+      "image": "https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_800/v1760989901/bedroom_xcasuq.jpg",
+      "featured": true
+    },
+    {
+      "id": "news-004",
+      "title": "5 Office Furniture Trends Taking Over Ghana in 2024",
+      "slug": "office-furniture-trends-ghana-2024",
+      "category": "Design Tips",
+      "categorySlug": "tips",
+      "date": "2024-08-14",
+      "dateFormatted": "August 14, 2024",
+      "excerpt": "From ergonomic seating to open-plan workstations, here are the office furniture trends we are seeing across Ghana this year.",
+      "image": "https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_800/v1760991627/office_zy54dk.jpg",
+      "featured": false
+    },
+    {
+      "id": "news-005",
+      "title": "Why Hardwood Furniture Outlasts Everything Else",
+      "slug": "why-hardwood-furniture-outlasts",
+      "category": "Craftsmanship",
+      "categorySlug": "craft",
+      "date": "2024-07-03",
+      "dateFormatted": "July 3, 2024",
+      "excerpt": "We look at why solid hardwood furniture continues to outlast cheaper alternatives and why it remains the material of choice at Kings.",
+      "image": "https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_800/v1760990684/dining_cvuxju.jpg",
+      "featured": false
+    },
+    {
+      "id": "news-006",
+      "title": "Kings Furniture Celebrates 32 Years in Business",
+      "slug": "kings-furniture-32-years",
+      "category": "Company News",
+      "categorySlug": "company",
+      "date": "2024-06-01",
+      "dateFormatted": "June 1, 2024",
+      "excerpt": "In June 2024 Kings Furniture marked 32 years since opening our first workshop in Takoradi. We reflect on the journey so far.",
+      "image": "https://res.cloudinary.com/djmyiuu5k/image/upload/f_auto,q_auto,w_800/v1760990288/kitchen_ss5qdm.jpg",
+      "featured": false
+    }
+  ]
+}
