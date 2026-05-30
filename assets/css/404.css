@@ -1,0 +1,130 @@
+/* ============================================================
+   KINGS FURNITURE GHANA — 404 Page
+   404.css
+   ============================================================ */
+
+.not-found {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-soft);
+  padding-inline: var(--gutter);
+}
+
+.not-found__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-8);
+  max-width: 620px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+/* Large 404 number — decorative */
+.not-found__code {
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 15vw, 10rem);
+  font-weight: 300;
+  color: var(--color-border);
+  line-height: 1;
+  margin: 0;
+  letter-spacing: var(--tracking-tight);
+  user-select: none;
+}
+
+.not-found__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.not-found__heading {
+  margin: 0;
+}
+
+.not-found__heading em {
+  color: var(--color-brand);
+  font-style: italic;
+}
+
+.not-found__body {
+  margin: 0;
+  max-width: 420px;
+}
+
+/* Actions */
+.not-found__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+/* Quick links */
+.not-found__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding-top: var(--space-6);
+  border-top: 0.5px solid var(--color-border);
+  width: 100%;
+}
+
+.not-found__links-label {
+  font-family: var(--font-label);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+  margin: 0;
+}
+
+.not-found__links-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.not-found__link {
+  font-family: var(--font-label);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: var(--space-2) var(--space-4);
+  border: 0.5px solid var(--color-border-strong);
+  border-radius: var(--radius-pill);
+  transition:
+    color        var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard),
+    background   var(--duration-fast) var(--ease-standard);
+}
+
+.not-found__link:hover {
+  color: var(--color-brand);
+  border-color: var(--color-brand);
+  background: var(--color-brand-light);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .not-found__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .not-found__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
