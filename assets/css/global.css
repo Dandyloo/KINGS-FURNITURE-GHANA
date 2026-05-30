@@ -1,0 +1,124 @@
+/* ============================================================
+   KINGS FURNITURE GHANA — Global UI Elements
+   global.css
+
+   WhatsApp floating button and back to top button.
+   Linked on every page.
+   ============================================================ */
+
+/* ── WHATSAPP FLOATING BUTTON ── */
+.wa-float {
+  position: fixed;
+  bottom: var(--space-8);
+  right: var(--space-8);
+  z-index: var(--z-overlay);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  text-decoration: none;
+  transition:
+    transform    var(--duration-base) var(--ease-expo),
+    box-shadow   var(--duration-base) var(--ease-expo),
+    background   var(--duration-fast) var(--ease-standard);
+}
+
+.wa-float:hover {
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: var(--shadow-xl);
+  background: #1da851;
+}
+
+/* Pulse ring animation */
+.wa-float::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #25D366;
+  opacity: 0.4;
+  animation: wa-pulse 2s ease-out infinite;
+}
+
+@keyframes wa-pulse {
+  0%   { transform: scale(1); opacity: 0.4; }
+  70%  { transform: scale(1.5); opacity: 0; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* ── BACK TO TOP BUTTON ── */
+.back-to-top {
+  position: fixed;
+  bottom: var(--space-8);
+  right: calc(var(--space-8) + 52px + var(--space-4));
+  z-index: var(--z-overlay);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  border: 0.5px solid var(--color-border-strong);
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+  transition:
+    opacity    var(--duration-base) var(--ease-expo),
+    transform  var(--duration-base) var(--ease-expo),
+    background var(--duration-fast) var(--ease-standard),
+    color      var(--duration-fast) var(--ease-standard);
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+.back-to-top:hover {
+  background: var(--color-brand);
+  border-color: var(--color-brand);
+  color: #fff;
+}
+
+/* ── SCROLL REVEAL ───────────────────────────────────────────
+   Elements with [data-reveal] start invisible.
+   main.js adds .is-revealed when they enter viewport.
+── */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity   0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 480px) {
+  .wa-float {
+    bottom: var(--space-6);
+    right: var(--space-6);
+    width: 48px;
+    height: 48px;
+  }
+
+  .back-to-top {
+    bottom: var(--space-6);
+    right: calc(var(--space-6) + 48px + var(--space-3));
+  }
+}
